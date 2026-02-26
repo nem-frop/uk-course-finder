@@ -1,0 +1,1884 @@
+﻿university,subject,qs_subject_rank,qs_subject_score
+University of Oxford,Arts & Humanities,2.0,97.7
+University of Cambridge,Arts & Humanities,3.0,96.8
+University of Edinburgh,Arts & Humanities,10.0,88.7
+University College London,Arts & Humanities,11.0,87.9
+King's College London,Arts & Humanities,17.0,84.1
+University of Manchester,Arts & Humanities,36.0,81.3
+Durham University,Arts & Humanities,43.0,79.6
+London School of Economics and Political Science,Arts & Humanities,54.0,78.2
+University of Leeds,Arts & Humanities,54.0,78.2
+University of St Andrews,Arts & Humanities,58.0,78.0
+University of Glasgow,Arts & Humanities,61.0,77.3
+University of Warwick,Arts & Humanities,63.0,77.2
+Newcastle University,Arts & Humanities,71.0,76.5
+University of Birmingham,Arts & Humanities,72.0,76.2
+University of York,Arts & Humanities,75.0,75.7
+Lancaster University,Arts & Humanities,76.0,75.6
+Queen Mary University of London,Arts & Humanities,81.0,75.3
+The University of Sheffield,Arts & Humanities,82.0,74.9
+University of Bristol,Arts & Humanities,88.0,74.4
+The University of Exeter,Arts & Humanities,90.0,74.2
+University of Reading,Arts & Humanities,92.0,74.0
+University of the Arts London,Arts & Humanities,112.0,73.1
+University of Nottingham,Arts & Humanities,121.0,72.3
+SOAS University of London,Arts & Humanities,123.0,72.2
+Oxford Brookes University,Arts & Humanities,137.0,71.4
+"Goldsmiths, University of London",Arts & Humanities,141.0,71.0
+University of Liverpool,Arts & Humanities,141.0,71.0
+Cardiff University,Arts & Humanities,151.0,70.6
+University of Southampton,Arts & Humanities,180.0,68.7
+Queen's University Belfast,Arts & Humanities,194.0,68.2
+Loughborough University,Arts & Humanities,207.0,67.8
+Royal Holloway University of London,Arts & Humanities,224.0,66.6
+University of Sussex,Arts & Humanities,246.0,65.9
+University of Kent,Arts & Humanities,276.0,65.0
+"Birkbeck, University of London",Arts & Humanities,285.0,64.8
+University of Aberdeen,Arts & Humanities,287.0,64.7
+University of Bath,Arts & Humanities,291.0,64.5
+University of East Anglia (UEA),Arts & Humanities,304.0,64.2
+Swansea University,Arts & Humanities,309.0,64.1
+Manchester Metropolitan University (MMU),Arts & Humanities,321.0,63.7
+University of Leicester,Arts & Humanities,331.0,63.2
+University of Huddersfield,Arts & Humanities,339.0,63.0
+"City, University of London",Arts & Humanities,345.0,62.8
+"Kingston University, London",Arts & Humanities,356.0,62.6
+Heriot-Watt University,Arts & Humanities,394.0,61.4
+"Essex, University of",Arts & Humanities,425.5,
+Nottingham Trent University,Arts & Humanities,425.5,
+University of Surrey,Arts & Humanities,425.5,
+Aston University,Arts & Humanities,475.5,
+Northumbria University at Newcastle,Arts & Humanities,475.5,
+University of Westminster,Arts & Humanities,475.5,
+Coventry University,Arts & Humanities,525.5,
+The Open University,Arts & Humanities,525.5,
+University of Brighton,Arts & Humanities,525.5,
+University of Stirling,Arts & Humanities,525.5,
+University of Strathclyde,Arts & Humanities,525.5,
+University of Cambridge,Archaeology,1.0,98.0
+University of Oxford,Archaeology,2.0,96.8
+University College London,Archaeology,3.0,96.5
+Durham University,Archaeology,6.0,89.1
+University of York,Archaeology,25.0,80.4
+University of Edinburgh,Archaeology,29.0,80.1
+The University of Sheffield,Archaeology,29.0,80.1
+University of Southampton,Archaeology,36.0,78.7
+University of Glasgow,Archaeology,37.0,78.6
+University of Leicester,Archaeology,40.0,78.2
+The University of Exeter,Archaeology,45.0,77.5
+University of Reading,Archaeology,49.0,77.0
+Newcastle University,Archaeology,75.5,
+University of Manchester,Archaeology,75.5,
+University of Aberdeen,Archaeology,75.5,
+University of Liverpool,Archaeology,75.5,
+University of St Andrews,Archaeology,75.5,
+Cardiff University,Archaeology,125.5,
+King's College London,Archaeology,125.5,
+Queen's University Belfast,Archaeology,125.5,
+University of Bradford,Archaeology,125.5,
+University of Bristol,Archaeology,125.5,
+University of Nottingham,Archaeology,125.5,
+SOAS University of London,Archaeology,175.5,
+University of Warwick,Archaeology,175.5,
+University of Birmingham,Archaeology,175.5,
+University of Stirling,Archaeology,175.5,
+Bournemouth University,Archaeology,230.5,
+Queen Mary University of London,Archaeology,230.5,
+University of Leeds,Archaeology,230.5,
+The Bartlett School of Architecture  | UCL,Architecture,1.0,97.7
+Manchester School of Architecture,Architecture,5.0,89.3
+University of Cambridge,Architecture,12.0,84.1
+University of Oxford,Architecture,33.0,76.5
+The University of Sheffield,Architecture,44.0,74.5
+Cardiff University,Architecture,75.5,
+Loughborough University,Architecture,75.5,
+Newcastle University,Architecture,75.5,
+London School of Economics and Political Science,Architecture,75.5,
+University of Edinburgh,Architecture,75.5,
+University of Bath,Architecture,75.5,
+University of Liverpool,Architecture,75.5,
+University of Nottingham,Architecture,75.5,
+Heriot-Watt University,Architecture,125.5,
+Oxford Brookes University,Architecture,125.5,
+University of Glasgow,Architecture,125.5,
+University of Leeds,Architecture,125.5,
+University of Reading,Architecture,125.5,
+Queen's University Belfast,Architecture,175.5,
+University of Birmingham,Architecture,230.5,
+University of Huddersfield,Architecture,230.5,
+University of Salford,Architecture,230.5,
+University of Strathclyde,Architecture,230.5,
+University of Westminster,Architecture,230.5,
+Royal College of Art,Art & Design,1.0,97.4
+University of the Arts London,Art & Design,2.0,93.8
+Glasgow School of Art (GSA),Art & Design,12.0,78.5
+University of Oxford,Art & Design,27.0,72.6
+University of Cambridge,Art & Design,32.0,71.9
+"Goldsmiths, University of London",Art & Design,37.0,70.7
+Loughborough University,Art & Design,39.0,69.1
+University College London,Art & Design,44.0,67.6
+Imperial College London,Art & Design,75.5,
+Manchester Metropolitan University (MMU),Art & Design,75.5,
+Nottingham Trent University,Art & Design,75.5,
+University of Edinburgh,Art & Design,75.5,
+University for the Creative Arts,Art & Design,75.5,
+Falmouth College of Arts University College Falmouth,Art & Design,125.5,
+"Kingston University, London",Art & Design,125.5,
+Lancaster University,Art & Design,125.5,
+Newcastle University,Art & Design,125.5,
+The Courtauld Institute of Art,Art & Design,125.5,
+University of Brighton,Art & Design,125.5,
+University of Leeds,Art & Design,125.5,
+University of Westminster,Art & Design,125.5,
+Brunel University London,Art & Design,175.5,
+Coventry University,Art & Design,175.5,
+Northumbria University at Newcastle,Art & Design,175.5,
+University of Glasgow,Art & Design,175.5,
+Sheffield Hallam University,Art & Design,230.5,
+University of Reading,Art & Design,230.5,
+University of St Andrews,Classics,3.0,92.8
+University of Oxford,Classics,4.0,92.6
+University of Cambridge,Classics,5.0,92.0
+Durham University,Classics,9.0,87.8
+King's College London,Classics,13.0,86.1
+University College London,Classics,17.0,82.0
+University of Edinburgh,Classics,28.0,79.0
+The University of Exeter,Classics,45.0,73.0
+Newcastle University,Classics,100.5,
+Royal Holloway University of London,Classics,100.5,
+SOAS University of London,Classics,100.5,
+Swansea University,Classics,100.5,
+University of Manchester,Classics,100.5,
+University of Warwick,Classics,100.5,
+University of Bristol,Classics,100.5,
+University of Liverpool,Classics,100.5,
+University of Reading,Classics,100.5,
+University of Cambridge,English Language,1.0,97.6
+University of Oxford,English Language,1.0,97.6
+University of Edinburgh,English Language,7.0,90.1
+University College London,English Language,12.0,87.1
+King's College London,English Language,16.0,83.9
+University of Manchester,English Language,18.0,82.2
+University of Birmingham,English Language,29.0,79.8
+University of York,English Language,32.0,78.9
+Durham University,English Language,33.0,78.8
+University of Warwick,English Language,34.0,78.6
+University of Glasgow,English Language,34.0,78.6
+University of Leeds,English Language,36.0,78.5
+Lancaster University,English Language,38.0,78.2
+Queen Mary University of London,English Language,42.0,76.9
+The University of Exeter,English Language,47.0,75.2
+University of St Andrews,English Language,52.0,74.4
+University of Bristol,English Language,61.0,73.1
+SOAS University of London,English Language,64.0,72.6
+University of Sussex,English Language,79.0,71.2
+Newcastle University,English Language,82.0,70.9
+University of Liverpool,English Language,90.0,70.7
+Cardiff University,English Language,91.0,70.6
+University of Nottingham,English Language,93.0,70.5
+"Goldsmiths, University of London",English Language,97.0,69.9
+The University of Sheffield,English Language,100.0,69.6
+"Birkbeck, University of London",English Language,125.5,
+Queen's University Belfast,English Language,125.5,
+Swansea University,English Language,125.5,
+University of East Anglia (UEA),English Language,125.5,
+University of Kent,English Language,125.5,
+University of Leicester,English Language,125.5,
+University of Reading,English Language,125.5,
+Loughborough University,English Language,175.5,
+Royal Holloway University of London,English Language,175.5,
+University of Aberdeen,English Language,175.5,
+University of Southampton,English Language,175.5,
+"City, University of London",English Language,225.5,
+"Essex, University of",English Language,225.5,
+Oxford Brookes University,English Language,225.5,
+University of Huddersfield,English Language,225.5,
+"Kingston University, London",English Language,275.5,
+Manchester Metropolitan University (MMU),English Language,275.5,
+Northumbria University at Newcastle,English Language,275.5,
+University of Stirling,English Language,275.5,
+Aston University,English Language,325.5,
+University of Surrey,English Language,325.5,
+University of Oxford,History$,2.0,97.1
+University of Cambridge,History$,3.0,95.7
+London School of Economics and Political Science,History$,6.0,90.8
+University of Edinburgh,History$,13.0,87.0
+University College London,History$,15.0,86.1
+King's College London,History$,25.0,82.8
+University of Manchester,History$,31.0,80.8
+Durham University,History$,36.0,79.7
+University of Warwick,History$,42.0,79.0
+University of St Andrews,History$,46.0,78.7
+University of Glasgow,History$,49.0,77.8
+Queen Mary University of London,History$,75.5,
+SOAS University of London,History$,75.5,
+The University of Exeter,History$,75.5,
+University of Birmingham,History$,75.5,
+University of Bristol,History$,75.5,
+University of Leeds,History$,75.5,
+University of York,History$,75.5,
+The University of Sheffield,History$,125.5,
+University of Liverpool,History$,125.5,
+University of Sussex,History$,125.5,
+Cardiff University,History$,175.5,
+Newcastle University,History$,175.5,
+Queen's University Belfast,History$,175.5,
+Royal Holloway University of London,History$,175.5,
+University of Nottingham,History$,175.5,
+University of Southampton,History$,175.5,
+"Birkbeck, University of London",History$,225.5,
+University of Aberdeen,History$,225.5,
+University of Kent,History$,225.5,
+University of Leicester,History$,225.5,
+University of Reading,History$,225.5,
+Royal College of Art,History of Art,1.0,97.0
+The Courtauld Institute of Art,History of Art,5.0,89.1
+University of Cambridge,History of Art,13.0,84.3
+University of Oxford,History of Art,15.0,83.6
+Architectural Association School of Architecture,History of Art,35.5,
+Glasgow School of Art (GSA),History of Art,35.5,
+"Goldsmiths, University of London",History of Art,35.5,
+University College London,History of Art,35.5,
+Lancaster University,Linguistics,3.0,91.8
+University of Cambridge,Linguistics,4.0,91.7
+University of Oxford,Linguistics,4.0,91.7
+University of Edinburgh,Linguistics,7.0,90.0
+University College London,Linguistics,19.0,84.1
+University of Manchester,Linguistics,29.0,80.7
+University of Birmingham,Linguistics,37.0,79.3
+University of Leeds,Linguistics,81.0,72.1
+University of York,Linguistics,99.0,70.0
+Queen Mary University of London,Linguistics,125.5,
+SOAS University of London,Linguistics,125.5,
+The University of Sheffield,Linguistics,125.5,
+University of Warwick,Linguistics,125.5,
+University of Nottingham,Linguistics,125.5,
+University of Surrey,Linguistics,125.5,
+Cardiff University,Linguistics,175.5,
+"Essex, University of",Linguistics,175.5,
+King's College London,Linguistics,175.5,
+Newcastle University,Linguistics,175.5,
+University of Glasgow,Linguistics,175.5,
+University of Reading,Linguistics,175.5,
+Aston University,Linguistics,225.5,
+Swansea University,Linguistics,225.5,
+Durham University,Linguistics,275.5,
+Heriot-Watt University,Linguistics,275.5,
+University of Bath,Linguistics,275.5,
+University of Liverpool,Linguistics,275.5,
+University of Southampton,Linguistics,275.5,
+Queen's University Belfast,Linguistics,325.5,
+University of Leicester,Linguistics,325.5,
+University of Cambridge,Modern Languages,1.0,99.1
+University of Oxford,Modern Languages,2.0,98.9
+University of Edinburgh,Modern Languages,13.0,88.0
+University College London,Modern Languages,16.0,86.4
+King's College London,Modern Languages,26.0,83.5
+University of Manchester,Modern Languages,35.0,82.2
+University of Leeds,Modern Languages,62.0,77.7
+Durham University,Modern Languages,66.0,77.1
+Lancaster University,Modern Languages,66.0,77.1
+University of Warwick,Modern Languages,68.0,76.8
+University of Bristol,Modern Languages,79.0,75.2
+University of St Andrews,Modern Languages,79.0,75.2
+SOAS University of London,Modern Languages,91.0,74.0
+University of Birmingham,Modern Languages,96.0,73.2
+London School of Economics and Political Science,Modern Languages,100.0,72.9
+University of Glasgow,Modern Languages,100.0,72.9
+Queen Mary University of London,Modern Languages,125.5,
+The University of Exeter,Modern Languages,125.5,
+University of Liverpool,Modern Languages,125.5,
+University of Nottingham,Modern Languages,125.5,
+University of York,Modern Languages,125.5,
+Cardiff University,Modern Languages,175.5,
+Newcastle University,Modern Languages,175.5,
+Queen's University Belfast,Modern Languages,175.5,
+The University of Sheffield,Modern Languages,175.5,
+University of Bath,Modern Languages,225.5,
+University of Reading,Modern Languages,225.5,
+Oxford Brookes University,Modern Languages,275.5,
+University of Southampton,Modern Languages,325.5,
+University of Surrey,Modern Languages,325.5,
+Royal College of Music,Music,1.0,98.2
+Royal Academy of Music,Music,2.0,97.0
+Guildhall School of Music and Drama,Music,3.0,93.8
+Royal Northern College of Music (RNCM),Music,5.0,88.7
+Trinity Laban Conservatoire of Music and Dance,Music,11.0,81.5
+Royal College of Music,Performing Arts,1.0,95.8
+Royal Academy of Music,Performing Arts,2.0,95.3
+Guildhall School of Music and Drama,Performing Arts,4.0,91.2
+Royal Conservatoire of Scotland (Formerly Royal Scottish Academy of Music and Drama),Performing Arts,6.0,90.1
+Royal Northern College of Music (RNCM),Performing Arts,10.0,83.7
+University of Oxford,Performing Arts,15.0,80.6
+University of Cambridge,Performing Arts,16.0,80.5
+Trinity Laban Conservatoire of Music and Dance,Performing Arts,18.0,79.8
+"Goldsmiths, University of London",Performing Arts,26.0,77.4
+Royal Holloway University of London,Performing Arts,30.0,76.9
+Central School of Speech & Drama,Performing Arts,33.0,76.0
+University of Huddersfield,Performing Arts,37.0,74.4
+King's College London,Performing Arts,75.5,
+Newcastle University,Performing Arts,75.5,
+Queen Mary University of London,Performing Arts,75.5,
+Queen's University Belfast,Performing Arts,75.5,
+University of Edinburgh,Performing Arts,75.5,
+University of Manchester,Performing Arts,75.5,
+University of Warwick,Performing Arts,75.5,
+University of Birmingham,Performing Arts,75.5,
+University of Glasgow,Performing Arts,75.5,
+University of Leeds,Performing Arts,75.5,
+University of York,Performing Arts,75.5,
+Royal College of Art,Performing Arts,125.5,
+The University of Exeter,Performing Arts,125.5,
+The University of Sheffield,Performing Arts,125.5,
+University of Bristol,Performing Arts,125.5,
+University of Kent,Performing Arts,125.5,
+University of the Arts London,Performing Arts,125.5,
+London School of Economics and Political Science,Philosophy,2.0,94.9
+University of Oxford,Philosophy,5.0,92.7
+University of Cambridge,Philosophy,6.0,90.0
+University of St Andrews,Philosophy,14.0,84.6
+University of Edinburgh,Philosophy,22.0,80.9
+King's College London,Philosophy,24.0,79.0
+Durham University,Philosophy,31.0,77.0
+University College London,Philosophy,39.0,75.2
+University of Leeds,Philosophy,41.0,74.6
+University of Warwick,Philosophy,75.5,
+University of Bristol,Philosophy,75.5,
+University of Glasgow,Philosophy,75.5,
+University of Southampton,Philosophy,75.5,
+"Essex, University of",Philosophy,125.5,
+University of Manchester,Philosophy,125.5,
+The University of Sheffield,Philosophy,125.5,
+University of Kent,Philosophy,125.5,
+University of Nottingham,Philosophy,125.5,
+University of Sussex,Philosophy,125.5,
+University of York,Philosophy,125.5,
+Queen's University Belfast,Philosophy,175.5,
+The University of Exeter,Philosophy,175.5,
+University of Aberdeen,Philosophy,175.5,
+University of Birmingham,Philosophy,175.5,
+University of Liverpool,Philosophy,175.5,
+University of Stirling,Philosophy,175.5,
+Queen Mary University of London,Philosophy,213.0,
+University of Oxford,Theology,3.0,91.2
+University of Cambridge,Theology,4.0,90.4
+Durham University,Theology,6.0,89.1
+University of Edinburgh,Theology,8.0,87.6
+University of St Andrews,Theology,14.0,84.8
+University of Aberdeen,Theology,26.0,76.0
+King's College London,Theology,35.0,72.9
+University of Birmingham,Theology,45.0,71.7
+SOAS University of London,Theology,75.5,
+The University of Exeter,Theology,75.5,
+University of Manchester,Theology,75.5,
+University College London,Theology,75.5,
+University of Leeds,Theology,75.5,
+Lancaster University,Theology,125.5,
+University of Warwick,Theology,125.5,
+University of Glasgow,Theology,125.5,
+University of Nottingham,Theology,125.5,
+University of Oxford,Engineering & Technology,2.0,93.7
+University of Cambridge,Engineering & Technology,4.0,92.9
+Imperial College London,Engineering & Technology,8.0,90.0
+University of Manchester,Engineering & Technology,32.0,81.7
+University College London,Engineering & Technology,33.0,81.6
+University of Edinburgh,Engineering & Technology,58.0,78.6
+University of Leeds,Engineering & Technology,92.0,75.4
+The University of Sheffield,Engineering & Technology,104.0,74.5
+King's College London,Engineering & Technology,116.0,74.0
+University of Bristol,Engineering & Technology,116.0,74.0
+University of Nottingham,Engineering & Technology,116.0,74.0
+University of Birmingham,Engineering & Technology,119.0,73.8
+University of Southampton,Engineering & Technology,120.0,73.7
+Newcastle University,Engineering & Technology,145.0,72.1
+University of Glasgow,Engineering & Technology,152.0,71.8
+University of Warwick,Engineering & Technology,159.0,71.5
+Queen Mary University of London,Engineering & Technology,173.0,70.7
+Cranfield University,Engineering & Technology,184.0,70.4
+Loughborough University,Engineering & Technology,189.0,70.2
+University of Liverpool,Engineering & Technology,204.0,69.7
+University of Bath,Engineering & Technology,212.0,69.4
+Swansea University,Engineering & Technology,220.0,69.0
+Cardiff University,Engineering & Technology,225.0,68.7
+University of Strathclyde,Engineering & Technology,237.0,68.2
+Queen's University Belfast,Engineering & Technology,246.0,67.9
+Heriot-Watt University,Engineering & Technology,254.0,67.6
+University of Surrey,Engineering & Technology,270.0,67.0
+Lancaster University,Engineering & Technology,319.0,65.3
+Aston University,Engineering & Technology,328.0,64.9
+Oxford Brookes University,Engineering & Technology,333.0,64.7
+The University of Exeter,Engineering & Technology,333.0,64.7
+Durham University,Engineering & Technology,341.0,64.6
+Brunel University London,Engineering & Technology,359.0,64.3
+University of Reading,Engineering & Technology,367.0,64.1
+University of Aberdeen,Engineering & Technology,394.0,63.1
+University of York,Engineering & Technology,425.5,
+Coventry University,Engineering & Technology,475.5,
+University of Oxford,Computer Science,5.0,89.8
+University of Cambridge,Computer Science,9.0,87.3
+Imperial College London,Computer Science,22.0,79.4
+University of Edinburgh,Computer Science,23.0,79.0
+University College London,Computer Science,24.0,78.9
+King's College London,Computer Science,57.0,73.2
+University of Manchester,Computer Science,67.0,72.2
+University of Warwick,Computer Science,83.0,70.7
+Queen Mary University of London,Computer Science,84.0,70.5
+London School of Economics and Political Science,Computer Science,126.0,66.8
+Lancaster University,Computer Science,132.0,66.3
+University of Bristol,Computer Science,134.0,66.2
+University of Glasgow,Computer Science,142.0,65.7
+Newcastle University,Computer Science,167.0,64.5
+University of Birmingham,Computer Science,174.0,64.2
+University of Surrey,Computer Science,184.0,63.5
+The University of Sheffield,Computer Science,191.0,63.2
+University of Nottingham,Computer Science,191.0,63.2
+Oxford Brookes University,Computer Science,225.5,
+Swansea University,Computer Science,225.5,
+University of Leeds,Computer Science,225.5,
+University of Liverpool,Computer Science,225.5,
+University of Southampton,Computer Science,225.5,
+University of York,Computer Science,225.5,
+Cardiff University,Computer Science,275.5,
+Durham University,Computer Science,275.5,
+Loughborough University,Computer Science,275.5,
+Queen's University Belfast,Computer Science,275.5,
+Brunel University London,Computer Science,375.5,
+"City, University of London",Computer Science,375.5,
+Heriot-Watt University,Computer Science,375.5,
+University of Bath,Computer Science,375.5,
+University of Leicester,Computer Science,375.5,
+University of Strathclyde,Computer Science,375.5,
+Aston University,Computer Science,425.5,
+Cranfield University,Computer Science,425.5,
+"Essex, University of",Computer Science,425.5,
+University of Kent,Computer Science,425.5,
+University of Reading,Computer Science,425.5,
+University of St Andrews,Computer Science,425.5,
+Royal Holloway University of London,Computer Science,475.5,
+The University of Exeter,Computer Science,475.5,
+De Montfort University,Computer Science,525.5,
+"Kingston University, London",Computer Science,525.5,
+Manchester Metropolitan University (MMU),Computer Science,525.5,
+University of Sussex,Computer Science,525.5,
+University of the West of England,Computer Science,525.5,
+Coventry University,Computer Science,575.5,
+Northumbria University at Newcastle,Computer Science,575.5,
+The Open University,Computer Science,575.5,
+Middlesex University,Computer Science,625.5,
+University of Bradford,Computer Science,625.5,
+University of Portsmouth,Computer Science,625.5,
+Edinburgh Napier University,Computer Science,675.5,
+Liverpool John Moores University,Computer Science,675.5,
+Ulster University,Computer Science,675.5,
+University of Aberdeen,Computer Science,675.5,
+University of Huddersfield,Computer Science,675.5,
+Nottingham Trent University,Computer Science,725.5,
+University of East Anglia (UEA),Computer Science,800.5,
+University of Lincoln,Computer Science,800.5,
+University of Salford,Computer Science,800.5,
+University of Oxford,Data Science,3.0,92.7
+Imperial College London,Data Science,12.0,85.0
+University College London,Data Science,21.0,80.6
+University of Edinburgh,Data Science,24.0,80.1
+King's College London,Data Science,46.0,74.4
+Lancaster University,Data Science,75.5,
+Queen Mary University of London,Data Science,75.5,
+London School of Economics and Political Science,Data Science,75.5,
+University of Warwick,Data Science,75.5,
+University of Bristol,Data Science,75.5,
+University of Glasgow,Data Science,75.5,
+University of Cambridge,Engineering - Chemical,3.0,92.5
+University of Oxford,Engineering - Chemical,8.0,90.0
+Imperial College London,Engineering - Chemical,9.0,89.3
+University of Manchester,Engineering - Chemical,16.0,85.2
+University College London,Engineering - Chemical,20.0,83.3
+University of Edinburgh,Engineering - Chemical,63.0,76.4
+University of Birmingham,Engineering - Chemical,75.0,74.7
+University of Leeds,Engineering - Chemical,84.0,73.9
+University of Nottingham,Engineering - Chemical,92.0,73.3
+Newcastle University,Engineering - Chemical,125.5,
+Queen's University Belfast,Engineering - Chemical,125.5,
+The University of Sheffield,Engineering - Chemical,125.5,
+University of Bath,Engineering - Chemical,125.5,
+Heriot-Watt University,Engineering - Chemical,225.5,
+Loughborough University,Engineering - Chemical,225.5,
+Queen Mary University of London,Engineering - Chemical,225.5,
+University of Southampton,Engineering - Chemical,225.5,
+University of Surrey,Engineering - Chemical,225.5,
+Aston University,Engineering - Chemical,275.5,
+Cranfield University,Engineering - Chemical,275.5,
+Swansea University,Engineering - Chemical,275.5,
+University of Strathclyde,Engineering - Chemical,275.5,
+Lancaster University,Engineering - Chemical,325.5,
+University of Aberdeen,Engineering - Chemical,375.5,
+University of Cambridge,Engineering - Civil,8.0,90.7
+Imperial College London,Engineering - Civil,11.0,89.9
+University of Oxford,Engineering - Civil,12.0,88.0
+University College London,Engineering - Civil,33.0,81.2
+University of Edinburgh,Engineering - Civil,75.5,
+University of Manchester,Engineering - Civil,75.5,
+The University of Sheffield,Engineering - Civil,75.5,
+University of Bristol,Engineering - Civil,75.5,
+University of Leeds,Engineering - Civil,75.5,
+University of Nottingham,Engineering - Civil,75.5,
+Loughborough University,Engineering - Civil,125.5,
+Newcastle University,Engineering - Civil,125.5,
+University of Birmingham,Engineering - Civil,125.5,
+University of Glasgow,Engineering - Civil,125.5,
+University of Liverpool,Engineering - Civil,125.5,
+University of Southampton,Engineering - Civil,125.5,
+Cardiff University,Engineering - Civil,175.5,
+Heriot-Watt University,Engineering - Civil,175.5,
+The University of Exeter,Engineering - Civil,175.5,
+University of Warwick,Engineering - Civil,175.5,
+University of Bath,Engineering - Civil,175.5,
+University of Strathclyde,Engineering - Civil,175.5,
+Queen's University Belfast,Engineering - Civil,238.0,
+Swansea University,Engineering - Civil,238.0,
+University of Surrey,Engineering - Civil,238.0,
+University of Cambridge,Engineering - Electrical,4.0,90.4
+University of Oxford,Engineering - Electrical,8.0,89.6
+Imperial College London,Engineering - Electrical,12.0,88.2
+University of Manchester,Engineering - Electrical,35.0,79.7
+University College London,Engineering - Electrical,39.0,78.5
+University of Edinburgh,Engineering - Electrical,55.0,76.2
+University of Southampton,Engineering - Electrical,83.0,73.3
+King's College London,Engineering - Electrical,102.0,71.5
+University of Nottingham,Engineering - Electrical,106.0,71.3
+University of Glasgow,Engineering - Electrical,128.0,69.2
+University of Warwick,Engineering - Electrical,130.0,69.1
+University of Leeds,Engineering - Electrical,132.0,68.8
+The University of Sheffield,Engineering - Electrical,136.0,68.7
+University of Birmingham,Engineering - Electrical,138.0,68.6
+Queen Mary University of London,Engineering - Electrical,140.0,68.4
+Newcastle University,Engineering - Electrical,175.5,
+Queen's University Belfast,Engineering - Electrical,175.5,
+University of Bath,Engineering - Electrical,175.5,
+University of Bristol,Engineering - Electrical,175.5,
+University of Strathclyde,Engineering - Electrical,175.5,
+University of Surrey,Engineering - Electrical,175.5,
+Cardiff University,Engineering - Electrical,225.5,
+Heriot-Watt University,Engineering - Electrical,225.5,
+Loughborough University,Engineering - Electrical,225.5,
+University of Liverpool,Engineering - Electrical,225.5,
+Cranfield University,Engineering - Electrical,275.5,
+Lancaster University,Engineering - Electrical,275.5,
+University of York,Engineering - Electrical,275.5,
+Brunel University London,Engineering - Electrical,325.5,
+Durham University,Engineering - Electrical,325.5,
+Swansea University,Engineering - Electrical,325.5,
+The University of Exeter,Engineering - Electrical,325.5,
+Aston University,Engineering - Electrical,425.5,
+Northumbria University at Newcastle,Engineering - Electrical,425.5,
+Oxford Brookes University,Engineering - Electrical,425.5,
+University of Aberdeen,Engineering - Electrical,425.5,
+University of Huddersfield,Engineering - Electrical,425.5,
+University of Reading,Engineering - Electrical,425.5,
+University of Kent,Engineering - Electrical,475.5,
+University of Sussex,Engineering - Electrical,475.5,
+"City, University of London",Engineering - Electrical,525.5,
+Coventry University,Engineering - Electrical,525.5,
+University of Leicester,Engineering - Electrical,525.5,
+University of Cambridge,Engineering - Mechanical,3.0,92.2
+University of Oxford,Engineering - Mechanical,8.0,90.0
+Imperial College London,Engineering - Mechanical,9.0,89.3
+University of Manchester,Engineering - Mechanical,29.0,81.9
+Cranfield University,Engineering - Mechanical,33.0,80.6
+University of Nottingham,Engineering - Mechanical,63.0,76.3
+University of Bristol,Engineering - Mechanical,66.0,76.1
+University College London,Engineering - Mechanical,78.0,75.0
+University of Birmingham,Engineering - Mechanical,82.0,74.5
+The University of Sheffield,Engineering - Mechanical,88.0,74.2
+University of Southampton,Engineering - Mechanical,93.0,73.8
+University of Edinburgh,Engineering - Mechanical,94.0,73.5
+Loughborough University,Engineering - Mechanical,100.0,73.2
+University of Leeds,Engineering - Mechanical,104.0,72.9
+University of Warwick,Engineering - Mechanical,106.0,72.7
+University of Bath,Engineering - Mechanical,127.0,71.0
+Swansea University,Engineering - Mechanical,131.0,70.5
+University of Glasgow,Engineering - Mechanical,138.0,70.2
+University of Liverpool,Engineering - Mechanical,150.0,69.0
+King's College London,Engineering - Mechanical,175.5,
+Queen's University Belfast,Engineering - Mechanical,175.5,
+University of Strathclyde,Engineering - Mechanical,175.5,
+Brunel University London,Engineering - Mechanical,225.5,
+Cardiff University,Engineering - Mechanical,225.5,
+Heriot-Watt University,Engineering - Mechanical,225.5,
+Newcastle University,Engineering - Mechanical,225.5,
+Queen Mary University of London,Engineering - Mechanical,225.5,
+University of Huddersfield,Engineering - Mechanical,275.5,
+University of Surrey,Engineering - Mechanical,275.5,
+Coventry University,Engineering - Mechanical,325.5,
+The University of Exeter,Engineering - Mechanical,325.5,
+Durham University,Engineering - Mechanical,375.5,
+Lancaster University,Engineering - Mechanical,375.5,
+Aston University,Engineering - Mechanical,425.5,
+"City, University of London",Engineering - Mechanical,425.5,
+Oxford Brookes University,Engineering - Mechanical,425.5,
+University of Aberdeen,Engineering - Mechanical,425.5,
+"Kingston University, London",Engineering - Mechanical,538.0,
+Manchester Metropolitan University (MMU),Engineering - Mechanical,538.0,
+Northumbria University at Newcastle,Engineering - Mechanical,538.0,
+University of Leicester,Engineering - Mechanical,538.0,
+University of Plymouth,Engineering - Mechanical,538.0,
+University of York,Engineering - Mechanical,538.0,
+Imperial College London,Engineering - Mineral,8.0,80.5
+Camborne School of Mines | University of Exeter,Engineering - Mineral,19.0,75.2
+University of Leeds,Engineering - Mineral,38.0,69.0
+University of Aberdeen,Engineering - Mineral,75.5,
+University of Birmingham,Engineering - Mineral,75.5,
+University of Nottingham,Engineering - Mineral,75.5,
+Imperial College London,Petroleum Engineering,6.0,87.8
+University of Manchester,Petroleum Engineering,10.0,81.2
+University of Surrey,Petroleum Engineering,13.0,80.0
+Heriot-Watt University,Petroleum Engineering,15.0,79.1
+University of Leeds,Petroleum Engineering,22.0,75.5
+University of Liverpool,Petroleum Engineering,40.0,70.3
+Brunel University London,Petroleum Engineering,75.5,
+Cranfield University,Petroleum Engineering,75.5,
+Loughborough University,Petroleum Engineering,75.5,
+University of Aberdeen,Petroleum Engineering,75.5,
+University of Huddersfield,Petroleum Engineering,75.5,
+University of Bradford,Petroleum Engineering,125.5,
+University of Portsmouth,Petroleum Engineering,125.5,
+Robert Gordon University,Petroleum Engineering,163.0,
+University of Oxford,Life Sciences & Medicine,2.0,94.2
+University of Cambridge,Life Sciences & Medicine,6.0,90.7
+Imperial College London,Life Sciences & Medicine,8.0,90.1
+University College London,Life Sciences & Medicine,9.0,89.4
+King's College London,Life Sciences & Medicine,11.0,88.0
+University of Edinburgh,Life Sciences & Medicine,19.0,84.5
+University of Manchester,Life Sciences & Medicine,32.0,81.5
+London School of Hygiene & Tropical Medicine,Life Sciences & Medicine,36.0,81.0
+University of Glasgow,Life Sciences & Medicine,42.0,80.3
+University of Bristol,Life Sciences & Medicine,56.0,78.0
+University of Birmingham,Life Sciences & Medicine,59.0,77.8
+University of Nottingham,Life Sciences & Medicine,68.0,76.8
+Queen Mary University of London,Life Sciences & Medicine,69.0,76.7
+University of Liverpool,Life Sciences & Medicine,72.0,76.3
+Newcastle University,Life Sciences & Medicine,93.0,74.5
+University of Leeds,Life Sciences & Medicine,97.0,74.1
+University of Southampton,Life Sciences & Medicine,116.0,72.8
+The University of Sheffield,Life Sciences & Medicine,128.0,72.2
+Cardiff University,Life Sciences & Medicine,131.0,71.9
+Queen's University Belfast,Life Sciences & Medicine,144.0,70.8
+The University of Exeter,Life Sciences & Medicine,152.0,70.1
+University of York,Life Sciences & Medicine,177.0,68.9
+University of Dundee,Life Sciences & Medicine,180.0,68.5
+University of Aberdeen,Life Sciences & Medicine,191.0,68.0
+University of Warwick,Life Sciences & Medicine,211.0,67.1
+University of Leicester,Life Sciences & Medicine,241.0,65.7
+University of East Anglia (UEA),Life Sciences & Medicine,316.0,62.6
+University of Reading,Life Sciences & Medicine,316.0,62.6
+University of Bath,Life Sciences & Medicine,366.0,60.6
+Swansea University,Life Sciences & Medicine,388.0,59.7
+Lancaster University,Life Sciences & Medicine,425.5,
+"St. George's, University of London",Life Sciences & Medicine,425.5,
+University of St Andrews,Life Sciences & Medicine,425.5,
+University of Strathclyde,Life Sciences & Medicine,425.5,
+University of Surrey,Life Sciences & Medicine,425.5,
+University of Sussex,Life Sciences & Medicine,425.5,
+"Royal Veterinary College, University of London",Life Sciences & Medicine,475.5,
+University of Plymouth,Life Sciences & Medicine,475.5,
+Durham University,Life Sciences & Medicine,525.5,
+Liverpool John Moores University,Life Sciences & Medicine,525.5,
+Loughborough University,Life Sciences & Medicine,525.5,
+University of Reading,Agriculture,20.0,76.9
+University of Edinburgh,Agriculture,58.0,69.4
+University of Nottingham,Agriculture,62.0,68.7
+University of Leeds,Agriculture,82.0,65.8
+Harper Adams University,Agriculture,99.0,64.2
+Bangor University,Agriculture,125.5,
+Newcastle University,Agriculture,125.5,
+University of Aberdeen,Agriculture,175.5,
+University of Bristol,Agriculture,175.5,
+Cranfield University,Agriculture,225.5,
+Durham University,Agriculture,225.5,
+Queen's University Belfast,Agriculture,225.5,
+Scottish Agricultural College (SAC),Agriculture,225.5,
+University of Lincoln,Agriculture,225.5,
+Aberystwyth University,Agriculture,325.5,
+University of Kent,Agriculture,325.5,
+Nottingham Trent University,Agriculture,438.0,
+University of Greenwich,Agriculture,438.0,
+University of Plymouth,Agriculture,438.0,
+University of Oxford,Anatomy,1.0,94.0
+University of Cambridge,Anatomy,3.0,92.5
+University College London,Anatomy,11.0,88.9
+University of Glasgow,Anatomy,13.0,88.0
+Imperial College London,Anatomy,16.0,87.3
+King's College London,Anatomy,26.0,84.1
+University of Manchester,Anatomy,29.0,83.9
+University of Edinburgh,Anatomy,33.0,83.4
+University of Birmingham,Anatomy,36.0,81.6
+University of Leeds,Anatomy,37.0,81.4
+Loughborough University,Anatomy,75.5,
+Newcastle University,Anatomy,75.5,
+The University of Exeter,Anatomy,75.5,
+The University of Sheffield,Anatomy,75.5,
+University of Bristol,Anatomy,75.5,
+University of Liverpool,Anatomy,75.5,
+University of Nottingham,Anatomy,75.5,
+Cardiff University,Anatomy,135.5,
+Liverpool John Moores University,Anatomy,135.5,
+University of Dundee,Anatomy,135.5,
+University of Oxford,Biological,4.0,92.8
+University of Cambridge,Biological,5.0,92.1
+Imperial College London,Biological,10.0,85.6
+University College London,Biological,16.0,84.1
+University of Edinburgh,Biological,23.0,81.9
+King's College London,Biological,31.0,80.0
+University of Manchester,Biological,49.0,77.1
+University of Glasgow,Biological,66.0,74.4
+University of Bristol,Biological,103.0,71.0
+The University of Sheffield,Biological,118.0,70.0
+University of Liverpool,Biological,118.0,70.0
+Queen Mary University of London,Biological,126.0,69.4
+University of Nottingham,Biological,132.0,69.0
+Newcastle University,Biological,140.0,68.6
+The University of Exeter,Biological,141.0,68.4
+University of Birmingham,Biological,145.0,68.2
+Cardiff University,Biological,150.0,67.8
+University of Leeds,Biological,152.0,67.7
+University of Southampton,Biological,177.0,66.2
+London School of Hygiene & Tropical Medicine,Biological,179.0,65.9
+Queen's University Belfast,Biological,187.0,65.5
+University of Dundee,Biological,187.0,65.5
+University of Warwick,Biological,199.0,65.1
+University of Aberdeen,Biological,225.5,
+University of St Andrews,Biological,225.5,
+University of York,Biological,225.5,
+University of East Anglia (UEA),Biological,275.5,
+University of Leicester,Biological,325.5,
+Swansea University,Biological,375.5,
+University of Bath,Biological,375.5,
+University of Reading,Biological,375.5,
+Durham University,Biological,425.5,
+University of Sussex,Biological,425.5,
+Lancaster University,Biological,475.5,
+University of Strathclyde,Biological,475.5,
+University of Surrey,Biological,475.5,
+Oxford Brookes University,Biological,575.5,
+"Royal Veterinary College, University of London",Biological,575.5,
+University of Kent,Biological,575.5,
+Bangor University,Biological,625.5,
+University of Plymouth,Biological,625.5,
+Aston University,Biological,675.5,
+Heriot-Watt University,Biological,675.5,
+Ulster University,Biological,675.5,
+King's College London,Dentistry,4.0,85.9
+Queen Mary University of London,Dentistry,15.0,77.7
+University of Birmingham,Dentistry,23.0,74.4
+University College London,Dentistry,32.0,71.9
+Cardiff University,Dentistry,34.0,71.8
+University of Dundee,Dentistry,50.0,69.9
+Newcastle University,Dentistry,85.5,
+University of Manchester,Dentistry,85.5,
+The University of Sheffield,Dentistry,85.5,
+University of Leeds,Dentistry,85.5,
+University of Oxford,Medicine,2.0,95.0
+University of Cambridge,Medicine,5.0,90.3
+Imperial College London,Medicine,7.0,89.1
+University College London,Medicine,8.0,89.0
+King's College London,Medicine,15.0,86.3
+University of Edinburgh,Medicine,20.0,83.3
+London School of Hygiene & Tropical Medicine,Medicine,21.0,82.9
+University of Manchester,Medicine,33.0,81.0
+University of Glasgow,Medicine,44.0,79.2
+Queen Mary University of London,Medicine,59.0,76.9
+University of Bristol,Medicine,59.0,76.9
+University of Birmingham,Medicine,67.0,75.9
+University of Liverpool,Medicine,74.0,75.1
+University of Southampton,Medicine,81.0,73.9
+Newcastle University,Medicine,95.0,72.6
+University of Leeds,Medicine,96.0,72.4
+University of Nottingham,Medicine,96.0,72.4
+The University of Sheffield,Medicine,106.0,71.5
+University of Dundee,Medicine,148.0,69.3
+University of York,Medicine,153.0,69.0
+Cardiff University,Medicine,155.0,68.8
+Queen's University Belfast,Medicine,168.0,67.5
+University of Warwick,Medicine,168.0,67.5
+University of Aberdeen,Medicine,194.0,66.4
+University of Leicester,Medicine,195.0,66.3
+The University of Exeter,Medicine,197.0,66.2
+London School of Economics and Political Science,Medicine,225.5,
+Swansea University,Medicine,325.5,
+University of Bath,Medicine,325.5,
+University of East Anglia (UEA),Medicine,325.5,
+University of Surrey,Medicine,325.5,
+"City, University of London",Medicine,375.5,
+Keele University,Medicine,375.5,
+Lancaster University,Medicine,375.5,
+"St. George's, University of London",Medicine,375.5,
+University of St Andrews,Medicine,375.5,
+University of Strathclyde,Medicine,375.5,
+University of Sussex,Medicine,375.5,
+Durham University,Medicine,425.5,
+Loughborough University,Medicine,425.5,
+University of Plymouth,Medicine,425.5,
+Aston University,Medicine,475.5,
+Nottingham Trent University,Medicine,475.5,
+Oxford Brookes University,Medicine,475.5,
+Anglia Ruskin University,Medicine,525.5,
+University of Reading,Medicine,525.5,
+Liverpool John Moores University,Medicine,575.5,
+Bangor University,Medicine,625.5,
+Brunel University London,Medicine,625.5,
+University of Kent,Medicine,625.5,
+University of the West of England,Medicine,625.5,
+Coventry University,Medicine,675.5,
+Manchester Metropolitan University (MMU),Medicine,675.5,
+Northumbria University at Newcastle,Medicine,675.5,
+University of Brighton,Medicine,675.5,
+University of Central Lancashire,Medicine,675.5,
+University of Stirling,Medicine,675.5,
+"Essex, University of",Medicine,775.5,
+University of Bradford,Medicine,775.5,
+University of Hertfordshire,Medicine,775.5,
+University of Huddersfield,Medicine,775.5,
+University of Hull,Medicine,775.5,
+University of Portsmouth,Medicine,775.5,
+King's College London,Nursing,1.0,95.5
+University of Manchester,Nursing,10.0,87.4
+University of Southampton,Nursing,13.0,86.8
+University of Edinburgh,Nursing,46.0,80.2
+Queen's University Belfast,Nursing,75.5,
+University of Birmingham,Nursing,75.5,
+University of Glasgow,Nursing,75.5,
+University of Leeds,Nursing,75.5,
+University of Liverpool,Nursing,75.5,
+University of Nottingham,Nursing,75.5,
+Cardiff University,Nursing,125.5,
+London School of Hygiene & Tropical Medicine,Nursing,125.5,
+The University of Exeter,Nursing,125.5,
+The University of Sheffield,Nursing,125.5,
+Ulster University,Nursing,125.5,
+University of Hull,Nursing,125.5,
+University of Surrey,Nursing,125.5,
+"City, University of London",Nursing,188.0,
+Oxford Brookes University,Nursing,188.0,
+Swansea University,Nursing,188.0,
+University of Dundee,Nursing,188.0,
+University of East Anglia (UEA),Nursing,188.0,
+University of Huddersfield,Nursing,188.0,
+University of Leicester,Nursing,188.0,
+University of Oxford,Pharmacy,2.0,93.5
+University College London,Pharmacy,3.0,92.4
+University of Cambridge,Pharmacy,6.0,90.3
+University of Nottingham,Pharmacy,12.0,86.5
+Imperial College London,Pharmacy,17.0,85.1
+Queen's University Belfast,Pharmacy,19.0,84.8
+University of Manchester,Pharmacy,25.0,82.8
+King's College London,Pharmacy,31.0,81.4
+University of Strathclyde,Pharmacy,36.0,80.9
+University of Edinburgh,Pharmacy,37.0,80.6
+University of Liverpool,Pharmacy,55.0,78.3
+University of Bristol,Pharmacy,69.0,76.6
+University of Glasgow,Pharmacy,87.0,74.6
+University of Birmingham,Pharmacy,90.0,74.4
+Cardiff University,Pharmacy,125.5,
+Newcastle University,Pharmacy,125.5,
+University of Bath,Pharmacy,125.5,
+London School of Hygiene & Tropical Medicine,Pharmacy,175.5,
+University of Dundee,Pharmacy,175.5,
+University of Leeds,Pharmacy,175.5,
+Queen Mary University of London,Pharmacy,225.5,
+University of Aberdeen,Pharmacy,225.5,
+The University of Sheffield,Pharmacy,275.5,
+Ulster University,Pharmacy,275.5,
+University of East Anglia (UEA),Pharmacy,275.5,
+University of Southampton,Pharmacy,275.5,
+University of York,Pharmacy,325.5,
+Liverpool John Moores University,Pharmacy,375.5,
+Swansea University,Pharmacy,375.5,
+University of Bradford,Pharmacy,375.5,
+University of Leicester,Pharmacy,375.5,
+University of Oxford,Psychology,2.0,93.9
+University of Cambridge,Psychology,4.0,93.1
+University College London,Psychology,6.0,89.2
+King's College London,Psychology,18.0,83.0
+London School of Economics and Political Science,Psychology,19.0,82.9
+University of Edinburgh,Psychology,30.0,80.0
+University of Manchester,Psychology,50.0,76.3
+University of Bath,Psychology,74.0,73.4
+University of Bristol,Psychology,74.0,73.4
+University of Warwick,Psychology,80.0,72.6
+Durham University,Psychology,84.0,72.5
+University of Nottingham,Psychology,85.0,72.4
+University of Birmingham,Psychology,88.0,72.3
+University of York,Psychology,97.0,71.8
+Cardiff University,Psychology,125.5,
+Nottingham Trent University,Psychology,125.5,
+The University of Exeter,Psychology,125.5,
+The University of Sheffield,Psychology,125.5,
+University of Glasgow,Psychology,125.5,
+University of Kent,Psychology,125.5,
+University of Leeds,Psychology,125.5,
+University of Liverpool,Psychology,125.5,
+University of St Andrews,Psychology,125.5,
+University of Sussex,Psychology,125.5,
+"City, University of London",Psychology,175.5,
+Lancaster University,Psychology,175.5,
+Loughborough University,Psychology,175.5,
+Newcastle University,Psychology,175.5,
+Queen Mary University of London,Psychology,175.5,
+Queen's University Belfast,Psychology,175.5,
+University of Reading,Psychology,175.5,
+University of Southampton,Psychology,175.5,
+Aston University,Psychology,225.5,
+Royal Holloway University of London,Psychology,225.5,
+Swansea University,Psychology,225.5,
+University of Surrey,Psychology,225.5,
+"Birkbeck, University of London",Psychology,275.5,
+"Essex, University of",Psychology,275.5,
+Oxford Brookes University,Psychology,275.5,
+University of Stirling,Psychology,275.5,
+Bangor University,Psychology,325.5,
+"Goldsmiths, University of London",Psychology,325.5,
+University of Leicester,Psychology,325.5,
+"Royal Veterinary College, University of London",Veterinary Science,1.0,97.8
+University of Edinburgh,Veterinary Science,5.0,90.6
+University of Liverpool,Veterinary Science,11.0,88.3
+University of Cambridge,Veterinary Science,15.0,86.8
+University of Glasgow,Veterinary Science,22.0,85.8
+University of Bristol,Veterinary Science,30.0,83.8
+University of Nottingham,Veterinary Science,47.0,79.1
+London School of Hygiene & Tropical Medicine,Veterinary Science,75.5,
+University of Oxford,Natural Sciences,3.0,95.4
+University of Cambridge,Natural Sciences,4.0,94.1
+Imperial College London,Natural Sciences,9.0,90.0
+University College London,Natural Sciences,29.0,83.0
+University of Edinburgh,Natural Sciences,30.0,82.6
+University of Manchester,Natural Sciences,31.0,82.5
+University of Bristol,Natural Sciences,81.0,77.2
+University of Leeds,Natural Sciences,105.0,75.4
+Durham University,Natural Sciences,111.0,75.2
+King's College London,Natural Sciences,116.0,74.8
+University of Southampton,Natural Sciences,126.0,74.2
+University of Warwick,Natural Sciences,136.0,73.7
+University of Birmingham,Natural Sciences,140.0,73.5
+University of Glasgow,Natural Sciences,150.0,73.0
+University of Liverpool,Natural Sciences,168.0,72.1
+University of Nottingham,Natural Sciences,171.0,72.0
+University of St Andrews,Natural Sciences,176.0,71.5
+The University of Sheffield,Natural Sciences,200.0,70.5
+Queen Mary University of London,Natural Sciences,203.0,70.3
+The University of Exeter,Natural Sciences,209.0,70.0
+University of Bath,Natural Sciences,223.0,69.5
+Newcastle University,Natural Sciences,248.0,68.4
+Cardiff University,Natural Sciences,253.0,68.1
+University of York,Natural Sciences,257.0,67.8
+University of Reading,Natural Sciences,258.0,67.7
+Queen's University Belfast,Natural Sciences,263.0,67.6
+Swansea University,Natural Sciences,268.0,67.5
+Lancaster University,Natural Sciences,269.0,67.4
+University of Strathclyde,Natural Sciences,344.0,64.8
+University of Aberdeen,Natural Sciences,369.0,63.6
+Heriot-Watt University,Natural Sciences,377.0,63.4
+University of East Anglia (UEA),Natural Sciences,377.0,63.4
+University of Surrey,Natural Sciences,393.0,62.9
+Loughborough University,Natural Sciences,425.5,
+University of Leicester,Natural Sciences,425.5,
+University of Sussex,Natural Sciences,475.5,
+University of Cambridge,Chemistry,3.0,94.2
+University of Oxford,Chemistry,5.0,92.7
+Imperial College London,Chemistry,11.0,88.6
+University of Manchester,Chemistry,22.0,82.5
+University College London,Chemistry,24.0,82.3
+University of Edinburgh,Chemistry,64.0,76.3
+University of Glasgow,Chemistry,80.0,74.3
+King's College London,Chemistry,82.0,74.1
+University of Nottingham,Chemistry,92.0,73.2
+University of Bristol,Chemistry,96.0,73.0
+University of Birmingham,Chemistry,104.0,72.7
+University of Liverpool,Chemistry,111.0,72.1
+University of Leeds,Chemistry,125.0,71.2
+University of Warwick,Chemistry,146.0,70.0
+University of Bath,Chemistry,146.0,70.0
+The University of Sheffield,Chemistry,157.0,69.3
+University of St Andrews,Chemistry,159.0,69.2
+University of Southampton,Chemistry,170.0,68.3
+Durham University,Chemistry,175.0,68.0
+Cardiff University,Chemistry,182.0,67.6
+University of Strathclyde,Chemistry,184.0,67.5
+Queen's University Belfast,Chemistry,190.0,67.1
+Newcastle University,Chemistry,225.5,
+University of York,Chemistry,225.5,
+Queen Mary University of London,Chemistry,275.5,
+Loughborough University,Chemistry,325.5,
+Swansea University,Chemistry,325.5,
+University of Surrey,Chemistry,425.5,
+Heriot-Watt University,Chemistry,475.5,
+Lancaster University,Chemistry,475.5,
+University of Aberdeen,Chemistry,475.5,
+University of Reading,Chemistry,475.5,
+University of East Anglia (UEA),Chemistry,525.5,
+Cranfield University,Chemistry,650.5,
+University of Dundee,Chemistry,650.5,
+University of Hull,Chemistry,650.5,
+University of Leicester,Chemistry,650.5,
+University of Sussex,Chemistry,650.5,
+University of Oxford,Earth & Marine Sciences,3.0,92.2
+University of Cambridge,Earth & Marine Sciences,4.0,91.7
+Imperial College London,Earth & Marine Sciences,17.0,85.8
+University of Leeds,Earth & Marine Sciences,20.0,85.3
+University College London,Earth & Marine Sciences,23.0,84.6
+University of Bristol,Earth & Marine Sciences,32.0,83.1
+University of Edinburgh,Earth & Marine Sciences,36.0,82.6
+University of Southampton,Earth & Marine Sciences,40.0,82.1
+The University of Exeter,Earth & Marine Sciences,44.0,81.5
+University of Reading,Earth & Marine Sciences,49.0,80.8
+Durham University,Earth & Marine Sciences,75.5,
+Newcastle University,Earth & Marine Sciences,75.5,
+University of Manchester,Earth & Marine Sciences,75.5,
+University of St Andrews,Earth & Marine Sciences,75.5,
+University of Birmingham,Earth & Marine Sciences,125.5,
+University of East Anglia (UEA),Earth & Marine Sciences,125.5,
+University of Liverpool,Earth & Marine Sciences,125.5,
+University of Plymouth,Earth & Marine Sciences,125.5,
+University of Aberdeen,Earth & Marine Sciences,175.5,
+University of Glasgow,Earth & Marine Sciences,175.5,
+University of Leicester,Earth & Marine Sciences,175.5,
+Cardiff University,Earth & Marine Sciences,238.0,
+Heriot-Watt University,Earth & Marine Sciences,238.0,
+King's College London,Earth & Marine Sciences,238.0,
+Lancaster University,Earth & Marine Sciences,238.0,
+Royal Holloway University of London,Earth & Marine Sciences,238.0,
+The University of Sheffield,Earth & Marine Sciences,238.0,
+University of Nottingham,Earth & Marine Sciences,238.0,
+University of York,Earth & Marine Sciences,238.0,
+University of Oxford,Environmental Sciences,4.0,92.5
+University of Cambridge,Environmental Sciences,9.0,90.9
+Imperial College London,Environmental Sciences,11.0,89.4
+University College London,Environmental Sciences,32.0,83.3
+The University of Exeter,Environmental Sciences,36.0,83.2
+University of Edinburgh,Environmental Sciences,42.0,82.5
+University of Manchester,Environmental Sciences,42.0,82.5
+University of Leeds,Environmental Sciences,59.0,80.8
+Newcastle University,Environmental Sciences,98.0,77.4
+University of Bristol,Environmental Sciences,102.0,77.1
+Lancaster University,Environmental Sciences,105.0,76.9
+London School of Economics and Political Science,Environmental Sciences,108.0,76.7
+University of East Anglia (UEA),Environmental Sciences,108.0,76.7
+University of Reading,Environmental Sciences,108.0,76.7
+The University of Sheffield,Environmental Sciences,122.0,75.8
+University of Southampton,Environmental Sciences,128.0,75.6
+University of Birmingham,Environmental Sciences,132.0,75.4
+King's College London,Environmental Sciences,144.0,74.9
+Cranfield University,Environmental Sciences,175.5,
+Queen's University Belfast,Environmental Sciences,175.5,
+University of Aberdeen,Environmental Sciences,175.5,
+University of Glasgow,Environmental Sciences,175.5,
+University of Nottingham,Environmental Sciences,175.5,
+University of York,Environmental Sciences,175.5,
+Cardiff University,Environmental Sciences,225.5,
+Loughborough University,Environmental Sciences,225.5,
+Swansea University,Environmental Sciences,225.5,
+University of Bath,Environmental Sciences,225.5,
+University of Plymouth,Environmental Sciences,225.5,
+Durham University,Environmental Sciences,275.5,
+University of Liverpool,Environmental Sciences,275.5,
+University of Surrey,Environmental Sciences,275.5,
+Bangor University,Environmental Sciences,325.5,
+Heriot-Watt University,Environmental Sciences,325.5,
+University of St Andrews,Environmental Sciences,325.5,
+University of Sussex,Environmental Sciences,325.5,
+University of Warwick,Environmental Sciences,375.5,
+Brunel University London,Environmental Sciences,425.5,
+Oxford Brookes University,Environmental Sciences,475.5,
+Queen Mary University of London,Environmental Sciences,475.5,
+University of Kent,Environmental Sciences,475.5,
+University of Stirling,Environmental Sciences,475.5,
+University of Dundee,Environmental Sciences,525.5,
+University of Hull,Environmental Sciences,525.5,
+University of Strathclyde,Environmental Sciences,525.5,
+University of Oxford,Geography,1.0,97.2
+London School of Economics and Political Science,Geography,2.0,96.3
+University of Cambridge,Geography,3.0,96.2
+University College London,Geography,4.0,93.1
+Durham University,Geography,11.0,88.1
+King's College London,Geography,14.0,86.1
+University of Manchester,Geography,18.0,85.5
+University of Edinburgh,Geography,21.0,84.5
+University of Leeds,Geography,23.0,83.7
+University of Bristol,Geography,27.0,82.8
+Newcastle University,Geography,36.0,80.8
+The University of Sheffield,Geography,39.0,80.2
+The University of Exeter,Geography,40.0,80.1
+Cardiff University,Geography,75.5,
+Royal Holloway University of London,Geography,75.5,
+SOAS University of London,Geography,75.5,
+University of Birmingham,Geography,75.5,
+University of Glasgow,Geography,75.5,
+University of Liverpool,Geography,75.5,
+University of Nottingham,Geography,75.5,
+University of St Andrews,Geography,75.5,
+University of Sussex,Geography,75.5,
+Lancaster University,Geography,125.5,
+Loughborough University,Geography,125.5,
+Queen Mary University of London,Geography,125.5,
+University of Reading,Geography,125.5,
+University of Southampton,Geography,125.5,
+Oxford Brookes University,Geography,175.5,
+University of East Anglia (UEA),Geography,175.5,
+Aberystwyth University,Geography,225.5,
+Queen's University Belfast,Geography,225.5,
+Swansea University,Geography,225.5,
+University of Aberdeen,Geography,225.5,
+University of York,Geography,225.5,
+University of Oxford,Geology,2.0,92.1
+University of Cambridge,Geology,5.0,90.8
+University of Leeds,Geology,15.0,86.8
+Imperial College London,Geology,21.0,85.6
+University College London,Geology,22.0,85.3
+University of Edinburgh,Geology,33.0,84.5
+The University of Exeter,Geology,39.0,83.4
+University of Bristol,Geology,43.0,82.9
+Durham University,Geology,75.5,
+Newcastle University,Geology,75.5,
+University of Manchester,Geology,75.5,
+University of Southampton,Geology,75.5,
+University of St Andrews,Geology,75.5,
+University of Birmingham,Geology,125.5,
+University of East Anglia (UEA),Geology,125.5,
+Cardiff University,Geology,175.5,
+Lancaster University,Geology,175.5,
+University of Aberdeen,Geology,175.5,
+University of Glasgow,Geology,175.5,
+University of Leicester,Geology,175.5,
+University of Liverpool,Geology,175.5,
+University of Plymouth,Geology,175.5,
+King's College London,Geology,225.5,
+Royal Holloway University of London,Geology,225.5,
+The University of Sheffield,Geology,225.5,
+University of Nottingham,Geology,225.5,
+University of York,Geology,225.5,
+University of Oxford,Geophysics,2.0,92.1
+University of Cambridge,Geophysics,6.0,90.9
+University of Leeds,Geophysics,14.0,87.4
+Imperial College London,Geophysics,20.0,85.6
+University College London,Geophysics,25.0,85.1
+University of Edinburgh,Geophysics,33.0,84.3
+University of Bristol,Geophysics,38.0,83.1
+Durham University,Geophysics,75.5,
+Newcastle University,Geophysics,75.5,
+University of Manchester,Geophysics,75.5,
+University of Southampton,Geophysics,75.5,
+University of St Andrews,Geophysics,75.5,
+University of Birmingham,Geophysics,125.5,
+University of East Anglia (UEA),Geophysics,125.5,
+Cardiff University,Geophysics,175.5,
+Lancaster University,Geophysics,175.5,
+University of Glasgow,Geophysics,175.5,
+University of Leicester,Geophysics,175.5,
+University of Liverpool,Geophysics,175.5,
+King's College London,Geophysics,225.5,
+The University of Sheffield,Geophysics,225.5,
+University of Aberdeen,Geophysics,225.5,
+University of Nottingham,Geophysics,225.5,
+University of Plymouth,Geophysics,225.5,
+University of York,Geophysics,225.5,
+University of Oxford,Mathematics,3.0,93.1
+University of Cambridge,Mathematics,4.0,92.5
+Imperial College London,Mathematics,10.0,86.7
+University of Warwick,Mathematics,31.0,79.1
+University of Edinburgh,Mathematics,32.0,79.0
+University College London,Mathematics,38.0,77.9
+University of Manchester,Mathematics,49.0,76.7
+King's College London,Mathematics,59.0,75.1
+London School of Economics and Political Science,Mathematics,75.0,72.5
+Queen Mary University of London,Mathematics,87.0,71.6
+University of Bristol,Mathematics,93.0,70.9
+University of Leeds,Mathematics,124.0,69.0
+The University of Exeter,Mathematics,175.5,
+University of Bath,Mathematics,175.5,
+University of Birmingham,Mathematics,175.5,
+University of Glasgow,Mathematics,175.5,
+University of Nottingham,Mathematics,175.5,
+Durham University,Mathematics,225.5,
+Heriot-Watt University,Mathematics,225.5,
+Loughborough University,Mathematics,225.5,
+Swansea University,Mathematics,225.5,
+The University of Sheffield,Mathematics,225.5,
+University of Southampton,Mathematics,225.5,
+Lancaster University,Mathematics,275.5,
+Oxford Brookes University,Mathematics,275.5,
+University of Liverpool,Mathematics,275.5,
+University of St Andrews,Mathematics,275.5,
+University of Strathclyde,Mathematics,275.5,
+University of York,Mathematics,275.5,
+Cardiff University,Mathematics,325.5,
+Newcastle University,Mathematics,325.5,
+University of Surrey,Mathematics,375.5,
+University of Aberdeen,Mathematics,425.5,
+University of Reading,Mathematics,425.5,
+Queen's University Belfast,Mathematics,475.5,
+University of Leicester,Mathematics,475.5,
+"City, University of London",Mathematics,550.5,
+"Essex, University of",Mathematics,550.5,
+University of Kent,Mathematics,550.5,
+University of Cambridge,Materials Science,4.0,90.7
+University of Oxford,Materials Science,8.0,88.7
+Imperial College London,Materials Science,11.0,87.3
+University of Manchester,Materials Science,21.0,83.1
+University College London,Materials Science,53.0,78.3
+The University of Sheffield,Materials Science,61.0,77.3
+University of Birmingham,Materials Science,66.0,76.9
+University of Nottingham,Materials Science,104.0,74.0
+University of Glasgow,Materials Science,130.0,71.9
+University of Leeds,Materials Science,136.0,71.5
+University of Bristol,Materials Science,138.0,71.4
+Swansea University,Materials Science,141.0,71.2
+University of Edinburgh,Materials Science,141.0,71.2
+Cranfield University,Materials Science,175.5,
+King's College London,Materials Science,175.5,
+Loughborough University,Materials Science,175.5,
+Queen Mary University of London,Materials Science,175.5,
+University of Warwick,Materials Science,175.5,
+University of Liverpool,Materials Science,175.5,
+University of Southampton,Materials Science,175.5,
+University of St Andrews,Materials Science,225.5,
+University of Strathclyde,Materials Science,225.5,
+University of Surrey,Materials Science,225.5,
+Durham University,Materials Science,275.5,
+Newcastle University,Materials Science,275.5,
+Heriot-Watt University,Materials Science,375.5,
+The University of Exeter,Materials Science,375.5,
+Brunel University London,Materials Science,475.5,
+University of Oxford,Physics,3.0,95.7
+University of Cambridge,Physics,5.0,94.5
+Imperial College London,Physics,11.0,88.5
+University College London,Physics,27.0,83.2
+University of Manchester,Physics,49.0,79.5
+University of Edinburgh,Physics,52.0,79.1
+University of Southampton,Physics,75.0,76.2
+King's College London,Physics,78.0,76.0
+Durham University,Physics,88.0,74.9
+The University of Sheffield,Physics,119.0,73.0
+University of Glasgow,Physics,120.0,72.7
+University of Nottingham,Physics,125.0,72.3
+University of Birmingham,Physics,136.0,71.7
+Queen Mary University of London,Physics,140.0,71.4
+University of Bristol,Physics,148.0,71.1
+University of Warwick,Physics,175.5,
+University of Leeds,Physics,175.5,
+University of Liverpool,Physics,175.5,
+University of St Andrews,Physics,175.5,
+Cardiff University,Physics,225.5,
+Queen's University Belfast,Physics,225.5,
+Swansea University,Physics,225.5,
+University of Surrey,Physics,225.5,
+University of Sussex,Physics,225.5,
+University of York,Physics,225.5,
+Lancaster University,Physics,275.5,
+The University of Exeter,Physics,275.5,
+University of Strathclyde,Physics,275.5,
+Heriot-Watt University,Physics,325.5,
+Newcastle University,Physics,325.5,
+University of Bath,Physics,325.5,
+Loughborough University,Physics,375.5,
+University of Leicester,Physics,425.5,
+University of Portsmouth,Physics,425.5,
+Liverpool John Moores University,Physics,525.5,
+Aston University,Physics,575.5,
+Royal Holloway University of London,Physics,575.5,
+University of Aberdeen,Physics,575.5,
+Northumbria University at Newcastle,Physics,638.0,
+University of Hertfordshire,Physics,638.0,
+University of Reading,Physics,638.0,
+University of Oxford,Social Sciences & Management,2.0,95.4
+University of Cambridge,Social Sciences & Management,5.0,93.5
+London School of Economics and Political Science,Social Sciences & Management,6.0,91.4
+University College London,Social Sciences & Management,19.0,84.7
+London Business School,Social Sciences & Management,23.0,82.8
+University of Manchester,Social Sciences & Management,36.0,81.2
+University of Warwick,Social Sciences & Management,42.0,79.8
+Imperial College London,Social Sciences & Management,43.0,79.7
+King's College London,Social Sciences & Management,46.0,79.5
+University of Edinburgh,Social Sciences & Management,47.0,79.4
+University of Leeds,Social Sciences & Management,82.0,74.9
+University of Glasgow,Social Sciences & Management,95.0,74.1
+Oxford Brookes University,Social Sciences & Management,99.0,73.7
+Durham University,Social Sciences & Management,107.0,73.4
+University of Birmingham,Social Sciences & Management,115.0,73.2
+Queen Mary University of London,Social Sciences & Management,127.0,72.6
+University of Bristol,Social Sciences & Management,128.0,72.5
+Lancaster University,Social Sciences & Management,132.0,72.4
+University of Nottingham,Social Sciences & Management,132.0,72.4
+The University of Sheffield,Social Sciences & Management,150.0,71.4
+University of Bath,Social Sciences & Management,159.0,71.0
+Cardiff University,Social Sciences & Management,172.0,70.6
+The University of Exeter,Social Sciences & Management,183.0,69.9
+University of Reading,Social Sciences & Management,189.0,69.6
+Newcastle University,Social Sciences & Management,203.0,69.1
+"City, University of London",Social Sciences & Management,207.0,69.0
+Loughborough University,Social Sciences & Management,221.0,68.5
+Swansea University,Social Sciences & Management,234.0,68.1
+University of Liverpool,Social Sciences & Management,234.0,68.1
+University of Southampton,Social Sciences & Management,234.0,68.1
+University of Sussex,Social Sciences & Management,234.0,68.1
+Aston University,Social Sciences & Management,243.0,67.8
+University of Surrey,Social Sciences & Management,253.0,67.4
+University of York,Social Sciences & Management,270.0,66.9
+University of Strathclyde,Social Sciences & Management,284.0,66.4
+"Essex, University of",Social Sciences & Management,302.0,65.9
+Queen's University Belfast,Social Sciences & Management,312.0,65.6
+University of Kent,Social Sciences & Management,312.0,65.6
+University of St Andrews,Social Sciences & Management,326.0,65.3
+Cranfield University,Social Sciences & Management,372.0,64.1
+SOAS University of London,Social Sciences & Management,389.0,63.6
+Heriot-Watt University,Social Sciences & Management,425.5,
+Manchester Metropolitan University (MMU),Social Sciences & Management,425.5,
+University of Aberdeen,Social Sciences & Management,425.5,
+Coventry University,Social Sciences & Management,475.5,
+"Kingston University, London",Social Sciences & Management,475.5,
+Brunel University London,Social Sciences & Management,525.5,
+Nottingham Trent University,Social Sciences & Management,525.5,
+University of Derby,Social Sciences & Management,525.5,
+University of Leicester,Social Sciences & Management,525.5,
+University of the West of England,Social Sciences & Management,525.5,
+University of Oxford,Accounting,4.0,91.0
+University of Cambridge,Accounting,6.0,88.4
+London School of Economics and Political Science,Accounting,8.0,87.1
+London Business School,Accounting,18.0,83.0
+Imperial College London,Accounting,21.0,81.4
+University of Manchester,Accounting,23.0,80.8
+University of Warwick,Accounting,44.0,76.6
+University College London,Accounting,46.0,75.9
+University of Edinburgh,Accounting,49.0,75.5
+University of Glasgow,Accounting,72.0,71.9
+Durham University,Accounting,76.0,71.5
+University of Birmingham,Accounting,79.0,71.1
+King's College London,Accounting,80.0,70.7
+Lancaster University,Accounting,90.0,69.7
+University of Southampton,Accounting,97.0,69.2
+"City, University of London",Accounting,125.5,
+Oxford Brookes University,Accounting,125.5,
+University of Bath,Accounting,125.5,
+University of Bristol,Accounting,125.5,
+University of Leeds,Accounting,125.5,
+University of Nottingham,Accounting,125.5,
+University of Reading,Accounting,125.5,
+Cardiff University,Accounting,175.5,
+"Essex, University of",Accounting,175.5,
+Queen Mary University of London,Accounting,175.5,
+The University of Sheffield,Accounting,175.5,
+University of Liverpool,Accounting,175.5,
+University of St Andrews,Accounting,175.5,
+Newcastle University,Accounting,225.5,
+Queen's University Belfast,Accounting,225.5,
+The University of Exeter,Accounting,225.5,
+Aston University,Accounting,275.5,
+Heriot-Watt University,Accounting,275.5,
+University of Aberdeen,Accounting,275.5,
+University of Strathclyde,Accounting,275.5,
+University of Sussex,Accounting,275.5,
+Brunel University London,Accounting,338.0,
+Loughborough University,Accounting,338.0,
+Royal Holloway University of London,Accounting,338.0,
+Swansea University,Accounting,338.0,
+University of Dundee,Accounting,338.0,
+University of Huddersfield,Accounting,338.0,
+University of Kent,Accounting,338.0,
+University of Portsmouth,Accounting,338.0,
+University of Surrey,Accounting,338.0,
+University of York,Accounting,338.0,
+University of Oxford,Anthropology,2.0,97.8
+University of Cambridge,Anthropology,3.0,97.3
+University College London,Anthropology,4.0,94.7
+London School of Economics and Political Science,Anthropology,11.0,90.6
+University of Edinburgh,Anthropology,17.0,88.6
+SOAS University of London,Anthropology,18.0,87.8
+University of Manchester,Anthropology,21.0,87.0
+Durham University,Anthropology,29.0,85.3
+"Goldsmiths, University of London",Anthropology,75.5,
+University of Aberdeen,Anthropology,75.5,
+University of St Andrews,Anthropology,75.5,
+University of Sussex,Anthropology,75.5,
+The University of Exeter,Anthropology,135.5,
+The University of Sheffield,Anthropology,135.5,
+University of Bristol,Anthropology,135.5,
+University of Liverpool,Anthropology,135.5,
+University of Cambridge,Business,5.0,90.5
+University of Oxford,Business,5.0,90.5
+London Business School,Business,7.0,90.2
+London School of Economics and Political Science,Business,12.0,86.5
+University of Warwick,Business,35.0,79.3
+Imperial College London,Business,37.0,79.2
+University of Manchester,Business,45.0,78.3
+Oxford Brookes University,Business,82.0,73.3
+King's College London,Business,83.0,73.2
+Swansea University,Business,83.0,73.2
+Aston University,Business,87.0,73.0
+University College London,Business,90.0,72.9
+Lancaster University,Business,99.0,72.6
+University of Bath,Business,102.0,72.5
+University of Leeds,Business,102.0,72.5
+"City, University of London",Business,120.0,70.7
+Durham University,Business,121.0,70.6
+University of Edinburgh,Business,121.0,70.6
+University of Nottingham,Business,131.0,69.4
+University of Reading,Business,131.0,69.4
+University of Glasgow,Business,134.0,69.3
+University of Birmingham,Business,143.0,68.4
+Cranfield University,Business,149.0,67.9
+Cardiff University,Business,175.5,
+Loughborough University,Business,175.5,
+University of Liverpool,Business,175.5,
+University of Strathclyde,Business,175.5,
+University of Surrey,Business,175.5,
+Heriot-Watt University,Business,225.5,
+Newcastle University,Business,225.5,
+The University of Exeter,Business,225.5,
+The University of Sheffield,Business,225.5,
+University of Bristol,Business,225.5,
+University of Sussex,Business,225.5,
+University of Southampton,Business,275.5,
+Manchester Metropolitan University (MMU),Business,325.5,
+Nottingham Trent University,Business,325.5,
+Queen Mary University of London,Business,325.5,
+"Kingston University, London",Business,375.5,
+University of Kent,Business,375.5,
+University of St Andrews,Business,375.5,
+Brunel University London,Business,425.5,
+Coventry University,Business,425.5,
+Royal Holloway University of London,Business,425.5,
+University of Bradford,Business,425.5,
+University of the West of England,Business,425.5,
+University of York,Business,425.5,
+Bournemouth University,Business,475.5,
+"Essex, University of",Business,475.5,
+Queen's University Belfast,Business,475.5,
+University of Derby,Business,475.5,
+Northumbria University at Newcastle,Business,525.5,
+University of Aberdeen,Business,525.5,
+University of Huddersfield,Business,525.5,
+University of Hull,Business,525.5,
+University of Leicester,Business,525.5,
+Middlesex University,Business,575.5,
+University of Stirling,Business,575.5,
+University of Dundee,Business,625.5,
+University of East Anglia (UEA),Business,625.5,
+University of Portsmouth,Business,625.5,
+London School of Economics and Political Science,Communication,6.0,89.5
+University of Cambridge,Communication,10.0,86.7
+King's College London,Communication,18.0,84.8
+"Goldsmiths, University of London",Communication,22.0,84.2
+University of Leeds,Communication,33.0,82.3
+University College London,Communication,37.0,82.1
+University of Edinburgh,Communication,40.0,81.6
+Cardiff University,Communication,50.0,80.0
+"City, University of London",Communication,75.5,
+Loughborough University,Communication,75.5,
+University of Manchester,Communication,75.5,
+The University of Sheffield,Communication,75.5,
+University of Warwick,Communication,75.5,
+University of Birmingham,Communication,75.5,
+University of Glasgow,Communication,75.5,
+University of Westminster,Communication,75.5,
+Lancaster University,Communication,125.5,
+Newcastle University,Communication,125.5,
+SOAS University of London,Communication,125.5,
+University of Bristol,Communication,125.5,
+University of Leicester,Communication,125.5,
+University of Liverpool,Communication,125.5,
+University of Nottingham,Communication,125.5,
+University of the Arts London,Communication,125.5,
+"Birkbeck, University of London",Communication,175.5,
+Bournemouth University,Communication,175.5,
+Queen Mary University of London,Communication,175.5,
+Swansea University,Communication,175.5,
+The University of Exeter,Communication,175.5,
+University of East Anglia (UEA),Communication,175.5,
+University of Sussex,Communication,175.5,
+University of York,Communication,175.5,
+Nottingham Trent University,Communication,225.5,
+University of Huddersfield,Communication,225.5,
+University of Stirling,Communication,225.5,
+University of Southampton,Communication,263.0,
+University of Sussex,Development Studies,1.0,95.9
+University of Oxford,Development Studies,2.0,92.8
+London School of Economics and Political Science,Development Studies,3.0,92.0
+SOAS University of London,Development Studies,5.0,90.6
+University of Cambridge,Development Studies,6.0,90.1
+University of Manchester,Development Studies,11.0,85.4
+University College London,Development Studies,12.0,83.2
+University of East Anglia (UEA),Development Studies,16.0,80.6
+University of Leeds,Development Studies,22.0,79.1
+King's College London,Development Studies,31.0,77.3
+The University of Sheffield,Development Studies,36.0,75.8
+Newcastle University,Development Studies,75.5,
+Queen Mary University of London,Development Studies,75.5,
+University of Edinburgh,Development Studies,75.5,
+University of Warwick,Development Studies,75.5,
+University of Bath,Development Studies,75.5,
+University of Birmingham,Development Studies,75.5,
+University of Glasgow,Development Studies,75.5,
+University of Reading,Development Studies,75.5,
+Durham University,Development Studies,125.5,
+Imperial College London,Development Studies,125.5,
+The Open University,Development Studies,125.5,
+University of Bristol,Development Studies,125.5,
+University of Nottingham,Development Studies,125.5,
+London School of Economics and Political Science,Economics & Econometrics,8.0,91.7
+University of Oxford,Economics & Econometrics,9.0,91.6
+University of Cambridge,Economics & Econometrics,10.0,89.9
+University College London,Economics & Econometrics,18.0,84.6
+London Business School,Economics & Econometrics,32.0,80.8
+Imperial College London,Economics & Econometrics,35.0,80.6
+University of Warwick,Economics & Econometrics,36.0,80.5
+University of Manchester,Economics & Econometrics,62.0,76.1
+University of Edinburgh,Economics & Econometrics,83.0,74.2
+University of Nottingham,Economics & Econometrics,96.0,73.3
+Queen Mary University of London,Economics & Econometrics,100.0,73.1
+King's College London,Economics & Econometrics,114.0,71.7
+University of Birmingham,Economics & Econometrics,118.0,71.5
+University of Glasgow,Economics & Econometrics,122.0,71.3
+Durham University,Economics & Econometrics,130.0,70.9
+University of Reading,Economics & Econometrics,137.0,70.6
+University of Southampton,Economics & Econometrics,146.0,69.9
+University of Bristol,Economics & Econometrics,164.0,69.2
+University of Leeds,Economics & Econometrics,168.0,69.1
+University of York,Economics & Econometrics,171.0,68.8
+University of Sussex,Economics & Econometrics,174.0,68.6
+"Essex, University of",Economics & Econometrics,189.0,67.8
+"City, University of London",Economics & Econometrics,225.5,
+Lancaster University,Economics & Econometrics,225.5,
+Newcastle University,Economics & Econometrics,225.5,
+The University of Exeter,Economics & Econometrics,225.5,
+The University of Sheffield,Economics & Econometrics,225.5,
+University of Bath,Economics & Econometrics,225.5,
+Cardiff University,Economics & Econometrics,275.5,
+SOAS University of London,Economics & Econometrics,275.5,
+University of Liverpool,Economics & Econometrics,275.5,
+University of St Andrews,Economics & Econometrics,275.5,
+University of Surrey,Economics & Econometrics,275.5,
+Aston University,Economics & Econometrics,325.5,
+Loughborough University,Economics & Econometrics,325.5,
+Oxford Brookes University,Economics & Econometrics,325.5,
+Queen's University Belfast,Economics & Econometrics,325.5,
+University of Aberdeen,Economics & Econometrics,325.5,
+University of East Anglia (UEA),Economics & Econometrics,325.5,
+Heriot-Watt University,Economics & Econometrics,375.5,
+Swansea University,Economics & Econometrics,375.5,
+University of Leicester,Economics & Econometrics,375.5,
+University of Strathclyde,Economics & Econometrics,375.5,
+Cranfield University,Economics & Econometrics,425.5,
+University of Kent,Economics & Econometrics,425.5,
+Brunel University London,Economics & Econometrics,475.5,
+Royal Holloway University of London,Economics & Econometrics,475.5,
+University of Stirling,Economics & Econometrics,475.5,
+University of the West of England,Economics & Econometrics,525.5,
+Bangor University,Economics & Econometrics,625.5,
+"Birkbeck, University of London",Economics & Econometrics,625.5,
+Coventry University,Economics & Econometrics,625.5,
+De Montfort University,Economics & Econometrics,625.5,
+"Kingston University, London",Economics & Econometrics,625.5,
+London School of Hygiene & Tropical Medicine,Economics & Econometrics,625.5,
+Manchester Metropolitan University (MMU),Economics & Econometrics,625.5,
+Middlesex University,Economics & Econometrics,625.5,
+Northumbria University at Newcastle,Economics & Econometrics,625.5,
+Nottingham Trent University,Economics & Econometrics,625.5,
+University of Dundee,Economics & Econometrics,625.5,
+University of Greenwich,Economics & Econometrics,625.5,
+University of Huddersfield,Economics & Econometrics,625.5,
+University of Portsmouth,Economics & Econometrics,625.5,
+UCL Institute of Education | University College London,Education,1.0,96.8
+University of Cambridge,Education,5.0,93.7
+University of Oxford,Education,6.0,93.5
+University of Edinburgh,Education,17.0,85.6
+King's College London,Education,22.0,83.8
+University of Manchester,Education,45.0,78.9
+University of Bristol,Education,46.0,78.8
+University of Nottingham,Education,54.0,78.1
+University of Glasgow,Education,65.0,76.7
+University of Birmingham,Education,70.0,76.3
+University of York,Education,72.0,76.2
+Durham University,Education,79.0,75.6
+University of Leeds,Education,89.0,74.7
+Lancaster University,Education,125.5,
+Newcastle University,Education,125.5,
+Oxford Brookes University,Education,125.5,
+The Open University,Education,125.5,
+The University of Sheffield,Education,125.5,
+Manchester Metropolitan University (MMU),Education,175.5,
+The University of Exeter,Education,175.5,
+University of Warwick,Education,175.5,
+University of Bath,Education,175.5,
+University of Reading,Education,175.5,
+University of Southampton,Education,175.5,
+Loughborough University,Education,225.5,
+Queen's University Belfast,Education,225.5,
+University of Derby,Education,225.5,
+Cardiff University,Education,275.5,
+Coventry University,Education,275.5,
+"Kingston University, London",Education,275.5,
+Swansea University,Education,275.5,
+University of Aberdeen,Education,275.5,
+University of Huddersfield,Education,275.5,
+University of Leicester,Education,275.5,
+University of Dundee,Education,325.5,
+University of Sussex,Education,325.5,
+Middlesex University,Education,375.5,
+University of Hull,Education,375.5,
+University of Kent,Education,375.5,
+"Birkbeck, University of London",Education,425.5,
+"Goldsmiths, University of London",Education,425.5,
+Nottingham Trent University,Education,425.5,
+Sheffield Hallam University,Education,425.5,
+University of Plymouth,Education,425.5,
+University of Strathclyde,Education,425.5,
+University of Surrey,Hospitality,16.0,66.9
+Oxford Brookes University,Hospitality,21.0,62.4
+Bournemouth University,Hospitality,23.0,61.3
+University of Derby,Hospitality,38.0,56.7
+University of Strathclyde,Hospitality,50.0,51.6
+Leeds Beckett University,Hospitality,75.5,
+Manchester Metropolitan University (MMU),Hospitality,75.5,
+Middlesex University,Hospitality,75.5,
+Sheffield Hallam University,Hospitality,75.5,
+The University of Exeter,Hospitality,75.5,
+University of Birmingham,Hospitality,75.5,
+University of Leeds,Hospitality,75.5,
+Heriot-Watt University,Hospitality,125.5,
+Imperial College London,Hospitality,125.5,
+University of Manchester,Hospitality,125.5,
+Ulster University,Hospitality,125.5,
+University of Bristol,Hospitality,125.5,
+Edinburgh Napier University,Hospitality,163.0,
+Loughborough University,Hospitality,163.0,
+University of Greenwich,Hospitality,163.0,
+University of the West of England,Hospitality,163.0,
+University of Oxford,Law,2.0,97.4
+University of Cambridge,Law,3.0,96.7
+London School of Economics and Political Science,Law,6.0,90.1
+University College London,Law,14.0,84.3
+King's College London,Law,19.0,82.9
+University of Edinburgh,Law,21.0,82.3
+Queen Mary University of London,Law,39.0,78.2
+Durham University,Law,57.0,74.7
+University of Manchester,Law,62.0,74.2
+University of Glasgow,Law,64.0,74.1
+University of Bristol,Law,65.0,74.0
+University of Nottingham,Law,95.0,70.5
+Queen's University Belfast,Law,125.5,
+SOAS University of London,Law,125.5,
+Swansea University,Law,125.5,
+University of Warwick,Law,125.5,
+University of Birmingham,Law,125.5,
+University of Leeds,Law,125.5,
+Cardiff University,Law,175.5,
+"City, University of London",Law,175.5,
+Newcastle University,Law,175.5,
+The University of Sheffield,Law,175.5,
+University of Aberdeen,Law,175.5,
+University of Southampton,Law,175.5,
+Oxford Brookes University,Law,225.5,
+The University of Exeter,Law,225.5,
+University of Liverpool,Law,225.5,
+University of Reading,Law,225.5,
+University of St Andrews,Law,225.5,
+"Essex, University of",Law,275.5,
+University of Kent,Law,275.5,
+University of Strathclyde,Law,275.5,
+University of Surrey,Law,275.5,
+University of York,Law,275.5,
+Lancaster University,Law,325.5,
+University of Dundee,Law,325.5,
+"Kingston University, London",Law,375.5,
+University of Sussex,Law,375.5,
+The University of Sheffield,Library,1.0,96.8
+University College London,Library,12.0,78.7
+Loughborough University,Library,18.0,75.4
+University of Manchester,Library,20.0,75.1
+University of Strathclyde,Library,26.0,71.3
+University of Glasgow,Library,36.0,67.7
+"City, University of London",Library,39.0,66.5
+University of Reading,Library,75.5,
+University of Cambridge,Marketing,1.0,90.1
+London Business School,Marketing,8.0,87.4
+London School of Economics and Political Science,Marketing,18.0,81.7
+University of Manchester,Marketing,27.0,80.3
+University of Warwick,Marketing,31.0,79.4
+University of Leeds,Marketing,35.0,78.3
+Imperial College London,Marketing,45.0,76.2
+Lancaster University,Marketing,48.0,75.9
+Swansea University,Marketing,49.0,75.8
+Aston University,Marketing,75.5,
+Cardiff University,Marketing,75.5,
+"City, University of London",Marketing,75.5,
+Durham University,Marketing,75.5,
+King's College London,Marketing,75.5,
+Loughborough University,Marketing,75.5,
+Oxford Brookes University,Marketing,75.5,
+University of Bath,Marketing,75.5,
+University of Birmingham,Marketing,75.5,
+University of Glasgow,Marketing,75.5,
+University of Liverpool,Marketing,75.5,
+University of Nottingham,Marketing,75.5,
+University of Strathclyde,Marketing,75.5,
+University of Surrey,Marketing,75.5,
+University of Oxford,Politics,2.0,92.8
+London School of Economics and Political Science,Politics,5.0,89.7
+University of Cambridge,Politics,7.0,89.4
+King's College London,Politics,12.0,83.5
+University College London,Politics,22.0,79.4
+SOAS University of London,Politics,28.0,78.4
+University of Edinburgh,Politics,31.0,78.1
+University of Manchester,Politics,45.0,75.1
+University of St Andrews,Politics,55.0,74.0
+Queen Mary University of London,Politics,57.0,73.3
+University of Warwick,Politics,64.0,72.6
+Durham University,Politics,72.0,70.8
+University of Bristol,Politics,75.0,70.5
+The University of Exeter,Politics,80.0,70.0
+University of Leeds,Politics,83.0,69.7
+The University of Sheffield,Politics,89.0,69.2
+University of Sussex,Politics,90.0,69.0
+University of Glasgow,Politics,95.0,68.6
+"Essex, University of",Politics,125.5,
+University of Birmingham,Politics,125.5,
+University of Nottingham,Politics,125.5,
+Cardiff University,Politics,175.5,
+Newcastle University,Politics,175.5,
+Queen's University Belfast,Politics,175.5,
+University of Bath,Politics,175.5,
+Aberystwyth University,Politics,225.5,
+Lancaster University,Politics,225.5,
+Oxford Brookes University,Politics,225.5,
+Swansea University,Politics,225.5,
+University of Kent,Politics,225.5,
+University of York,Politics,225.5,
+Loughborough University,Politics,275.5,
+Royal Holloway University of London,Politics,275.5,
+University of Liverpool,Politics,275.5,
+University of Reading,Politics,275.5,
+University of Southampton,Politics,275.5,
+University of Strathclyde,Politics,275.5,
+"City, University of London",Politics,350.5,
+"Kingston University, London",Politics,350.5,
+University of East Anglia (UEA),Politics,350.5,
+University of Leicester,Politics,350.5,
+University of Surrey,Politics,350.5,
+University of Oxford,Social Policy,2.0,96.0
+University of Cambridge,Social Policy,5.0,93.0
+London School of Economics and Political Science,Social Policy,7.0,92.7
+University of Edinburgh,Social Policy,13.0,88.2
+University College London,Social Policy,30.0,83.6
+King's College London,Social Policy,32.0,83.2
+University of Bristol,Social Policy,33.0,82.9
+University of York,Social Policy,41.0,79.5
+University of Manchester,Social Policy,48.0,78.5
+Queen's University Belfast,Social Policy,75.5,
+University of Bath,Social Policy,75.5,
+University of Birmingham,Social Policy,75.5,
+University of Glasgow,Social Policy,75.5,
+University of Leeds,Social Policy,75.5,
+Cardiff University,Social Policy,125.5,
+Durham University,Social Policy,125.5,
+"Essex, University of",Social Policy,125.5,
+Imperial College London,Social Policy,125.5,
+London School of Hygiene & Tropical Medicine,Social Policy,125.5,
+SOAS University of London,Social Policy,125.5,
+The University of Sheffield,Social Policy,125.5,
+University of Warwick,Social Policy,125.5,
+University of Kent,Social Policy,125.5,
+University of Southampton,Social Policy,125.5,
+University of Sussex,Social Policy,125.5,
+University of Oxford,Sociology,2.0,96.7
+London School of Economics and Political Science,Sociology,5.0,93.8
+University of Cambridge,Sociology,6.0,93.4
+University of Manchester,Sociology,20.0,85.4
+University College London,Sociology,22.0,84.9
+University of Edinburgh,Sociology,30.0,82.6
+University of Sussex,Sociology,39.0,81.1
+University of Bristol,Sociology,42.0,80.9
+King's College London,Sociology,49.0,79.2
+University of Warwick,Sociology,66.0,75.8
+Lancaster University,Sociology,67.0,75.7
+"Essex, University of",Sociology,72.0,75.2
+SOAS University of London,Sociology,72.0,75.2
+University of Birmingham,Sociology,76.0,74.9
+University of Leeds,Sociology,81.0,74.3
+Cardiff University,Sociology,86.0,73.7
+University of York,Sociology,88.0,73.6
+Durham University,Sociology,89.0,73.5
+The University of Sheffield,Sociology,93.0,73.4
+"Goldsmiths, University of London",Sociology,125.5,
+University of Bath,Sociology,125.5,
+University of Glasgow,Sociology,125.5,
+Loughborough University,Sociology,175.5,
+Newcastle University,Sociology,175.5,
+Queen's University Belfast,Sociology,175.5,
+The University of Exeter,Sociology,175.5,
+University of Kent,Sociology,175.5,
+University of Nottingham,Sociology,175.5,
+University of Southampton,Sociology,175.5,
+University of St Andrews,Sociology,175.5,
+London School of Hygiene & Tropical Medicine,Sociology,225.5,
+University of Leicester,Sociology,225.5,
+University of Surrey,Sociology,225.5,
+"City, University of London",Sociology,275.5,
+Manchester Metropolitan University (MMU),Sociology,275.5,
+Oxford Brookes University,Sociology,275.5,
+The Open University,Sociology,275.5,
+University of East Anglia (UEA),Sociology,275.5,
+University of Liverpool,Sociology,275.5,
+University of Stirling,Sociology,275.5,
+"Birkbeck, University of London",Sociology,338.0,
+Royal Holloway University of London,Sociology,338.0,
+University of Aberdeen,Sociology,338.0,
+University of Strathclyde,Sociology,338.0,
+Loughborough University,Sports-related Subjects,1.0,94.7
+University of Birmingham,Sports-related Subjects,8.0,86.3
+University of Bath,Sports-related Subjects,12.0,83.2
+Liverpool John Moores University,Sports-related Subjects,16.0,83.0
+University of Edinburgh,Sports-related Subjects,18.0,82.5
+The University of Exeter,Sports-related Subjects,37.0,79.7
+University College London,Sports-related Subjects,40.0,79.0
+University of Manchester,Sports-related Subjects,42.0,78.6
+King's College London,Sports-related Subjects,50.0,77.7
+Durham University,Sports-related Subjects,75.5,
+Leeds Beckett University,Sports-related Subjects,75.5,
+Manchester Metropolitan University (MMU),Sports-related Subjects,75.5,
+Swansea University,Sports-related Subjects,75.5,
+University of Bristol,Sports-related Subjects,75.5,
+University of Glasgow,Sports-related Subjects,75.5,
+University of Leeds,Sports-related Subjects,75.5,
+University of Nottingham,Sports-related Subjects,75.5,
+Nottingham Trent University,Sports-related Subjects,125.5,
+Oxford Brookes University,Sports-related Subjects,125.5,
+Ulster University,Sports-related Subjects,125.5,
+University of Leicester,Sports-related Subjects,125.5,
+University of Stirling,Sports-related Subjects,125.5,
+University of Cambridge,Statistics,4.0,94.7
+University of Oxford,Statistics,7.0,93.2
+Imperial College London,Statistics,11.0,90.6
+University of Warwick,Statistics,33.0,82.1
+University College London,Statistics,41.0,81.6
+Lancaster University,Statistics,75.5,
+London School of Economics and Political Science,Statistics,75.5,
+University of Edinburgh,Statistics,75.5,
+University of Manchester,Statistics,75.5,
+University of Bristol,Statistics,75.5,
+University of Leeds,Statistics,75.5,
+University of Nottingham,Statistics,75.5,
+University of Southampton,Statistics,75.5,
+The University of Sheffield,Statistics,125.5,
+University of Liverpool,Statistics,125.5,
+Cardiff University,Statistics,175.5,
+King's College London,Statistics,175.5,
+London School of Hygiene & Tropical Medicine,Statistics,175.5,
+Loughborough University,Statistics,175.5,
+Newcastle University,Statistics,175.5,
+University of Bath,Statistics,175.5,
+Cranfield University,Statistics,225.5,
+Durham University,Statistics,225.5,
+Queen Mary University of London,Statistics,225.5,
+University of Glasgow,Statistics,225.5,
+University of Kent,Statistics,225.5,
+University of Strathclyde,Statistics,225.5,
+University of York,Statistics,225.5,
+The University of Exeter,Statistics,263.0,
+University of Birmingham,Statistics,263.0,

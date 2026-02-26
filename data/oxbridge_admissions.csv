@@ -1,0 +1,79 @@
+﻿university,course,course_clean,total_applicants,uk_applicants,intl_applicants,total_offers,uk_offers,intl_offers,total_offer_pct,uk_offer_pct,intl_offer_pct
+University of Cambridge,"Anglo-Saxon, Norse, and Celtic","Anglo-Saxon, Norse, And Celtic",65.0,59.0,6,42.0,40.0,2,64.6,67.8,33.3
+University of Cambridge,Archaeology,Archaeology,79.0,59.0,20,41.0,35.0,6,51.9,59.3,30.0
+University of Cambridge,Architecture,Architecture,526.0,372.0,154,88.0,75.0,13,16.7,20.2,8.4
+University of Cambridge,Asian and Middle Eastern Studies,Asian And Middle Eastern Studies,111.0,89.0,22,61.0,55.0,6,55.0,61.8,27.3
+University of Cambridge,Chemical Engineering & Biotechnology,Chemical Engineering & Biotechnology,421.0,253.0,168,76.0,57.0,19,18.1,22.5,11.3
+University of Cambridge,Classics,Classics,115.0,99.0,16,67.0,62.0,5,58.3,62.6,31.3
+University of Cambridge,Computer Science,Computer Science,1863.0,1254.0,609,168.0,98.0,70,9.0,7.8,11.5
+University of Cambridge,Design,Design,110.0,74.0,36,35.0,28.0,7,31.8,37.8,19.4
+University of Cambridge,Economics,Economics,1571.0,790.0,781,197.0,112.0,85,12.5,14.2,10.9
+University of Cambridge,Education,Education,164.0,72.0,92,54.0,39.0,15,32.9,54.2,16.3
+University of Cambridge,Engineering,Engineering,2654.0,1575.0,1079,371.0,236.0,135,14.0,15.0,12.5
+University of Cambridge,English,English,719.0,615.0,104,230.0,205.0,25,32.0,33.3,24.0
+University of Cambridge,Geography,Geography,437.0,373.0,64,140.0,124.0,16,32.0,33.2,25.0
+University of Cambridge,History,History,599.0,534.0,65,222.0,203.0,19,37.1,38.0,29.2
+University of Cambridge,History and Modern Languages,History And Modern Languages,94.0,84.0,10,44.0,43.0,1,46.8,51.2,10.0
+University of Cambridge,History and Politics,History And Politics,260.0,185.0,75,71.0,58.0,13,27.3,31.4,17.3
+University of Cambridge,History of Art,History Of Art,103.0,68.0,35,47.0,37.0,10,45.6,54.4,28.6
+University of Cambridge,"Human, Social, and Political Sciences","Human, Social, And Political Sciences",1259.0,803.0,456,228.0,170.0,58,18.1,21.2,12.7
+University of Cambridge,Land Economy,Land Economy,614.0,309.0,305,111.0,74.0,37,18.1,23.9,12.1
+University of Cambridge,Law,Law,1604.0,1108.0,496,288.0,195.0,93,18.0,17.6,18.8
+University of Cambridge,Linguistics,Linguistics,120.0,71.0,49,55.0,35.0,20,45.8,49.3,40.8
+University of Cambridge,Maths,Maths,1840.0,1130.0,710,537.0,344.0,193,29.2,30.4,27.2
+University of Cambridge,Medicine,Medicine,1791.0,1283.0,508,288.0,261.0,27,16.1,20.3,5.3
+University of Cambridge,Modern and Medieval Languages,Modern And Medieval Languages,218.0,202.0,16,152.0,147.0,5,69.7,72.8,31.3
+University of Cambridge,Music,Music,130.0,114.0,16,82.0,76.0,6,63.1,66.7,37.5
+University of Cambridge,Natural Sciences,Natural Sciences,2529.0,1370.0,1159,650.0,409.0,241,25.7,29.9,20.8
+University of Cambridge,Philosophy,Philosophy,288.0,207.0,81,66.0,56.0,10,22.9,27.1,12.3
+University of Cambridge,Psychological and Behavioural Sciences,Psychological And Behavioural Sciences,837.0,481.0,356,108.0,78.0,30,12.9,16.2,8.4
+University of Cambridge,"Theology, Religion, and Philosophy of Religion","Theology, Religion, And Philosophy Of Religion",128.0,120.0,8,61.0,59.0,2,47.7,49.2,25.0
+University of Cambridge,Veterinary Medicine,Veterinary Medicine,336.0,272.0,64,81.0,77.0,4,24.1,28.3,6.3
+University of Oxford,Archaeology and Anthropology,Archaeology And Anthropology,123.0,61.0,62,27.0,21.0,6,22.0,34.4,9.7
+University of Oxford,Biochemistry (Molecular and Cellular),Biochemistry (Molecular And Cellular),886.0,477.0,409,121.0,101.0,20,13.7,21.2,4.9
+University of Oxford,Biology,Biology,731.0,398.0,333,130.0,112.0,18,17.8,28.1,5.4
+University of Oxford,Biomedical Sciences,Biomedical Sciences,494.0,272.0,222,49.0,36.0,13,9.9,13.2,5.9
+University of Oxford,Chemistry,Chemistry,1070.0,640.0,430,214.0,171.0,43,20.0,26.7,10.0
+University of Oxford,Classical Archaeology and Ancient History,Classical Archaeology And Ancient History,169.0,141.0,28,37.0,35.0,2,21.9,24.8,7.1
+University of Oxford,Classics,Classics,287.0,244.0,43,121.0,109.0,12,42.2,44.7,27.9
+University of Oxford,Classics and English,Classics And English,56.0,46.0,10,18.0,16.0,2,32.1,34.8,20.0
+University of Oxford,Classics and Modern Languages,Classics And Modern Languages,24.0,21.0,3,11.0,10.0,1,45.8,47.6,33.3
+University of Oxford,Classics and Oriental Studies,Classics And Oriental Studies,,,0,,,0,,,
+University of Oxford,Computer Science,Computer Science,881.0,504.0,377,66.0,43.0,23,7.5,8.5,6.1
+University of Oxford,Computer Science and Philosophy,Computer Science And Philosophy,135.0,71.0,64,15.0,9.0,6,11.1,12.7,9.4
+University of Oxford,Earth Sciences (Geology),Earth Sciences (Geology),172.0,80.0,92,42.0,37.0,5,24.4,46.3,5.4
+University of Oxford,Economics and Management,Economics And Management,1517.0,828.0,689,93.0,67.0,26,6.1,8.1,3.8
+University of Oxford,Engineering Science,Engineering Science,1137.0,560.0,577,204.0,129.0,75,17.9,23.0,13.0
+University of Oxford,English Language and Literature,English Language And Literature,869.0,696.0,173,237.0,214.0,23,27.3,30.7,13.3
+University of Oxford,English and Modern Languages,English And Modern Languages,102.0,80.0,22,26.0,21.0,5,25.5,26.3,22.7
+University of Oxford,European and Middle Eastern Languages,European And Middle Eastern Languages,30.0,27.0,3,15.0,14.0,1,50.0,51.9,33.3
+University of Oxford,Fine Art,Fine Art,248.0,174.0,74,33.0,23.0,10,13.3,13.2,13.5
+University of Oxford,Geography,Geography,290.0,238.0,52,98.0,91.0,7,33.8,38.2,13.5
+University of Oxford,History,History,951.0,810.0,141,248.0,221.0,27,26.1,27.3,19.1
+University of Oxford,History (Ancient and Modern),History (Ancient And Modern),101.0,90.0,11,27.0,27.0,0,26.7,30.0,0.0
+University of Oxford,History and Economics,History And Economics,131.0,88.0,43,17.0,12.0,5,13.0,13.6,11.6
+University of Oxford,History and English,History And English,97.0,80.0,17,19.0,18.0,1,19.6,22.5,5.9
+University of Oxford,History and Modern Languages,History And Modern Languages,87.0,73.0,14,25.0,24.0,1,28.7,32.9,7.1
+University of Oxford,History and Politics,History And Politics,340.0,214.0,126,53.0,42.0,11,15.6,19.6,8.7
+University of Oxford,History of Art,History Of Art,98.0,49.0,49,18.0,14.0,4,18.4,28.6,8.2
+University of Oxford,Human Sciences,Human Sciences,161.0,107.0,54,34.0,25.0,9,21.1,23.4,16.7
+University of Oxford,Law (Jurisprudence),Law (Jurisprudence),1872.0,1204.0,668,216.0,167.0,49,11.5,13.9,7.3
+University of Oxford,Materials Science,Materials Science,211.0,90.0,121,46.0,26.0,20,21.8,28.9,16.5
+University of Oxford,Maths,Maths,1959.0,1196.0,763,205.0,129.0,76,10.5,10.8,10.0
+University of Oxford,Maths and Computer Science,Maths And Computer Science,610.0,360.0,250,68.0,31.0,37,11.1,8.6,14.8
+University of Oxford,Maths and Philosophy,Maths And Philosophy,173.0,100.0,73,17.0,13.0,4,9.8,13.0,5.5
+University of Oxford,Maths and Statistics,Maths And Statistics,,,0,,,0,,,
+University of Oxford,Medicine,Medicine,1500.0,1078.0,422,170.0,160.0,10,11.3,14.8,2.4
+University of Oxford,Modern Languages,Modern Languages,357.0,326.0,31,174.0,167.0,7,48.7,51.2,22.6
+University of Oxford,Modern Languages and Linguistics,Modern Languages And Linguistics,89.0,76.0,13,42.0,38.0,4,47.2,50.0,30.8
+University of Oxford,Music,Music,212.0,174.0,38,94.0,87.0,7,44.3,50.0,18.4
+University of Oxford,Asian and Middle Eastern Studies,Asian And Middle Eastern Studies,113.0,79.0,34,45.0,36.0,9,39.8,45.6,26.5
+University of Oxford,Philosophy and Modern Languages,Philosophy And Modern Languages,54.0,41.0,13,23.0,17.0,6,42.6,41.5,46.2
+University of Oxford,"Philosophy, Politics and Economics (PPE)","Philosophy, Politics And Economics (Ppe)",1774.0,926.0,848,270.0,174.0,96,15.2,18.8,11.3
+University of Oxford,Philosophy and Theology,Philosophy And Theology,154.0,131.0,23,32.0,28.0,4,20.8,21.4,17.4
+University of Oxford,Physics,Physics,1518.0,1022.0,496,184.0,118.0,66,12.1,11.5,13.3
+University of Oxford,Physics and Philosophy,Physics And Philosophy,154.0,96.0,58,16.0,15.0,1,10.4,15.6,1.7
+University of Oxford,Psychology (Experimental),Psychology (Experimental),402.0,266.0,136,69.0,53.0,16,17.2,19.9,11.8
+University of Oxford,"Psychology, Philosophy and Linguistics","Psychology, Philosophy And Linguistics",245.0,132.0,113,43.0,24.0,19,17.6,18.2,16.8
+University of Oxford,Religion and Asian and Middle Eastern Studies,Religion And Asian And Middle Eastern Studies,14.0,6.0,8,3.0,2.0,1,21.4,33.3,12.5
+University of Oxford,Theology and Religion,Theology And Religion,132.0,110.0,22,44.0,39.0,5,33.3,35.5,22.7
