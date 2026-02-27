@@ -41,6 +41,8 @@ QS_NAME_MAP = {
     "University of Warwick": "University of Warwick",
     "The University of Warwick": "University of Warwick",
     "University of Exeter": "University of Exeter",
+    "The University of Exeter": "University of Exeter",
+    "Camborne School of Mines | University of Exeter": "University of Exeter",
 }
 
 THE_NAME_MAP = {

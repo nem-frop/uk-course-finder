@@ -18,7 +18,7 @@ Lancaster University,Arts & Humanities,76.0,75.6
 Queen Mary University of London,Arts & Humanities,81.0,75.3
 The University of Sheffield,Arts & Humanities,82.0,74.9
 University of Bristol,Arts & Humanities,88.0,74.4
-The University of Exeter,Arts & Humanities,90.0,74.2
+University of Exeter,Arts & Humanities,90.0,74.2
 University of Reading,Arts & Humanities,92.0,74.0
 University of the Arts London,Arts & Humanities,112.0,73.1
 University of Nottingham,Arts & Humanities,121.0,72.3
@@ -65,7 +65,7 @@ The University of Sheffield,Archaeology,29.0,80.1
 University of Southampton,Archaeology,36.0,78.7
 University of Glasgow,Archaeology,37.0,78.6
 University of Leicester,Archaeology,40.0,78.2
-The University of Exeter,Archaeology,45.0,77.5
+University of Exeter,Archaeology,45.0,77.5
 University of Reading,Archaeology,49.0,77.0
 Newcastle University,Archaeology,75.5,
 University of Manchester,Archaeology,75.5,
@@ -143,7 +143,7 @@ Durham University,Classics,9.0,87.8
 King's College London,Classics,13.0,86.1
 University College London,Classics,17.0,82.0
 University of Edinburgh,Classics,28.0,79.0
-The University of Exeter,Classics,45.0,73.0
+University of Exeter,Classics,45.0,73.0
 Newcastle University,Classics,100.5,
 Royal Holloway University of London,Classics,100.5,
 SOAS University of London,Classics,100.5,
@@ -167,7 +167,7 @@ University of Glasgow,English Language,34.0,78.6
 University of Leeds,English Language,36.0,78.5
 Lancaster University,English Language,38.0,78.2
 Queen Mary University of London,English Language,42.0,76.9
-The University of Exeter,English Language,47.0,75.2
+University of Exeter,English Language,47.0,75.2
 University of St Andrews,English Language,52.0,74.4
 University of Bristol,English Language,61.0,73.1
 SOAS University of London,English Language,64.0,72.6
@@ -212,7 +212,7 @@ University of St Andrews,History$,46.0,78.7
 University of Glasgow,History$,49.0,77.8
 Queen Mary University of London,History$,75.5,
 SOAS University of London,History$,75.5,
-The University of Exeter,History$,75.5,
+University of Exeter,History$,75.5,
 University of Birmingham,History$,75.5,
 University of Bristol,History$,75.5,
 University of Leeds,History$,75.5,
@@ -286,7 +286,7 @@ University of Birmingham,Modern Languages,96.0,73.2
 London School of Economics and Political Science,Modern Languages,100.0,72.9
 University of Glasgow,Modern Languages,100.0,72.9
 Queen Mary University of London,Modern Languages,125.5,
-The University of Exeter,Modern Languages,125.5,
+University of Exeter,Modern Languages,125.5,
 University of Liverpool,Modern Languages,125.5,
 University of Nottingham,Modern Languages,125.5,
 University of York,Modern Languages,125.5,
@@ -328,7 +328,7 @@ University of Glasgow,Performing Arts,75.5,
 University of Leeds,Performing Arts,75.5,
 University of York,Performing Arts,75.5,
 Royal College of Art,Performing Arts,125.5,
-The University of Exeter,Performing Arts,125.5,
+University of Exeter,Performing Arts,125.5,
 The University of Sheffield,Performing Arts,125.5,
 University of Bristol,Performing Arts,125.5,
 University of Kent,Performing Arts,125.5,
@@ -354,7 +354,7 @@ University of Nottingham,Philosophy,125.5,
 University of Sussex,Philosophy,125.5,
 University of York,Philosophy,125.5,
 Queen's University Belfast,Philosophy,175.5,
-The University of Exeter,Philosophy,175.5,
+University of Exeter,Philosophy,175.5,
 University of Aberdeen,Philosophy,175.5,
 University of Birmingham,Philosophy,175.5,
 University of Liverpool,Philosophy,175.5,
@@ -369,7 +369,7 @@ University of Aberdeen,Theology,26.0,76.0
 King's College London,Theology,35.0,72.9
 University of Birmingham,Theology,45.0,71.7
 SOAS University of London,Theology,75.5,
-The University of Exeter,Theology,75.5,
+University of Exeter,Theology,75.5,
 University of Manchester,Theology,75.5,
 University College London,Theology,75.5,
 University of Leeds,Theology,75.5,
@@ -407,7 +407,7 @@ University of Surrey,Engineering & Technology,270.0,67.0
 Lancaster University,Engineering & Technology,319.0,65.3
 Aston University,Engineering & Technology,328.0,64.9
 Oxford Brookes University,Engineering & Technology,333.0,64.7
-The University of Exeter,Engineering & Technology,333.0,64.7
+University of Exeter,Engineering & Technology,333.0,64.7
 Durham University,Engineering & Technology,341.0,64.6
 Brunel University London,Engineering & Technology,359.0,64.3
 University of Reading,Engineering & Technology,367.0,64.1
@@ -455,7 +455,7 @@ University of Kent,Computer Science,425.5,
 University of Reading,Computer Science,425.5,
 University of St Andrews,Computer Science,425.5,
 Royal Holloway University of London,Computer Science,475.5,
-The University of Exeter,Computer Science,475.5,
+University of Exeter,Computer Science,475.5,
 De Montfort University,Computer Science,525.5,
 "Kingston University, London",Computer Science,525.5,
 Manchester Metropolitan University (MMU),Computer Science,525.5,
@@ -529,7 +529,7 @@ University of Liverpool,Engineering - Civil,125.5,
 University of Southampton,Engineering - Civil,125.5,
 Cardiff University,Engineering - Civil,175.5,
 Heriot-Watt University,Engineering - Civil,175.5,
-The University of Exeter,Engineering - Civil,175.5,
+University of Exeter,Engineering - Civil,175.5,
 University of Warwick,Engineering - Civil,175.5,
 University of Bath,Engineering - Civil,175.5,
 University of Strathclyde,Engineering - Civil,175.5,
@@ -567,7 +567,7 @@ University of York,Engineering - Electrical,275.5,
 Brunel University London,Engineering - Electrical,325.5,
 Durham University,Engineering - Electrical,325.5,
 Swansea University,Engineering - Electrical,325.5,
-The University of Exeter,Engineering - Electrical,325.5,
+University of Exeter,Engineering - Electrical,325.5,
 Aston University,Engineering - Electrical,425.5,
 Northumbria University at Newcastle,Engineering - Electrical,425.5,
 Oxford Brookes University,Engineering - Electrical,425.5,
@@ -609,7 +609,7 @@ Queen Mary University of London,Engineering - Mechanical,225.5,
 University of Huddersfield,Engineering - Mechanical,275.5,
 University of Surrey,Engineering - Mechanical,275.5,
 Coventry University,Engineering - Mechanical,325.5,
-The University of Exeter,Engineering - Mechanical,325.5,
+University of Exeter,Engineering - Mechanical,325.5,
 Durham University,Engineering - Mechanical,375.5,
 Lancaster University,Engineering - Mechanical,375.5,
 Aston University,Engineering - Mechanical,425.5,
@@ -623,7 +623,7 @@ University of Leicester,Engineering - Mechanical,538.0,
 University of Plymouth,Engineering - Mechanical,538.0,
 University of York,Engineering - Mechanical,538.0,
 Imperial College London,Engineering - Mineral,8.0,80.5
-Camborne School of Mines | University of Exeter,Engineering - Mineral,19.0,75.2
+University of Exeter,Engineering - Mineral,19.0,75.2
 University of Leeds,Engineering - Mineral,38.0,69.0
 University of Aberdeen,Engineering - Mineral,75.5,
 University of Birmingham,Engineering - Mineral,75.5,
@@ -662,7 +662,7 @@ University of Southampton,Life Sciences & Medicine,116.0,72.8
 The University of Sheffield,Life Sciences & Medicine,128.0,72.2
 Cardiff University,Life Sciences & Medicine,131.0,71.9
 Queen's University Belfast,Life Sciences & Medicine,144.0,70.8
-The University of Exeter,Life Sciences & Medicine,152.0,70.1
+University of Exeter,Life Sciences & Medicine,152.0,70.1
 University of York,Life Sciences & Medicine,177.0,68.9
 University of Dundee,Life Sciences & Medicine,180.0,68.5
 University of Aberdeen,Life Sciences & Medicine,191.0,68.0
@@ -714,7 +714,7 @@ University of Birmingham,Anatomy,36.0,81.6
 University of Leeds,Anatomy,37.0,81.4
 Loughborough University,Anatomy,75.5,
 Newcastle University,Anatomy,75.5,
-The University of Exeter,Anatomy,75.5,
+University of Exeter,Anatomy,75.5,
 The University of Sheffield,Anatomy,75.5,
 University of Bristol,Anatomy,75.5,
 University of Liverpool,Anatomy,75.5,
@@ -736,7 +736,7 @@ University of Liverpool,Biological,118.0,70.0
 Queen Mary University of London,Biological,126.0,69.4
 University of Nottingham,Biological,132.0,69.0
 Newcastle University,Biological,140.0,68.6
-The University of Exeter,Biological,141.0,68.4
+University of Exeter,Biological,141.0,68.4
 University of Birmingham,Biological,145.0,68.2
 Cardiff University,Biological,150.0,67.8
 University of Leeds,Biological,152.0,67.7
@@ -801,7 +801,7 @@ Queen's University Belfast,Medicine,168.0,67.5
 University of Warwick,Medicine,168.0,67.5
 University of Aberdeen,Medicine,194.0,66.4
 University of Leicester,Medicine,195.0,66.3
-The University of Exeter,Medicine,197.0,66.2
+University of Exeter,Medicine,197.0,66.2
 London School of Economics and Political Science,Medicine,225.5,
 Swansea University,Medicine,325.5,
 University of Bath,Medicine,325.5,
@@ -851,7 +851,7 @@ University of Liverpool,Nursing,75.5,
 University of Nottingham,Nursing,75.5,
 Cardiff University,Nursing,125.5,
 London School of Hygiene & Tropical Medicine,Nursing,125.5,
-The University of Exeter,Nursing,125.5,
+University of Exeter,Nursing,125.5,
 The University of Sheffield,Nursing,125.5,
 Ulster University,Nursing,125.5,
 University of Hull,Nursing,125.5,
@@ -910,7 +910,7 @@ University of Birmingham,Psychology,88.0,72.3
 University of York,Psychology,97.0,71.8
 Cardiff University,Psychology,125.5,
 Nottingham Trent University,Psychology,125.5,
-The University of Exeter,Psychology,125.5,
+University of Exeter,Psychology,125.5,
 The University of Sheffield,Psychology,125.5,
 University of Glasgow,Psychology,125.5,
 University of Kent,Psychology,125.5,
@@ -964,7 +964,7 @@ University of Nottingham,Natural Sciences,171.0,72.0
 University of St Andrews,Natural Sciences,176.0,71.5
 The University of Sheffield,Natural Sciences,200.0,70.5
 Queen Mary University of London,Natural Sciences,203.0,70.3
-The University of Exeter,Natural Sciences,209.0,70.0
+University of Exeter,Natural Sciences,209.0,70.0
 University of Bath,Natural Sciences,223.0,69.5
 Newcastle University,Natural Sciences,248.0,68.4
 Cardiff University,Natural Sciences,253.0,68.1
@@ -1027,7 +1027,7 @@ University College London,Earth & Marine Sciences,23.0,84.6
 University of Bristol,Earth & Marine Sciences,32.0,83.1
 University of Edinburgh,Earth & Marine Sciences,36.0,82.6
 University of Southampton,Earth & Marine Sciences,40.0,82.1
-The University of Exeter,Earth & Marine Sciences,44.0,81.5
+University of Exeter,Earth & Marine Sciences,44.0,81.5
 University of Reading,Earth & Marine Sciences,49.0,80.8
 Durham University,Earth & Marine Sciences,75.5,
 Newcastle University,Earth & Marine Sciences,75.5,
@@ -1052,7 +1052,7 @@ University of Oxford,Environmental Sciences,4.0,92.5
 University of Cambridge,Environmental Sciences,9.0,90.9
 Imperial College London,Environmental Sciences,11.0,89.4
 University College London,Environmental Sciences,32.0,83.3
-The University of Exeter,Environmental Sciences,36.0,83.2
+University of Exeter,Environmental Sciences,36.0,83.2
 University of Edinburgh,Environmental Sciences,42.0,82.5
 University of Manchester,Environmental Sciences,42.0,82.5
 University of Leeds,Environmental Sciences,59.0,80.8
@@ -1105,7 +1105,7 @@ University of Leeds,Geography,23.0,83.7
 University of Bristol,Geography,27.0,82.8
 Newcastle University,Geography,36.0,80.8
 The University of Sheffield,Geography,39.0,80.2
-The University of Exeter,Geography,40.0,80.1
+University of Exeter,Geography,40.0,80.1
 Cardiff University,Geography,75.5,
 Royal Holloway University of London,Geography,75.5,
 SOAS University of London,Geography,75.5,
@@ -1133,7 +1133,7 @@ University of Leeds,Geology,15.0,86.8
 Imperial College London,Geology,21.0,85.6
 University College London,Geology,22.0,85.3
 University of Edinburgh,Geology,33.0,84.5
-The University of Exeter,Geology,39.0,83.4
+University of Exeter,Geology,39.0,83.4
 University of Bristol,Geology,43.0,82.9
 Durham University,Geology,75.5,
 Newcastle University,Geology,75.5,
@@ -1191,7 +1191,7 @@ London School of Economics and Political Science,Mathematics,75.0,72.5
 Queen Mary University of London,Mathematics,87.0,71.6
 University of Bristol,Mathematics,93.0,70.9
 University of Leeds,Mathematics,124.0,69.0
-The University of Exeter,Mathematics,175.5,
+University of Exeter,Mathematics,175.5,
 University of Bath,Mathematics,175.5,
 University of Birmingham,Mathematics,175.5,
 University of Glasgow,Mathematics,175.5,
@@ -1244,7 +1244,7 @@ University of Surrey,Materials Science,225.5,
 Durham University,Materials Science,275.5,
 Newcastle University,Materials Science,275.5,
 Heriot-Watt University,Materials Science,375.5,
-The University of Exeter,Materials Science,375.5,
+University of Exeter,Materials Science,375.5,
 Brunel University London,Materials Science,475.5,
 University of Oxford,Physics,3.0,95.7
 University of Cambridge,Physics,5.0,94.5
@@ -1272,7 +1272,7 @@ University of Surrey,Physics,225.5,
 University of Sussex,Physics,225.5,
 University of York,Physics,225.5,
 Lancaster University,Physics,275.5,
-The University of Exeter,Physics,275.5,
+University of Exeter,Physics,275.5,
 University of Strathclyde,Physics,275.5,
 Heriot-Watt University,Physics,325.5,
 Newcastle University,Physics,325.5,
@@ -1309,7 +1309,7 @@ University of Nottingham,Social Sciences & Management,132.0,72.4
 The University of Sheffield,Social Sciences & Management,150.0,71.4
 University of Bath,Social Sciences & Management,159.0,71.0
 Cardiff University,Social Sciences & Management,172.0,70.6
-The University of Exeter,Social Sciences & Management,183.0,69.9
+University of Exeter,Social Sciences & Management,183.0,69.9
 University of Reading,Social Sciences & Management,189.0,69.6
 Newcastle University,Social Sciences & Management,203.0,69.1
 "City, University of London",Social Sciences & Management,207.0,69.0
@@ -1368,7 +1368,7 @@ University of Liverpool,Accounting,175.5,
 University of St Andrews,Accounting,175.5,
 Newcastle University,Accounting,225.5,
 Queen's University Belfast,Accounting,225.5,
-The University of Exeter,Accounting,225.5,
+University of Exeter,Accounting,225.5,
 Aston University,Accounting,275.5,
 Heriot-Watt University,Accounting,275.5,
 University of Aberdeen,Accounting,275.5,
@@ -1396,7 +1396,7 @@ Durham University,Anthropology,29.0,85.3
 University of Aberdeen,Anthropology,75.5,
 University of St Andrews,Anthropology,75.5,
 University of Sussex,Anthropology,75.5,
-The University of Exeter,Anthropology,135.5,
+University of Exeter,Anthropology,135.5,
 The University of Sheffield,Anthropology,135.5,
 University of Bristol,Anthropology,135.5,
 University of Liverpool,Anthropology,135.5,
@@ -1430,7 +1430,7 @@ University of Strathclyde,Business,175.5,
 University of Surrey,Business,175.5,
 Heriot-Watt University,Business,225.5,
 Newcastle University,Business,225.5,
-The University of Exeter,Business,225.5,
+University of Exeter,Business,225.5,
 The University of Sheffield,Business,225.5,
 University of Bristol,Business,225.5,
 University of Sussex,Business,225.5,
@@ -1489,7 +1489,7 @@ University of the Arts London,Communication,125.5,
 Bournemouth University,Communication,175.5,
 Queen Mary University of London,Communication,175.5,
 Swansea University,Communication,175.5,
-The University of Exeter,Communication,175.5,
+University of Exeter,Communication,175.5,
 University of East Anglia (UEA),Communication,175.5,
 University of Sussex,Communication,175.5,
 University of York,Communication,175.5,
@@ -1546,7 +1546,7 @@ University of Sussex,Economics & Econometrics,174.0,68.6
 "City, University of London",Economics & Econometrics,225.5,
 Lancaster University,Economics & Econometrics,225.5,
 Newcastle University,Economics & Econometrics,225.5,
-The University of Exeter,Economics & Econometrics,225.5,
+University of Exeter,Economics & Econometrics,225.5,
 The University of Sheffield,Economics & Econometrics,225.5,
 University of Bath,Economics & Econometrics,225.5,
 Cardiff University,Economics & Econometrics,275.5,
@@ -1603,7 +1603,7 @@ Oxford Brookes University,Education,125.5,
 The Open University,Education,125.5,
 The University of Sheffield,Education,125.5,
 Manchester Metropolitan University (MMU),Education,175.5,
-The University of Exeter,Education,175.5,
+University of Exeter,Education,175.5,
 University of Warwick,Education,175.5,
 University of Bath,Education,175.5,
 University of Reading,Education,175.5,
@@ -1638,7 +1638,7 @@ Leeds Beckett University,Hospitality,75.5,
 Manchester Metropolitan University (MMU),Hospitality,75.5,
 Middlesex University,Hospitality,75.5,
 Sheffield Hallam University,Hospitality,75.5,
-The University of Exeter,Hospitality,75.5,
+University of Exeter,Hospitality,75.5,
 University of Birmingham,Hospitality,75.5,
 University of Leeds,Hospitality,75.5,
 Heriot-Watt University,Hospitality,125.5,
@@ -1675,7 +1675,7 @@ The University of Sheffield,Law,175.5,
 University of Aberdeen,Law,175.5,
 University of Southampton,Law,175.5,
 Oxford Brookes University,Law,225.5,
-The University of Exeter,Law,225.5,
+University of Exeter,Law,225.5,
 University of Liverpool,Law,225.5,
 University of Reading,Law,225.5,
 University of St Andrews,Law,225.5,
@@ -1732,7 +1732,7 @@ Queen Mary University of London,Politics,57.0,73.3
 University of Warwick,Politics,64.0,72.6
 Durham University,Politics,72.0,70.8
 University of Bristol,Politics,75.0,70.5
-The University of Exeter,Politics,80.0,70.0
+University of Exeter,Politics,80.0,70.0
 University of Leeds,Politics,83.0,69.7
 The University of Sheffield,Politics,89.0,69.2
 University of Sussex,Politics,90.0,69.0
@@ -1811,7 +1811,7 @@ University of Glasgow,Sociology,125.5,
 Loughborough University,Sociology,175.5,
 Newcastle University,Sociology,175.5,
 Queen's University Belfast,Sociology,175.5,
-The University of Exeter,Sociology,175.5,
+University of Exeter,Sociology,175.5,
 University of Kent,Sociology,175.5,
 University of Nottingham,Sociology,175.5,
 University of Southampton,Sociology,175.5,
@@ -1835,7 +1835,7 @@ University of Birmingham,Sports-related Subjects,8.0,86.3
 University of Bath,Sports-related Subjects,12.0,83.2
 Liverpool John Moores University,Sports-related Subjects,16.0,83.0
 University of Edinburgh,Sports-related Subjects,18.0,82.5
-The University of Exeter,Sports-related Subjects,37.0,79.7
+University of Exeter,Sports-related Subjects,37.0,79.7
 University College London,Sports-related Subjects,40.0,79.0
 University of Manchester,Sports-related Subjects,42.0,78.6
 King's College London,Sports-related Subjects,50.0,77.7
@@ -1880,5 +1880,5 @@ University of Glasgow,Statistics,225.5,
 University of Kent,Statistics,225.5,
 University of Strathclyde,Statistics,225.5,
 University of York,Statistics,225.5,
-The University of Exeter,Statistics,263.0,
+University of Exeter,Statistics,263.0,
 University of Birmingham,Statistics,263.0,

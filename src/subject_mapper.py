@@ -18,7 +18,8 @@ SUBJECT_RULES = [
     ("Petroleum Engineering", ["petroleum engineering"]),
 
     # Medicine and health (before general science)
-    ("Medicine", ["medicine", "medical sciences", "mbbs", "mbchb", "clinical"]),
+    ("Medicine", ["medicine", "medical sciences", "mbbs", "mbchb", "clinical",
+                  "radiography", "diagnostic imaging"]),
     ("Dentistry", ["dentistry", "dental"]),
     ("Nursing", ["nursing", "midwifery", "audiology", "speech therapy",
                  "occupational therapy", "physiotherapy"]),
@@ -53,7 +54,8 @@ SUBJECT_RULES = [
 
     # Business
     ("Accounting", ["accounting"]),
-    ("Business", ["business", "management", "commerce", "enterprise"]),
+    ("Business", ["business", "management", "commerce", "enterprise",
+                  "finance", "banking", "investment"]),
     ("Marketing", ["marketing"]),
     ("Economics & Econometrics", ["economics", "econometrics"]),
 
@@ -68,6 +70,7 @@ SUBJECT_RULES = [
     ("Social Policy", ["social policy", "social work", "criminology"]),
     ("Communication", ["journalism", "media", "communication", "film"]),
     ("Geography", ["geography", "geographic"]),
+    ("Area Studies", ["middle east", "middle eastern", "area studies"]),
     ("Hospitality", ["hospitality", "tourism"]),
     ("Sports-related Subjects", ["sport", "exercise science", "kinesiology"]),
 
@@ -177,6 +180,7 @@ SUBJECT_TO_DOMAIN = {
     "Social Policy": "Social Sciences",
     "Communication": "Social Sciences",
     "Geography": "Social Sciences",
+    "Area Studies": "Social Sciences",
     "Sports-related Subjects": "Social Sciences",
 
     # Humanities

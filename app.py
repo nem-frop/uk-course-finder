@@ -309,13 +309,29 @@ def show_landing_page(df):
     left_col, right_col = st.columns([1, 1])
 
     with left_col:
-        st.subheader("Data Sources")
-        st.markdown("""
+        st.subheader("What's Included")
+        n_courses = len(df)
+        n_unis = df["university"].nunique()
+        n_with_subj = df["qs_subject_rank"].notna().sum()
+        n_med = load_med_data().shape[0]
+        st.markdown(f"""
         **Course Data (2025 UCAS cycle):**
-        - 2,437 undergraduate courses across 12 top UK universities
+        - {n_courses:,} undergraduate courses across {n_unis} universities
         - A-Level and IB entry requirements
         - Course URLs and UCAS codes
 
+        **Rankings:** QS Global + Subject (60 subjects) + THE Global
+        - {n_with_subj:,}/{n_courses:,} courses have subject-level rank data
+
+        **Medical Schools tab:** {n_med} schools with SMC requirements,
+        admission tests, interview types, and international applicant stats
+
+        **Oxbridge admissions:** Per-course offer rates for Oxford and Cambridge
+        """)
+
+    with right_col:
+        st.subheader("Data Sources")
+        st.markdown("""
         **Rankings (2025-26):**
         - QS World University Rankings 2026 (global)
         - QS Subject Rankings 2025 (60 subjects)
@@ -327,21 +343,26 @@ def show_landing_page(df):
         - International applicant statistics (34 schools)
         """)
 
-    with right_col:
-        st.subheader("Known Gaps")
-        st.markdown("""
-        **Oxford STEM courses** - The UCAS source data contains 248 Oxford courses
-        but no STEM subjects (sciences, engineering, maths). This is a source data
-        limitation. Humanities and social science courses are present and correct.
+    # Data quality / known gaps in expander
+    with st.expander("Data Quality & Known Gaps (priority list)", expanded=False):
+        # Compute dynamic stats
+        n_courses = len(df)
+        oxford_count = len(df[df["university"] == "University of Oxford"])
+        oxford_stem = len(df[(df["university"] == "University of Oxford") & (df["domain"].isin(["Engineering", "Physical Sciences", "Mathematics & Statistics", "Computing & Technology", "Life Sciences"]))])
+        cambridge_count = len(df[df["university"] == "University of Cambridge"])
+        oxford_offer = df[(df["university"] == "University of Oxford") & (df["total_offer_pct"].notna())].shape[0]
+        cambridge_offer = df[(df["university"] == "University of Cambridge") & (df["total_offer_pct"].notna())].shape[0]
+        missing_urls = df["course_url"].isna().sum()
+        missing_subj = df["qs_subject_rank"].isna().sum()
 
-        **Exeter subject rankings** - 442 courses but 0% have QS subject rank matches.
-        The subject mapper cannot find QS subject categories for Exeter's course naming.
-
-        **Cambridge course count** - Only 27 courses listed vs 200+ in reality.
-        The UCAS source appears to have incomplete Cambridge coverage.
-
-        **Oxford Oxbridge stats** - Only 19/248 Oxford courses have offer data,
-        vs 25/27 for Cambridge. The admissions CSV has limited Oxford course matching.
+        st.markdown(f"""
+| # | Priority | Gap | Detail | To fix |
+|---|----------|-----|--------|--------|
+| 1 | **HIGH** | Oxford STEM courses | {oxford_count} Oxford courses but only {oxford_stem} STEM | Get updated UCAS data with Oxford sciences |
+| 2 | **HIGH** | Cambridge course count | Only {cambridge_count} courses vs 200+ in reality | Get fuller Cambridge UCAS extract |
+| 3 | **MEDIUM** | Oxford Oxbridge stats | Only {oxford_offer}/{oxford_count} Oxford courses have offer data (vs {cambridge_offer}/{cambridge_count} Cambridge) | Improve course name matching between sources |
+| 4 | **MEDIUM** | Missing course URLs | {missing_urls}/{n_courses} ({100*missing_urls//n_courses}%) have no link | Check if source Excel contains the URLs |
+| 5 | **LOW** | Unmatched QS subjects | {missing_subj}/{n_courses} ({100*missing_subj//n_courses}%) courses have no subject-level rank | Expand subject mapper keyword rules |
         """)
 
     st.divider()
@@ -611,7 +632,7 @@ def render_medical_schools():
     st.caption("Requirements and admissions data from the Medical School Council and international applicant statistics.")
 
     # Filters for this tab (independent of sidebar)
-    f1, f2 = st.columns(2)
+    f1, f2, f3 = st.columns(3)
     with f1:
         med_uni_filter = st.multiselect(
             "University",
@@ -629,6 +650,13 @@ def render_medical_schools():
             placeholder="All test types",
             key="med_test_filter"
         )
+    with f3:
+        smc_only = st.checkbox(
+            "SMC Approved only",
+            value=False,
+            help="Filter to Singapore Medical Council approved schools (22 schools)",
+            key="smc_filter"
+        )
 
     # Apply med filters
     med_mask = pd.Series(True, index=med.index)
@@ -636,6 +664,8 @@ def render_medical_schools():
         med_mask &= med["university"].isin(med_uni_filter)
     if med_test_filter:
         med_mask &= med["test_category"].isin(med_test_filter)
+    if smc_only:
+        med_mask &= med["med_singapore_approved"].str.contains("Yes", case=False, na=False)
 
     med_filtered = med.loc[med_mask].copy()
 
@@ -650,6 +680,7 @@ def render_medical_schools():
     display_cols = {
         "university": "University",
         "med_course": "Course",
+        "med_singapore_approved": "SMC Approved",
         "med_alevel_req": "A-Level Req",
         "med_ib_req": "IB Req",
         "med_gcse_req": "GCSE Req",
@@ -674,6 +705,7 @@ def render_medical_schools():
     col_config = {
         "University": st.column_config.TextColumn(width="medium"),
         "Course": st.column_config.TextColumn(width="medium"),
+        "SMC Approved": st.column_config.TextColumn(width="small"),
         "A-Level Req": st.column_config.TextColumn(width="medium"),
         "IB Req": st.column_config.TextColumn(width="medium"),
         "GCSE Req": st.column_config.TextColumn(width="medium"),

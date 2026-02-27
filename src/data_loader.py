@@ -51,20 +51,14 @@ def load_master_dataframe() -> pd.DataFrame:
     )
     courses = courses.drop(columns=["subject"], errors="ignore")
 
-    # 4. Med school data - join on university for medicine courses
+    # 4. Med school data - join only for medicine/health courses
     med = pd.read_csv(DATA_DIR / "med_schools.csv")
-    # Only join med data for medicine-related courses
-    is_med = courses["domain"] == "Medicine & Health"
     med_cols = [c for c in med.columns if c.startswith("med_") or c == "university"]
-    courses = courses.merge(
-        med[med_cols],
-        on="university",
-        how="left",
-        suffixes=("", "_med")
+    med_courses = courses[courses["domain"] == "Medicine & Health"].merge(
+        med[med_cols], on="university", how="left", suffixes=("", "_med")
     )
-    # Blank out med columns for non-med courses
-    med_only_cols = [c for c in courses.columns if c.startswith("med_")]
-    courses.loc[~is_med, med_only_cols] = None
+    non_med_courses = courses[courses["domain"] != "Medicine & Health"]
+    courses = pd.concat([med_courses, non_med_courses], ignore_index=True)
 
     # 5. Oxbridge admissions
     oxbridge = pd.read_csv(DATA_DIR / "oxbridge_admissions.csv")
@@ -111,18 +105,15 @@ def normalize_ranks(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def categorize_admission_test(text: str) -> str:
-    """Extract admission test type from descriptive text."""
+    """Extract admission test type from descriptive text.
+
+    BMAT was phased out after 2023 — only UCAT remains as a standard test.
+    """
     if pd.isna(text) or not str(text).strip():
         return "Unknown"
     t = str(text).lower()
-    has_ucat = "ucat" in t
-    has_bmat = "bmat" in t
-    if has_ucat and has_bmat:
-        return "UCAT + BMAT"
-    if has_ucat:
+    if "ucat" in t:
         return "UCAT"
-    if has_bmat:
-        return "BMAT"
     return "Other"
 
 
