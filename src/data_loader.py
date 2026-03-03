@@ -18,6 +18,85 @@ from grade_parser import parse_alevel_grades, parse_ib_points
 DATA_DIR = Path(__file__).parent.parent / "data"
 
 
+# Oxbridge admissions course name aliases: admissions name -> courses.csv name
+# These handle naming differences between the two data sources
+OXBRIDGE_NAME_MAP = {
+    # Oxford naming differences
+    "Asian And Middle Eastern Studies": "Oriental Studies",
+    "Biochemistry (Molecular And Cellular)": "Biochemistry",
+    "Classics And Oriental Studies": "Classics And Asian And Middle Eastern Studies",
+    "Earth Sciences (Geology)": "Earth Sciences",
+    "History (Ancient And Modern)": "Ancient And Modern History",
+    "Law (Jurisprudence)": "Law",
+    "Maths": "Mathematics",
+    "Maths And Computer Science": "Mathematics And Computer Science",
+    "Maths And Philosophy": "Mathematics And Philosophy",
+    "Maths And Statistics": "Mathematics And Statistics",
+    "Philosophy, Politics And Economics (Ppe)": "Philosophy, Politics And Economics",
+    "Psychology (Experimental)": "Experimental Psychology",
+    "Psychology, Philosophy And Linguistics": "Psychology, Philosophy, And Linguistics",
+    # Cambridge naming differences
+    "Chemical Engineering & Biotechnology": "Chemical Engineering And Biotechnology",
+    "Engineering": "Engineering",
+    "Natural Sciences": "Natural Sciences",
+}
+
+
+def _merge_oxbridge(courses: pd.DataFrame, oxbridge: pd.DataFrame, offer_cols: list) -> pd.DataFrame:
+    """Merge Oxbridge admissions data using smart name matching.
+
+    Strategy:
+    1. Try exact match on course name (title-cased)
+    2. Try mapped name aliases for known mismatches
+    3. For variant courses (e.g. "X With Foundation Year"), inherit parent course stats
+    """
+    # Build a lookup: (university, normalized_name) -> offer data row
+    lookup = {}
+    for _, row in oxbridge.iterrows():
+        uni = row["university"]
+        name = row["course_clean"]
+        lookup[(uni, name)] = row[offer_cols]
+        # Also add mapped aliases
+        if name in OXBRIDGE_NAME_MAP:
+            lookup[(uni, OXBRIDGE_NAME_MAP[name])] = row[offer_cols]
+
+    # Match each course
+    for col in offer_cols:
+        courses[col] = pd.NA
+
+    for idx, row in courses.iterrows():
+        uni = row["university"]
+        if uni not in ("University of Oxford", "University of Cambridge"):
+            continue
+
+        course_name = row["course"]
+
+        # 1. Exact match
+        key = (uni, course_name)
+        if key in lookup:
+            for col in offer_cols:
+                courses.at[idx, col] = lookup[key][col]
+            continue
+
+        # 2. Strip common suffixes and try parent course
+        for suffix in [" With Foundation Year", " With A Foundation Year",
+                       " With Year Abroad", " With Placement Year",
+                       " With Industrial Experience"]:
+            if course_name.endswith(suffix):
+                parent = course_name[:-len(suffix)]
+                parent_key = (uni, parent)
+                if parent_key in lookup:
+                    for col in offer_cols:
+                        courses.at[idx, col] = lookup[parent_key][col]
+                    break
+
+    # Convert to numeric
+    for col in offer_cols:
+        courses[col] = pd.to_numeric(courses[col], errors="coerce")
+
+    return courses
+
+
 def load_master_dataframe() -> pd.DataFrame:
     """Load and merge all data sources into a single DataFrame."""
 
@@ -60,21 +139,12 @@ def load_master_dataframe() -> pd.DataFrame:
     non_med_courses = courses[courses["domain"] != "Medicine & Health"]
     courses = pd.concat([med_courses, non_med_courses], ignore_index=True)
 
-    # 5. Oxbridge admissions
+    # 5. Oxbridge admissions - smart matching with name normalization
     oxbridge = pd.read_csv(DATA_DIR / "oxbridge_admissions.csv")
-    # Fuzzy match on university + course name
-    # The Oxbridge CSV course names need to match our title-cased course names
-    oxbridge["course_match"] = oxbridge["course_clean"]
-    courses = courses.merge(
-        oxbridge[["university", "course_match",
-                  "total_applicants", "uk_applicants", "intl_applicants",
+    offer_cols = ["total_applicants", "uk_applicants", "intl_applicants",
                   "total_offers", "uk_offers", "intl_offers",
-                  "total_offer_pct", "uk_offer_pct", "intl_offer_pct"]],
-        left_on=["university", "course"],
-        right_on=["university", "course_match"],
-        how="left"
-    )
-    courses = courses.drop(columns=["course_match"], errors="ignore")
+                  "total_offer_pct", "uk_offer_pct", "intl_offer_pct"]
+    courses = _merge_oxbridge(courses, oxbridge, offer_cols)
 
     # Compute a combined "best rank" for sorting
     courses["best_global_rank"] = courses[["qs_global_rank", "the_rank"]].min(axis=1)

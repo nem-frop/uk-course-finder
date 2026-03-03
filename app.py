@@ -358,9 +358,9 @@ def show_landing_page(df):
         st.markdown(f"""
 | # | Priority | Gap | Detail | To fix |
 |---|----------|-----|--------|--------|
-| 1 | **HIGH** | Oxford STEM courses | {oxford_count} Oxford courses but only {oxford_stem} STEM | Get updated UCAS data with Oxford sciences |
-| 2 | **HIGH** | Cambridge course count | Only {cambridge_count} courses vs 200+ in reality | Get fuller Cambridge UCAS extract |
-| 3 | **MEDIUM** | Oxford Oxbridge stats | Only {oxford_offer}/{oxford_count} Oxford courses have offer data (vs {cambridge_offer}/{cambridge_count} Cambridge) | Improve course name matching between sources |
+| 1 | **MEDIUM** | Oxford course count | {oxford_count} Oxford courses ({oxford_stem} STEM) — many language variants from UCAS, core STEM added manually | Original UCAS extract heavy on language combos, light on sciences |
+| 2 | **MEDIUM** | Cambridge course count | {cambridge_count} courses (core subjects covered, but variants like "with Year Abroad" not in data) | Get fuller Cambridge UCAS extract for variant courses |
+| 3 | **MEDIUM** | Oxford Oxbridge stats | {oxford_offer}/{oxford_count} Oxford courses have offer data (vs {cambridge_offer}/{cambridge_count} Cambridge) | Many Oxford language variants have no separate admissions stats |
 | 4 | **MEDIUM** | Missing course URLs | {missing_urls}/{n_courses} ({100*missing_urls//n_courses}%) have no link | Check if source Excel contains the URLs |
 | 5 | **LOW** | Unmatched QS subjects | {missing_subj}/{n_courses} ({100*missing_subj//n_courses}%) courses have no subject-level rank | Expand subject mapper keyword rules |
         """)
