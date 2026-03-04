@@ -5,6 +5,8 @@ Uses keyword matching to assign each course to the most relevant QS subject.
 A course can map to multiple QS subjects (e.g. "Biochemistry" -> Chemistry, Biological).
 """
 
+import re
+
 # Ordered by specificity - more specific patterns first
 # Each entry: (QS subject name, list of keyword patterns)
 # Patterns are matched case-insensitively against the course name
@@ -18,13 +20,15 @@ SUBJECT_RULES = [
     ("Petroleum Engineering", ["petroleum engineering"]),
 
     # Medicine and health (before general science)
+    # Veterinary must be before Medicine so "veterinary medicine" matches correctly
+    ("Veterinary Science", ["veterinary"]),
     ("Medicine", ["medicine", "medical sciences", "mbbs", "mbchb", "clinical",
-                  "radiography", "diagnostic imaging"]),
+                  "radiography", "diagnostic imaging", "public health",
+                  "extended medical"]),
     ("Dentistry", ["dentistry", "dental"]),
     ("Nursing", ["nursing", "midwifery", "audiology", "speech therapy",
                  "occupational therapy", "physiotherapy"]),
     ("Pharmacy", ["pharmacy", "pharmacology", "pharmaceutical"]),
-    ("Veterinary Science", ["veterinary"]),
     ("Anatomy", ["anatomy", "physiology"]),
     ("Psychology", ["psychology"]),
 
@@ -34,7 +38,8 @@ SUBJECT_RULES = [
     ("Biological", ["biology", "biological", "biochemistry", "biomedical", "bioscience",
                      "genetics", "microbiology", "neuroscience", "zoology", "ecology",
                      "molecular biology", "cell biology", "biotechnology", "animal",
-                     "plant science"]),
+                     "plant science", "immunology", "virology", "infectious",
+                     "infection", "palaeontology", "paleontology"]),
     ("Mathematics", ["mathematics", "maths", "mathematical"]),
     ("Statistics", ["statistics", "statistical", "actuarial"]),
     ("Computer Science", ["computer science", "computing", "software engineering",
@@ -43,8 +48,10 @@ SUBJECT_RULES = [
     ("Data Science", ["data science", "data analytics"]),
     ("Materials Science", ["materials science", "materials engineering"]),
     ("Environmental Sciences", ["environmental science", "environmental studies",
-                                 "sustainability", "climate"]),
-    ("Earth & Marine Sciences", ["earth science", "marine", "ocean"]),
+                                 "sustainability", "climate", "environmental humanities",
+                                 "built environment"]),
+    ("Earth & Marine Sciences", ["earth science", "earth and planetary", "planetary science",
+                                  "marine", "ocean", "earth sciences"]),
     ("Geology", ["geology", "geological"]),
     ("Geophysics", ["geophysics"]),
 
@@ -62,15 +69,22 @@ SUBJECT_RULES = [
     # Social sciences
     ("Law", ["law", "legal"]),
     ("Politics", ["politics", "political", "international relations", "government",
-                   "public policy", "public administration"]),
+                   "public policy", "public administration", "war studies"]),
     ("Sociology", ["sociology", "social science", "childhood studies"]),
-    ("Anthropology", ["anthropology"]),
-    ("Education", ["education", "teaching"]),
-    ("Development Studies", ["development studies", "international development"]),
-    ("Social Policy", ["social policy", "social work", "criminology"]),
-    ("Communication", ["journalism", "media", "communication", "film"]),
-    ("Geography", ["geography", "geographic"]),
-    ("Area Studies", ["middle east", "middle eastern", "area studies"]),
+    ("Anthropology", ["anthropology", "ethnology"]),
+    ("Education", ["education", "teaching", "learning in communities"]),
+    ("Development Studies", ["development studies", "international development",
+                              "global development", "sustainable development"]),
+    ("Social Policy", ["social policy", "social work", "criminology",
+                        "humanitarian", "youth"]),
+    ("Communication", ["journalism", "media", "communication", "film",
+                        "information in society"]),
+    ("Geography", ["geography", "geographic", "urban studies", "urban planning",
+                    "land economy", "planning and real estate"]),
+    ("Area Studies", ["middle east", "middle eastern", "area studies",
+                      "american studies", "east asian studies", "oriental studies",
+                      "hispanic studies", "scottish studies", "jewish studies",
+                      "viking", "old norse", "icelandic"]),
     ("Hospitality", ["hospitality", "tourism"]),
     ("Sports-related Subjects", ["sport", "exercise science", "kinesiology"]),
 
@@ -81,7 +95,8 @@ SUBJECT_RULES = [
     ("Classics", ["classics", "classical", "latin", "greek", "ancient", "assyriology",
                   "egyptology"]),
     ("Philosophy", ["philosophy"]),
-    ("Theology", ["theology", "religious studies", "divinity", "religion"]),
+    ("Theology", ["theology", "religious studies", "divinity", "religion",
+                   "islamic studies"]),
     ("English Language", ["english", "creative writing", "literature"]),
     ("Modern Languages", ["french", "german", "spanish", "italian", "portuguese",
                            "russian", "japanese", "chinese", "mandarin", "arabic",
@@ -96,12 +111,26 @@ SUBJECT_RULES = [
     ("Music", ["music"]),
     ("Performing Arts", ["drama", "theatre", "dance", "performing arts"]),
     ("Art & Design", ["art", "design", "fine art", "fashion", "textile", "animation",
-                      "creative", "visual"]),
+                      "creative", "visual", "illustration", "jewellery",
+                      "silversmith", "costume"]),
     ("Architecture", ["architecture"]),
 
-    # Natural Sciences (broad)
+    # Interdisciplinary / general
     ("Natural Sciences", ["natural sciences", "science"]),
+    ("Sociology", ["liberal arts", "interdisciplinary futures"]),
 ]
+
+
+# Keywords that must match as whole words (not substrings) to avoid false positives
+# e.g. "art" should not match inside "earth", "part", "heart"
+_WORD_BOUNDARY_KEYWORDS = {"art"}
+
+
+def _keyword_matches(keyword: str, name_lower: str) -> bool:
+    """Check if keyword matches in the course name, using word boundaries for short ambiguous keywords."""
+    if keyword in _WORD_BOUNDARY_KEYWORDS:
+        return bool(re.search(r'\b' + re.escape(keyword) + r'\b', name_lower))
+    return keyword in name_lower
 
 
 def map_course_to_subjects(course_name: str) -> list[str]:
@@ -110,7 +139,7 @@ def map_course_to_subjects(course_name: str) -> list[str]:
     matches = []
     for qs_subject, keywords in SUBJECT_RULES:
         for keyword in keywords:
-            if keyword in name_lower:
+            if _keyword_matches(keyword, name_lower):
                 matches.append(qs_subject)
                 break
     return matches

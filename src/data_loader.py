@@ -79,6 +79,7 @@ def _merge_oxbridge(courses: pd.DataFrame, oxbridge: pd.DataFrame, offer_cols: l
             continue
 
         # 2. Strip common suffixes and try parent course
+        matched = False
         for suffix in [" With Foundation Year", " With A Foundation Year",
                        " With Year Abroad", " With Placement Year",
                        " With Industrial Experience"]:
@@ -88,7 +89,17 @@ def _merge_oxbridge(courses: pd.DataFrame, oxbridge: pd.DataFrame, offer_cols: l
                 if parent_key in lookup:
                     for col in offer_cols:
                         courses.at[idx, col] = lookup[parent_key][col]
+                    matched = True
                     break
+        if matched:
+            continue
+
+        # 3. "Law With X Law" pattern -> inherit from "Law"
+        if course_name.startswith("Law With ") and course_name.endswith(" Law"):
+            law_key = (uni, "Law")
+            if law_key in lookup:
+                for col in offer_cols:
+                    courses.at[idx, col] = lookup[law_key][col]
 
     # Convert to numeric
     for col in offer_cols:
