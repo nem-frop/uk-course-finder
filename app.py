@@ -545,6 +545,22 @@ def main():
 
         st.divider()
 
+        # Demographics filters
+        min_asia, max_asia = st.slider(
+            "Min Asia %",
+            min_value=0, max_value=50, value=(0, 50),
+            help="Filter universities by percentage of Asian students"
+        )
+        min_intl, max_intl = st.slider(
+            "Min International %",
+            min_value=0, max_value=70, value=(0, 70),
+            help="Filter universities by percentage of international students"
+        )
+        demo_filter_active = (min_asia > 0 or max_asia < 50
+                              or min_intl > 0 or max_intl < 70)
+
+        st.divider()
+
         # Group by
         group_by = st.selectbox(
             "Group by",
@@ -582,6 +598,7 @@ def main():
         selected_unis or selected_domains or course_search.strip()
         or grade_filter_enabled
         or selected_modes or selected_durations
+        or demo_filter_active
     )
 
     # Initialize shortlist in session state
@@ -612,6 +629,13 @@ def main():
                 mask &= df["study_mode"].isin(selected_modes)
             if selected_durations:
                 mask &= df["duration"].isin(selected_durations)
+
+            # Demographics filters
+            if demo_filter_active:
+                if "asia_pct" in df.columns:
+                    mask &= (df["asia_pct"] >= min_asia) & (df["asia_pct"] <= max_asia)
+                if "international_pct" in df.columns:
+                    mask &= (df["international_pct"] >= min_intl) & (df["international_pct"] <= max_intl)
 
             # Grade filters
             if req_mode == "A-Level" and grade_filter_enabled and my_grade_score is not None:
