@@ -194,7 +194,8 @@ def build_display_df(filtered, req_mode, has_oxbridge):
                    "qs_global_rank", "the_rank", "qs_subject_rank",
                    "weighted_score",
                    "duration", "study_mode",
-                   "total_offer_pct", "intl_offer_pct"]
+                   "total_offer_pct", "intl_offer_pct",
+                   "asia_pct", "international_pct"]
     available_wanted = [c for c in wanted_cols if c in filtered.columns]
     display_df = filtered[available_wanted].copy()
 
@@ -213,6 +214,8 @@ def build_display_df(filtered, req_mode, has_oxbridge):
         "study_mode": "Study Mode",
         "total_offer_pct": "Offer %",
         "intl_offer_pct": "Intl Offer %",
+        "asia_pct": "Asia %",
+        "international_pct": "Intl %",
     })
 
     for rank_col in ["QS Global", "THE Global", "QS Subject"]:
@@ -224,10 +227,10 @@ def build_display_df(filtered, req_mode, has_oxbridge):
             lambda x: f"{x:.1f}" if pd.notna(x) else "-"
         )
 
-    for pct_col in ["Offer %", "Intl Offer %"]:
+    for pct_col in ["Offer %", "Intl Offer %", "Asia %", "Intl %"]:
         if pct_col in display_df.columns:
             display_df[pct_col] = display_df[pct_col].apply(
-                lambda x: f"{x:.1f}%" if pd.notna(x) else "-"
+                lambda x: f"{x:.0f}%" if pd.notna(x) else "-"
             )
 
     show_cols = ["University", "Course", "Link", "Subject Area"]
@@ -238,6 +241,7 @@ def build_display_df(filtered, req_mode, has_oxbridge):
     show_cols.extend(["QS Global", "THE Global", "QS Subject", "Score"])
     if has_oxbridge:
         show_cols.extend(["Offer %", "Intl Offer %"])
+    show_cols.extend(["Asia %", "Intl %"])
 
     available_show = [c for c in show_cols if c in display_df.columns]
     return display_df, available_show
@@ -256,6 +260,8 @@ COLUMN_CONFIG = {
     "Score": st.column_config.TextColumn(width="small"),
     "Offer %": st.column_config.TextColumn(width="small"),
     "Intl Offer %": st.column_config.TextColumn(width="small"),
+    "Asia %": st.column_config.TextColumn(width="small"),
+    "Intl %": st.column_config.TextColumn(width="small"),
 }
 
 
@@ -327,6 +333,8 @@ def show_landing_page(df):
         admission tests, interview types, and international applicant stats
 
         **Oxbridge admissions:** Per-course offer rates for Oxford and Cambridge
+
+        **Demographics:** Student population, international %, and Asian student % per university
         """)
 
     with right_col:
@@ -338,9 +346,10 @@ def show_landing_page(df):
         - Times Higher Education World Rankings 2026
 
         **Admissions:**
-        - Oxbridge per-course offer rates (78 courses)
+        - Oxbridge per-course offer rates (92 courses matched)
         - Medical School Council requirements (44 schools)
         - International applicant statistics (34 schools)
+        - Student demographics (50 universities)
         """)
 
     # Data quality / known gaps in expander
@@ -369,14 +378,29 @@ def show_landing_page(df):
 
     # Universities overview
     st.subheader("Universities Covered")
-    uni_summary = df.groupby("university").agg(
-        Courses=("course", "size"),
-        Domains=("domain", "nunique"),
-        QS_Rank=("qs_global_rank", "first"),
-        THE_Rank=("the_rank", "first"),
-    ).sort_values("QS_Rank")
+    agg_dict = {
+        "Courses": ("course", "size"),
+        "Domains": ("domain", "nunique"),
+        "QS_Rank": ("qs_global_rank", "first"),
+        "THE_Rank": ("the_rank", "first"),
+    }
+    if "total_students" in df.columns:
+        agg_dict["Students"] = ("total_students", "first")
+        agg_dict["Intl %"] = ("international_pct", "first")
+        agg_dict["Asia %"] = ("asia_pct", "first")
+    uni_summary = df.groupby("university").agg(**agg_dict).sort_values("QS_Rank")
     uni_summary["QS_Rank"] = uni_summary["QS_Rank"].apply(format_rank)
     uni_summary["THE_Rank"] = uni_summary["THE_Rank"].apply(format_rank)
+    if "Students" in uni_summary.columns:
+        uni_summary["Students"] = uni_summary["Students"].apply(
+            lambda x: f"{int(x):,}" if pd.notna(x) else "-"
+        )
+        uni_summary["Intl %"] = uni_summary["Intl %"].apply(
+            lambda x: f"{x:.0f}%" if pd.notna(x) else "-"
+        )
+        uni_summary["Asia %"] = uni_summary["Asia %"].apply(
+            lambda x: f"{x:.0f}%" if pd.notna(x) else "-"
+        )
     uni_summary = uni_summary.rename(columns={"QS_Rank": "QS Global", "THE_Rank": "THE Global"})
     st.dataframe(uni_summary, width="stretch")
 
@@ -601,7 +625,14 @@ def main():
 
                     for group_name, group_df in groups:
                         count = len(group_df)
-                        with st.expander(f"{group_name} ({count} courses)", expanded=True):
+                        # Add demographics to university group headers
+                        label = f"{group_name} ({count} courses)"
+                        if group_by == "University" and "asia_pct" in group_df.columns:
+                            asia = group_df["asia_pct"].iloc[0]
+                            intl = group_df["international_pct"].iloc[0]
+                            if pd.notna(asia) and pd.notna(intl):
+                                label += f" — Asia {asia:.0f}%, Intl {intl:.0f}%"
+                        with st.expander(label, expanded=True):
                             display_df, available_show = build_display_df(group_df, req_mode, has_oxbridge)
                             render_dataframe(display_df, available_show, height=min(400, 35 * count + 60))
 

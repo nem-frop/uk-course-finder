@@ -157,6 +157,15 @@ def load_master_dataframe() -> pd.DataFrame:
                   "total_offer_pct", "uk_offer_pct", "intl_offer_pct"]
     courses = _merge_oxbridge(courses, oxbridge, offer_cols)
 
+    # 6. Demographics - student population breakdown
+    demo_path = DATA_DIR / "demographics.csv"
+    if demo_path.exists():
+        demo = pd.read_csv(demo_path)
+        demo_cols = ["university", "total_students", "international_pct", "asia_pct"]
+        courses = courses.merge(
+            demo[demo_cols], on="university", how="left"
+        )
+
     # Compute a combined "best rank" for sorting
     courses["best_global_rank"] = courses[["qs_global_rank", "the_rank"]].min(axis=1)
 
