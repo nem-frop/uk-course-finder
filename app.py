@@ -265,15 +265,53 @@ COLUMN_CONFIG = {
 }
 
 
-def render_dataframe(display_df, available_show, height=600):
-    """Render a styled st.dataframe."""
-    st.dataframe(
-        display_df[available_show],
-        hide_index=True,
-        width="stretch",
-        height=height,
-        column_config={k: v for k, v in COLUMN_CONFIG.items() if k in available_show}
-    )
+_editor_counter = 0
+
+
+def render_dataframe(display_df, available_show, height=600, enable_shortlist=False, source_df=None):
+    """Render a styled st.dataframe, optionally with shortlist checkboxes."""
+    global _editor_counter
+
+    if enable_shortlist and source_df is not None:
+        # Use st.data_editor with a Select column for shortlisting
+        shortlist = st.session_state.get("shortlist", set())
+        # Create unique keys from university + course + ucas_code
+        keys = (source_df["university"] + " | " + source_df["course"] + " | " + source_df["ucas_code"].fillna("")).values
+        editor_df = display_df[available_show].copy()
+        editor_df.insert(0, "⭐", [k in shortlist for k in keys])
+
+        col_cfg = {k: v for k, v in COLUMN_CONFIG.items() if k in available_show}
+        col_cfg["⭐"] = st.column_config.CheckboxColumn(
+            "⭐", help="Add to shortlist", default=False, width="small"
+        )
+
+        _editor_counter += 1
+        edited = st.data_editor(
+            editor_df,
+            hide_index=True,
+            width="stretch",
+            height=height,
+            column_config=col_cfg,
+            disabled=[c for c in available_show],  # Only star column is editable
+            key=f"shortlist_editor_{_editor_counter}",
+        )
+
+        # Sync selections back to session state
+        new_shortlist = set()
+        for i, selected in enumerate(edited["⭐"]):
+            if selected and i < len(keys):
+                new_shortlist.add(keys[i])
+        # Preserve selections from other views/filters
+        other_selections = shortlist - set(keys)
+        st.session_state["shortlist"] = new_shortlist | other_selections
+    else:
+        st.dataframe(
+            display_df[available_show],
+            hide_index=True,
+            width="stretch",
+            height=height,
+            column_config={k: v for k, v in COLUMN_CONFIG.items() if k in available_show}
+        )
 
 
 # --- Landing page ---
@@ -525,6 +563,8 @@ def main():
                 "Grade requirement (lowest first)",
                 "Course name (A-Z)",
                 "Offer rate (lowest first)",
+                "Asia % (highest first)",
+                "International % (highest first)",
             ]
         )
 
@@ -544,8 +584,15 @@ def main():
         or selected_modes or selected_durations
     )
 
+    # Initialize shortlist in session state
+    if "shortlist" not in st.session_state:
+        st.session_state["shortlist"] = set()
+
+    shortlist_count = len(st.session_state["shortlist"])
+    shortlist_label = f"Shortlist ({shortlist_count})" if shortlist_count > 0 else "Shortlist"
+
     # Tabs
-    tab_courses, tab_med = st.tabs(["Course Explorer", "Medical Schools"])
+    tab_courses, tab_med, tab_shortlist = st.tabs(["Course Explorer", "Medical Schools", shortlist_label])
 
     # ==================== TAB 1: Course Explorer ====================
     with tab_courses:
@@ -588,6 +635,8 @@ def main():
                 "Grade requirement (lowest first)": ("alevel_score", True),
                 "Course name (A-Z)": ("course", True),
                 "Offer rate (lowest first)": ("total_offer_pct", True),
+                "Asia % (highest first)": ("asia_pct", False),
+                "International % (highest first)": ("international_pct", False),
             }
             sort_col, sort_asc = sort_map.get(sort_by, ("weighted_score", False))
             if sort_col in filtered.columns:
@@ -617,7 +666,8 @@ def main():
                 if group_by == "None":
                     # Flat table
                     display_df, available_show = build_display_df(filtered, req_mode, has_oxbridge)
-                    render_dataframe(display_df, available_show)
+                    render_dataframe(display_df, available_show,
+                                     enable_shortlist=True, source_df=filtered)
                 else:
                     # Grouped tables inside expanders
                     group_col = "university" if group_by == "University" else "domain"
@@ -633,8 +683,11 @@ def main():
                             if pd.notna(asia) and pd.notna(intl):
                                 label += f" — Asia {asia:.0f}%, Intl {intl:.0f}%"
                         with st.expander(label, expanded=True):
-                            display_df, available_show = build_display_df(group_df, req_mode, has_oxbridge)
-                            render_dataframe(display_df, available_show, height=min(400, 35 * count + 60))
+                            gdf = group_df.reset_index(drop=True)
+                            display_df, available_show = build_display_df(gdf, req_mode, has_oxbridge)
+                            render_dataframe(display_df, available_show,
+                                             height=min(400, 35 * count + 60),
+                                             enable_shortlist=True, source_df=gdf)
 
                 # Export
                 st.divider()
@@ -642,7 +695,30 @@ def main():
                 if len(filtered) > export_limit:
                     st.info(f"Exporting first {export_limit} of {len(filtered):,} courses. Increase the limit in the sidebar or apply more filters.")
 
-                csv = filtered.head(n_export).to_csv(index=False).encode("utf-8")
+                export_cols = {
+                    "university": "University",
+                    "course": "Course",
+                    "course_url": "URL",
+                    "domain": "Subject Area",
+                    "alevel_grades": "A-Level Req",
+                    "ib_points_raw": "IB Req",
+                    "qs_global_rank": "QS Global Rank",
+                    "the_rank": "THE Rank",
+                    "qs_subject_rank": "QS Subject Rank",
+                    "weighted_score": "Weighted Score",
+                    "duration": "Duration",
+                    "study_mode": "Study Mode",
+                    "total_offer_pct": "Offer %",
+                    "intl_offer_pct": "Intl Offer %",
+                    "asia_pct": "Asia %",
+                    "international_pct": "Intl %",
+                    "total_students": "Total Students",
+                    "ucas_code": "UCAS Code",
+                    "qualification": "Qualification",
+                }
+                available_export = {k: v for k, v in export_cols.items() if k in filtered.columns}
+                export_df = filtered.head(n_export)[list(available_export.keys())].rename(columns=available_export)
+                csv = export_df.to_csv(index=False).encode("utf-8")
                 st.download_button(
                     label=f"Export {n_export} courses as CSV",
                     data=csv,
@@ -653,6 +729,10 @@ def main():
     # ==================== TAB 2: Medical Schools ====================
     with tab_med:
         render_medical_schools()
+
+    # ==================== TAB 3: Shortlist ====================
+    with tab_shortlist:
+        render_shortlist(df, req_mode=req_mode)
 
 
 def render_medical_schools():
@@ -756,6 +836,86 @@ def render_medical_schools():
         height=600,
         column_config={k: v for k, v in col_config.items() if k in med_display.columns}
     )
+
+
+def render_shortlist(df, req_mode="A-Level"):
+    """Render the Shortlist tab showing saved courses."""
+    shortlist = st.session_state.get("shortlist", set())
+
+    st.subheader("Your Shortlist")
+    st.caption("Star courses in the Course Explorer to add them here. Shortlist persists during your session.")
+
+    if not shortlist:
+        st.info("No courses shortlisted yet. Use the ⭐ column in Course Explorer to add courses.")
+        return
+
+    # Filter master df to shortlisted courses (avoid mutating original df)
+    keys = df["university"] + " | " + df["course"] + " | " + df["ucas_code"].fillna("")
+    shortlisted = df[keys.isin(shortlist)].copy()
+
+    if shortlisted.empty:
+        st.warning("Shortlisted courses not found in current data.")
+        return
+
+    # Stats
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("Shortlisted", len(shortlisted))
+    with col2:
+        st.metric("Universities", shortlisted["university"].nunique())
+    with col3:
+        st.metric("Subject Areas", shortlisted["domain"].nunique())
+
+    st.divider()
+
+    # Display table
+    has_oxbridge = shortlisted["total_offer_pct"].notna().any()
+    display_df, available_show = build_display_df(shortlisted, req_mode, has_oxbridge)
+    st.dataframe(
+        display_df[available_show],
+        hide_index=True,
+        width="stretch",
+        height=min(600, 35 * len(shortlisted) + 60),
+        column_config={k: v for k, v in COLUMN_CONFIG.items() if k in available_show}
+    )
+
+    # Export shortlist
+    st.divider()
+    export_cols = {
+        "university": "University",
+        "course": "Course",
+        "course_url": "URL",
+        "domain": "Subject Area",
+        "alevel_grades": "A-Level Req",
+        "ib_points_raw": "IB Req",
+        "qs_global_rank": "QS Global Rank",
+        "the_rank": "THE Rank",
+        "qs_subject_rank": "QS Subject Rank",
+        "duration": "Duration",
+        "asia_pct": "Asia %",
+        "international_pct": "Intl %",
+        "total_students": "Total Students",
+        "ucas_code": "UCAS Code",
+        "qualification": "Qualification",
+        "total_offer_pct": "Offer %",
+        "intl_offer_pct": "Intl Offer %",
+    }
+    available_export = {k: v for k, v in export_cols.items() if k in shortlisted.columns}
+    export_df = shortlisted[list(available_export.keys())].rename(columns=available_export)
+
+    col_dl, col_clear = st.columns([3, 1])
+    with col_dl:
+        csv = export_df.to_csv(index=False).encode("utf-8")
+        st.download_button(
+            label=f"Export shortlist ({len(shortlisted)} courses) as CSV",
+            data=csv,
+            file_name="uk_courses_shortlist.csv",
+            mime="text/csv"
+        )
+    with col_clear:
+        if st.button("Clear shortlist", type="secondary"):
+            st.session_state["shortlist"] = set()
+            st.rerun()
 
 
 if __name__ == "__main__":
