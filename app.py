@@ -238,10 +238,10 @@ def build_display_df(filtered, req_mode, has_oxbridge):
         show_cols.append("A-Level Req")
     else:
         show_cols.append("IB Req")
-    show_cols.extend(["QS Global", "THE Global", "QS Subject", "Score"])
+    show_cols.extend(["QS Global", "THE Global", "QS Subject", "Score",
+                       "Asia %", "Intl %"])
     if has_oxbridge:
         show_cols.extend(["Offer %", "Intl Offer %"])
-    show_cols.extend(["Asia %", "Intl %"])
 
     available_show = [c for c in show_cols if c in display_df.columns]
     return display_df, available_show
