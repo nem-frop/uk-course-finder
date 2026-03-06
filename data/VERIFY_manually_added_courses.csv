@@ -1,0 +1,33 @@
+university,course,ucas_code,alevel_grades,ib_points_raw,duration,qualification,course_url
+University of Cambridge,Chemical Engineering And Biotechnology,H810,A*A*A,41-42,4 years,Master of Engineering (with Honours) - MEng (Hon),https://www.undergraduate.study.cam.ac.uk/courses/chemical-engineering-biotechnology-ba-hons-meng
+University of Cambridge,Design,KH11,A*AA,41-42,4 years,Master of Design (with Honours) - MDes (Hon),https://www.undergraduate.study.cam.ac.uk/courses/design-ba-hons-mdes
+University of Cambridge,Engineering,H100,A*A*A,41-42,4 years,Master of Engineering (with Honours) - MEng (Hon),https://www.undergraduate.study.cam.ac.uk/courses/engineering-ba-hons-meng
+University of Cambridge,Mathematics,G100,A*A*A,41-42,4 years,Master of Mathematics (with Honours) - MMath (Hon),https://www.undergraduate.study.cam.ac.uk/courses/mathematics-ba-hons-mmath
+University of Cambridge,Natural Sciences,BCF0,A*A*A,41-42,4 years,Master of Natural Sciences (with Honours) - MSci (Hon),https://www.undergraduate.study.cam.ac.uk/courses/natural-sciences-ba-hons-msci
+University of Oxford,Chemistry,F100,A*A*A,40,4 years,Master of Chemistry (with Honours) - MChem (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/chemistry
+University of Oxford,Engineering Science,H100,A*A*A,40,4 years,Master of Engineering (with Honours) - MEng (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/engineering-science
+University of Oxford,Mathematics,G100,A*A*A,39,4 years,Master of Mathematics (with Honours) - MMath (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/mathematics
+University of Oxford,Mathematics And Computer Science,GG14,A*A*A,39,4 years,Master of Mathematics and Computer Science (with Honours) - MMathCompSci (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/mathematics-and-computer-science
+University of Oxford,Mathematics And Philosophy,GV15,A*A*A,39,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/mathematics-and-philosophy
+University of Oxford,Mathematics And Statistics,GG13,A*A*A,39,4 years,Master of Mathematics (with Honours) - MMath (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/mathematics-and-statistics
+University of Oxford,Biology,C100,A*AA,39,4 years,Master of Biology (with Honours) - MBiol (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/biology
+University of Oxford,Biochemistry,C700,A*AA,39,4 years,Master of Biochemistry (with Honours) - MBiochem (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/biochemistry-molecular-and-cellular
+University of Oxford,Biomedical Sciences,BC98,A*AA,39,4 years,Master of Biomedical Sciences (with Honours) - MBiomedSci (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/biomedical-sciences
+University of Oxford,Computer Science,G400,A*AA,39,4 years,Master of Computer Science (with Honours) - MCompSci (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/computer-science
+University of Oxford,Computer Science And Philosophy,IV15,A*AA,39,3 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/computer-science-and-philosophy
+University of Oxford,Earth Sciences (Geology),F600,A*AA,39,4 years,Master of Earth Sciences (with Honours) - MEarthSci (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/earth-sciences-geology
+University of Oxford,Materials Science,FJ22,A*AA,39,4 years,Master of Engineering (with Honours) - MEng (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/materials-science
+University of Oxford,Physics,F303,A*AA,39,4 years,Master of Physics (with Honours) - MPhys (Hon),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/physics
+University of Oxford,Physics And Philosophy,FV35,A*AA,39,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/physics-and-philosophy
+University of Oxford,Classics And Modern Languages,QR89,AAA,39,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/classics-and-modern-languages
+University of Oxford,Classics And Asian And Middle Eastern Studies,QT89,AAA,39,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/classics-and-asian-and-middle-eastern-studies
+University of Oxford,English And Modern Languages,QR13,AAA,38,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/english-and-modern-languages
+University of Oxford,European And Middle Eastern Languages,TR89,AAA,38,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/european-and-middle-eastern-languages
+University of Oxford,Ancient And Modern History,V110,AAA,38,3 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/history-ancient-and-modern
+University of Oxford,History And Modern Languages,RV11,AAA,38,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/history-and-modern-languages
+University of Oxford,Modern Languages,R900,AAA,38,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/modern-languages
+University of Oxford,Modern Languages And Linguistics,QR19,AAA,38,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/modern-languages-and-linguistics
+University of Oxford,Asian and Middle Eastern Studie,T600,AAA,39,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/asian-and-middle-eastern-studies
+University of Oxford,Philosophy And Modern Languages,VR51,AAA,39,4 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/philosophy-and-modern-languages
+University of Oxford,Experimental Psychology,C830,A*AA,39,3 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/psychology-experimental
+University of Oxford,"Psychology, Philosophy, And Linguistics",CV85,A*AA,39,3 years,Bachelor of Arts (with Honours) - BA (Hons),https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/psychology-philosophy-and-linguistics

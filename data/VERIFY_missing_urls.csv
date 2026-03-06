@@ -1,0 +1,274 @@
+university,course,ucas_code,alevel_grades,ib_points_raw
+University of Oxford,Classical Archaeology And Ancient History With Foundation Year,VV1F,BBB,35 points
+University of Oxford,Classics And English With Beginner'S Latin And Greek With Foundation Year,QQHF,BBB,35 points
+University of Oxford,Classics And English With Foundation Year,QQ3F,BBB,35 points
+University of Oxford,Classics With Foundation Year,Q80F,BBB,35 points
+University of Oxford,English Language And Literature With Foundation Year,Q30F,BBB,35 points
+University of Oxford,Hebrew,Q480,AAA,39 points
+University of Oxford,History And Beginners' German,RV21,AAA,38 points
+University of Oxford,History And English With Foundation Year,VQ1F,BBB,35 points
+University of Oxford,History With Foundation Year,V10F,BBB,35 points
+University of Oxford,Law With Foundation Year,M10F,BBB,35 points
+University of Oxford,Philosophy And Theology With Foundation Year,VV5F,BBB,35 points
+University of Oxford,"Philosophy, Politics And Economics With Foundation Year",L0VF,BBB,35 points
+University of Oxford,Theology And Religion With Foundation Year,V60F,BBB,35 points
+University College London,Arts And Sciences With Study Abroad,Y001,A*AA,39 points
+University College London,Bsc Experimental Linguistics,Q102,AAB,36 points
+University College London,Bsc Experimental Linguistics (International Programme),Q103,AAB,36 points
+University College London,Bulgarian And Czech,R7BC,ABB,34 points
+University College London,Bulgarian And Danish,R7BD,ABB,34 points
+University College London,Bulgarian And Dutch,R7BA,ABB,34 points
+University College London,Bulgarian And Finnish,R7BF,ABB,34 points
+University College London,Bulgarian And French,R7FB,AAB,36 points
+University College London,Bulgarian And German,R7RG,AAB,36 points
+University College London,Bulgarian And Hebrew,R7BH,ABB,34 points
+University College London,Bulgarian And Hungarian,R7RH,ABB,34 points
+University College London,Bulgarian And Italian,R7RI,AAB,36 points
+University College London,Bulgarian And Norwegian,R7RN,ABB,34 points
+University College London,Bulgarian And Polish,R7BP,ABB,34 points
+University College London,Bulgarian And Portuguese,R7RP,ABB,34 points
+University College London,Bulgarian And Romanian,R7GO,ABB,34 points
+University College London,Bulgarian And Russian,R7GR,ABB,34 points
+University College London,Bulgarian And Serbian/Croatian,R7SB,ABB,34 points
+University College London,Bulgarian And Spanish,R74S,AAB,36 points
+University College London,Bulgarian And Swedish,R7BW,ABB,34 points
+University College London,Bulgarian And Ukrainian,R7GU,ABB,34 points
+University College London,Bulgarian And Yiddish,R7BY,ABB,34 points
+University College London,Classics And The Ancient World,Q802,AAB,36 points
+University College London,Classics And The Ancient World With Study Abroad,Q803,AAB,36 points
+University College London,Computer Science With Integrated Foundation Year Bsc,FY12,,
+University College London,Czech And Danish,R7CD,ABB,34 points
+University College London,Czech And Dutch,R7R9,ABB,34 points
+University College London,Czech And Finnish,R7CF,ABB,34 points
+University College London,Czech And French,R7R1,AAB,36 points
+University College London,Czech And German,R7R2,AAB,36 points
+University College London,Czech And Hebrew,R7Q4,ABB,34 points
+University College London,Czech And Hungarian,R7CH,ABB,34 points
+University College London,Czech And Italian,R7R3,AAB,36 points
+University College London,Czech And Norwegian,R7CN,ABB,34 points
+University College London,Czech And Polish,R7CP,ABB,34 points
+University College London,Czech And Portuguese,R7PC,ABB,34 points
+University College London,Czech And Romanian,R7CO,ABB,34 points
+University College London,Czech And Russian,R7CR,ABB,34 points
+University College London,Czech And Serbian/Croatian,R7CC,ABB,34 points
+University College London,Czech And Spanish,R7SC,AAB,36 points
+University College London,Czech And Swedish,R7CW,ABB,34 points
+University College London,Czech And Ukrainian,R7CU,ABB,34 points
+University College London,Czech And Yiddish,R7CY,ABB,34 points
+University College London,Danish And Dutch,R6R9,ABB,34 points
+University College London,Danish And Finnish,R7AF,ABB,34 points
+University College London,Danish And French,R6R1,ABB,34 points
+University College London,Danish And German,R6R2,ABB,34 points
+University College London,Danish And Hebrew,R6Q4,ABB,34 points
+University College London,Danish And Hungarian,R6DH,ABB,34 points
+University College London,Danish And Italian,R6R3,ABB,34 points
+University College London,Danish And Polish,R6DP,ABB,34 points
+University College London,Danish And Portuguese,R6R5,ABB,34 points
+University College London,Danish And Romanian,R6DR,ABB,34 points
+University College London,Danish And Russian,R6RD,ABB,34 points
+University College London,Danish And Serbian/Croatian,R6R7,ABB,34 points
+University College London,Danish And Spanish,R6R4,ABB,34 points
+University College London,Danish And Ukrainian,R6DU,ABB,34 points
+University College London,Danish And Yiddish,R6DY,ABB,34 points
+University College London,Data Science,G303,A*AA,39 points
+University College London,Dutch And English,R9Q3,AAA,38 points
+University College London,Dutch And Finnish,R7DF,ABB,34 points
+University College London,Dutch And French,R9R1,ABB,34 points
+University College London,Dutch And German,R9R2,ABB,34 points
+University College London,Dutch And Hebrew,R9Q4,ABB,34 points
+University College London,Dutch And History Of Art,R9V3,ABB,34 points
+University College London,Dutch And Hungarian,R9RH,AAB,36 points
+University College London,Dutch And Italian,R9R3,ABB,34 points
+University College London,Dutch And Latin,R9Q6,ABB,34 points
+University College London,Dutch And Management Studies,R9N2,AAB,36 points
+University College London,Dutch And Norwegian,R9RN,ABB,34 points
+University College London,Dutch And Philosophy,R9V5,AAB,36 points
+University College London,Dutch And Polish,R9DP,ABB,34 points
+University College London,Dutch And Portuguese,R9R5,ABB,34 points
+University College London,Dutch And Romanian,R9RO,ABB,34 points
+University College London,Dutch And Russian,R9DR,AAB,36 points
+University College London,Dutch And Serbian/Croatian,R9R7,ABB,34 points
+University College London,Dutch And Spanish,R9R4,ABB,34 points
+University College London,Dutch And Swedish,R9R6,ABB,34 points
+University College London,Dutch And Ukrainian,R9RU,ABB,34 points
+University College London,Dutch And Yiddish,R9R9,ABB,34 points
+University College London,Dutch With Film Studies,R9P3,ABB,34 points
+University College London,Dutch With Management Studies,R9N3,AAB,36 points
+University College London,Finnish And German,R6RG,AAB,36 points
+University College London,Finnish And Hebrew,R6FH,ABB,34 points
+University College London,Finnish And Hungarian,R6RH,ABB,34 points
+University College London,Finnish And Italian,R6FI,AAB,36 points
+University College London,Finnish And Norwegian,R6RN,ABB,34 points
+University College London,Finnish And Polish,R6FP,ABB,34 points
+University College London,Finnish And Portuguese,R6PF,ABB,34 points
+University College London,Finnish And Romanian,R6FR,ABB,34 points
+University College London,Finnish And Russian,R6NN,ABB,34 points
+University College London,Finnish And Serbian/Croatian,R6CF,ABB,34 points
+University College London,Finnish And Spanish,R6SI,AAB,36 points
+University College London,Finnish And Swedish,R6R6,ABB,34 points
+University College London,Finnish And Ukrainian,R6UF,ABB,34 points
+University College London,Finnish And Yiddish,R6FY,ABB,34 points
+University College London,French And English,R1Q3,AAA,38 points
+University College London,French And German,R1R2,ABB,34 points
+University College London,French And Hebrew,R1Q4,AAB,34 points
+University College London,French And History Of Art,R1V3,ABB,34 points
+University College London,French And Hungarian,R1RH,AAB,36 points
+University College London,French And Italian,R1R3,ABB,34 points
+University College London,French And Latin,R1Q6,AAB,36 points
+University College London,French And Norwegian,R1RN,ABB,34 points
+University College London,French And Philosophy,R1V5,AAA,38 points
+University College London,French And Polish,R1RP,AAB,36 points
+University College London,French And Portuguese,R1R5,ABB,34 points
+University College London,French And Romanian,R1RO,AAB,36 points
+University College London,French And Russian,R1RU,AAB,36 points
+University College London,French And Serbian/Croatian,R1R7,AAB,36 points
+University College London,French And Spanish,R1R4,AAB,36 points
+University College London,French And Swedish,R1R6,ABB,34 points
+University College London,French And Ukrainian,R1UK,AAB,36 points
+University College London,French And Yiddish,R1R9,AAB,36 points
+University College London,French With Film Studies,R1P3,ABB,34 points
+University College London,French With Management Studies,R1N2,AAB,36 points
+University College London,Geography And Economics,LL17,A*AA,39 points
+University College London,German And English,R2Q3,AAA,38 points
+University College London,German And Hebrew,R2Q4,ABB,34 points
+University College London,German And History Of Art,R2V3,ABB,34 points
+University College London,German And Hungarian,R2RH,AAB,36 points
+University College London,German And Italian,R2R3,ABB,34 points
+University College London,German And Jewish Studies,R2V6,ABB,34 points
+University College London,German And Latin,R2Q6,ABB,34 points
+University College London,German And Norwegian,R2RN,ABB,34 points
+University College London,German And Philosophy,R2V5,AAB,36 points
+University College London,German And Polish,R2RP,ABB,34 points
+University College London,German And Portuguese,R2R5,ABB,34 points
+University College London,German And Romanian,R2RO,ABB,34 points
+University College London,German And Russian,R2RU,ABB,34 points
+University College London,German And Serbian/Croatian,R2R7,ABB,34 points
+University College London,German And Spanish,R2R4,ABB,34 points
+University College London,German And Swedish,R2R6,ABB,34 points
+University College London,German And Ukrainian,R2UK,ABB,34 points
+University College London,German And Yiddish,R2R9,ABB,34 points
+University College London,German With Film Studies,R2P3,ABB,34 points
+University College London,German With Management Studies,R2N2,AAB,36 points
+University College London,Hebrew And Hungarian,Q4RH,ABB,34 points
+University College London,Hebrew And Italian,Q4R3,ABB,34 points
+University College London,Hebrew And Norwegian,Q4RN,ABB,34 points
+University College London,Hebrew And Polish,Q4RP,ABB,34 points
+University College London,Hebrew And Romanian,Q4RO,ABB,34 points
+University College London,Hebrew And Russian,Q4RU,ABB,34 points
+University College London,Hebrew And Serbian/Croatian,Q4R7,ABB,34 points
+University College London,Hebrew And Spanish,Q4R4,ABB,34 points
+University College London,Hebrew And Swedish,Q4R6,ABB,34 points
+University College London,Hebrew And Ukrainian,Q4UK,ABB,34 points
+University College London,Hungarian And Italian,R7HI,ABB,34 points
+University College London,Hungarian And Norwegian,R7HN,ABB,34 points
+University College London,Hungarian And Polish,R7HP,ABB,34 points
+University College London,Hungarian And Portuguese,R7PH,ABB,34 points
+University College London,Hungarian And Romanian,R7HR,ABB,34 points
+University College London,Hungarian And Russian,R7HU,ABB,34 points
+University College London,Hungarian And Serbian/Croatian,R7SH,ABB,34 points
+University College London,Hungarian And Spanish,R7SA,AAB,36 points
+University College London,Hungarian And Swedish,R7HW,ABB,34 points
+University College London,Hungarian And Ukrainian,R7UH,ABB,34 points
+University College London,Hungarian And Yiddish,R7HY,ABB,34 points
+University College London,International Social And Political Studies,LV01,A*AA,39 points
+University College London,Italian And History Of Art,R3V3,ABB,34 points
+University College London,Italian And Jewish Studies,R3V6,ABB,34 points
+University College London,Italian And Latin,R3Q6,ABB,34 points
+University College London,Italian And Management Studies,RN32,AAB,36 points
+University College London,Italian And Norwegian,R3RN,ABB,34 points
+University College London,Italian And Philosophy,R3V5,AAB,36 points
+University College London,Italian And Polish,R3RP,ABB,34 points
+University College London,Italian And Portuguese,R3R5,ABB,34 points
+University College London,Italian And Romanian,R3RO,ABB,34 points
+University College London,Italian And Russian,R3RU,ABB,34 points
+University College London,Italian And Serbian/Croatian,R3R7,ABB,34 points
+University College London,Italian And Spanish,R3R4,ABB,34 points
+University College London,Italian And Swedish,R3R6,ABB,34 points
+University College London,Italian And Ukrainian,R3UK,ABB,34 points
+University College London,Italian And Yiddish,R3R9,ABB,36 points
+University College London,Italian With Film Studies,R3P3,ABB,34 points
+University College London,Media,P300,AAB,36 points
+University College London,Norwegian And Polish,R6NP,ABB,34 points
+University College London,Norwegian And Portuguese,R6PN,ABB,34 points
+University College London,Norwegian And Romanian,R6NR,ABB,34 points
+University College London,Norwegian And Russian,R6ON,ABB,34 points
+University College London,Norwegian And Serbian/Croatian,R6SN,ABB,34 points
+University College London,Norwegian And Spanish,R6SO,ABB,34 points
+University College London,Norwegian And Ukrainian,R6NU,ABB,34 points
+University College London,Norwegian And Yiddish,R6NY,ABB,34 points
+University College London,Polish And Portuguese,R6PP,ABB,34 points
+University College London,Polish And Romanian,R7PN,ABB,34 points
+University College London,Polish And Russian,R7PR,ABB,34 points
+University College London,Polish And Serbian/Croatian,R7SP,ABB,34 points
+University College London,Polish And Spanish,R6PO,AAB,36 points
+University College London,Polish And Swedish,R7PW,ABB,34 points
+University College London,Polish And Ukrainian,R7PU,ABB,34 points
+University College London,Polish And Yiddish,R6PY,ABB,34 points
+University College London,Romanian And Portuguese,R5RO,ABB,34 points
+University College London,Romanian And Russian,R7OC,ABB,34 points
+University College London,Romanian And Serbian/Croatian,R7RC,ABB,34 points
+University College London,Romanian And Spanish,R7OR,AAB,36 points
+University College London,Romanian And Swedish,R7OW,ABB,34 points
+University College London,Romanian And Ukrainian,R7OU,ABB,34 points
+University College London,Romanian And Yiddish,RR0Y,ABB,34 points
+University College London,Russian And Portuguese,R5RU,ABB,34 points
+University College London,Russian And Serbian/Croatian,R7SR,ABB,34 points
+University College London,Russian And Spanish,R7US,AAB,36 points
+University College London,Russian And Swedish,R7RW,ABB,34 points
+University College London,Russian And Ukrainian,R7UK,ABB,34 points
+University College London,Russian And Yiddish,RRUY,ABB,
+University College London,Scandinavian Studies And English,R6Q3,AAA,38 points
+University College London,Scandinavian Studies And History Of Art,R6V3,ABB,34 points
+University College London,Scandinavian Studies And Latin,R6Q6,ABB,34 points
+University College London,Scandinavian Studies And Philosophy,R6V5,AAB,36 points
+University College London,Scandinavian Studies With Film Studies,R6P3,ABB,34 points
+University College London,Scandinavian Studies With Management Studies,R6N2,AAB,36 points
+University College London,Science And Engineering For Social Change With Integrated Foundation Year Bsc,FY27,,
+University College London,Serbian/Croatian And Portuguese,R7R5,ABB,34 points
+University College London,Serbian/Croatian And Spanish,R7R4,AAB,36 points
+University College London,Serbian/Croatian And Swedish,R7R6,ABB,34 points
+University College London,Serbian/Croatian And Ukrainian,R7SU,ABB,34 points
+University College London,Serbian/Croatian And Yiddish,R7RY,ABB,34 points
+University College London,Spanish And Latin,R4Q6,AAB,36 points
+University College London,Spanish And Philosophy,R4V5,AAA,38 points
+University College London,Spanish And Portuguese,R5R4,ABB,34 points
+University College London,Spanish And Swedish,R4R6,ABB,34 points
+University College London,Spanish And Ukrainian,R4R7,AAB,36 points
+University College London,Spanish And Yiddish,R4R9,ABB,34 points
+University College London,Spanish With Film Studies,R4P3,ABB,34 points
+University College London,Spanish With Management Studies,R4N2,AAB,36 points
+University College London,"Sustainable Built Environments, Energy And Resources",K300,AAA,38 points
+University College London,Swedish And Portuguese,R6SP,ABB,34 points
+University College London,Swedish And Yiddish,R6SY,ABB,34 points
+University College London,Ukrainian And Portuguese,R7UP,ABB,34 points
+University College London,Ukrainian And Swedish,R7UW,ABB,34 points
+University College London,Ukrainian And Yiddish,R7UY,ABB,34 points
+King's College London,Artificial Intelligence,G700,A*A*A,39 points
+King's College London,Artificial Intelligence And Philosophy,G704,A*AA,38 points
+King's College London,Artificial Intelligence And Philosophy With A Year Abroad,G705,A*AA,38 points
+King's College London,Artificial Intelligence With A Year In Industry,G702,A*A*A,39 points
+King's College London,Data Analytics For Business And Finance,N210,A*AA,38 points
+King's College London,Data Analytics For Business And Finance With Year In Industry,N211,A*AA,38 points
+King's College London,Dental Therapy And Hygiene,A900,BBB,32 points
+King's College London,English Law And Australian Law,M124,A*AA,38 points
+King's College London,General Engineering,H100,AAA,36 points
+King's College London,Natural Sciences,CFG0,AAA,36 points
+King's College London,Natural Sciences With A Year In Industry,CFG1,AAA,36 points
+King's College London,Psychology And Criminology,C820,A*AA,38 points
+King's College London,Psychology And Criminology With Professional Year Placement,C821,A*AA,38 points
+King's College London,Psychology And Criminology With Year Abroad,C822,A*AA,38 points
+University of Warwick,Medicine Graduate Entry,A101,,
+University of Exeter,Comparative Literatures And Cultures With Employment Experience Abroad,Q201,ABB,32 points
+University of Exeter,Computer Science With Foundation Year,I403,BCC,26 points
+University of Exeter,Data Science With Foundation Year,GG20,BCC,26 points
+University of Exeter,Finance: Business Management,NN46,AAB,34 points
+University of Exeter,Finance: Business Management With Industrial Experience,NN50,AAB,34 points
+University of Exeter,Finance: Business Management With Year Abroad,NN51,AAB,34 points
+University of Exeter,Finance: Data Science,NN47,AAB,34 points
+University of Exeter,Finance: Data Science With Industrial Experience,NN52,AAB,34 points
+University of Exeter,Finance: Data Science With Year Abroad,NN53,AAB,34 points
+University of Exeter,Finance: Investment Banking,NN45,AAB,34 points
+University of Exeter,Finance: Investment Banking With Industrial Experience,NN48,AAB,34 points
+University of Exeter,Finance: Investment Banking With Year Abroad,NN49,AAB,34 points
+University of Exeter,History With Employment Experience Abroad,V106,AAB,34 points
+University of Exeter,Mathematics And Data Science With A Year In Industry,GG22,AAB,34

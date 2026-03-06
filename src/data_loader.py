@@ -5,8 +5,9 @@ Data flow:
 1. courses.csv = base (one row per course)
 2. LEFT JOIN rankings_global on university -> QS/THE rank columns
 3. LEFT JOIN rankings_subject on university+qs_subject -> subject rank
-4. LEFT JOIN med_schools on university (medicine courses only) -> med columns
+4. LEFT JOIN med_schools on university (medicine courses only) -> SMC approved
 5. LEFT JOIN oxbridge_admissions on university+course -> offer rate columns
+6. LEFT JOIN demographics on university -> student population breakdown
 """
 
 import pandas as pd
@@ -141,14 +142,15 @@ def load_master_dataframe() -> pd.DataFrame:
     )
     courses = courses.drop(columns=["subject"], errors="ignore")
 
-    # 4. Med school data - join only for medicine/health courses
-    med = pd.read_csv(DATA_DIR / "med_schools.csv")
-    med_cols = [c for c in med.columns if c.startswith("med_") or c == "university"]
-    med_courses = courses[courses["domain"] == "Medicine & Health"].merge(
-        med[med_cols], on="university", how="left", suffixes=("", "_med")
-    )
-    non_med_courses = courses[courses["domain"] != "Medicine & Health"]
-    courses = pd.concat([med_courses, non_med_courses], ignore_index=True)
+    # 4. SMC approval status for medicine courses
+    med_path = DATA_DIR / "med_schools.csv"
+    if med_path.exists():
+        med = pd.read_csv(med_path)
+        smc_map = med.drop_duplicates("university")[["university", "med_singapore_approved"]]
+        smc_map = smc_map.rename(columns={"med_singapore_approved": "smc_approved"})
+        courses = courses.merge(smc_map, on="university", how="left")
+        # Only keep SMC for medicine courses
+        courses.loc[courses["domain"] != "Medicine & Health", "smc_approved"] = pd.NA
 
     # 5. Oxbridge admissions - smart matching with name normalization
     oxbridge = pd.read_csv(DATA_DIR / "oxbridge_admissions.csv")
@@ -194,26 +196,6 @@ def normalize_ranks(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def categorize_admission_test(text: str) -> str:
-    """Extract admission test type from descriptive text.
-
-    BMAT was phased out after 2023 — only UCAT remains as a standard test.
-    """
-    if pd.isna(text) or not str(text).strip():
-        return "Unknown"
-    t = str(text).lower()
-    if "ucat" in t:
-        return "UCAT"
-    return "Other"
-
-
-def load_med_schools() -> pd.DataFrame:
-    """Load med_schools.csv independently for the Medical Schools tab."""
-    med = pd.read_csv(DATA_DIR / "med_schools.csv")
-    med["test_category"] = med["med_admission_test"].apply(categorize_admission_test)
-    return med
-
-
 def get_filter_options(df: pd.DataFrame) -> dict:
     """Extract available filter options from the master DataFrame."""
     return {
@@ -239,7 +221,7 @@ if __name__ == "__main__":
     print(f"\nUniversities: {df['university'].nunique()}")
     print(f"Domains: {df['domain'].nunique()}")
     print(f"With QS Subject rank: {df['qs_subject_rank'].notna().sum()}")
-    print(f"With med data: {df['med_course'].notna().sum() if 'med_course' in df.columns else 0}")
+    print(f"With SMC data: {df['smc_approved'].notna().sum() if 'smc_approved' in df.columns else 0}")
     print(f"With Oxbridge data: {df['total_offer_pct'].notna().sum()}")
     print(f"\nSample rows:")
     sample_cols = ["university", "course", "domain", "alevel_grades", "qs_global_rank", "the_rank", "qs_subject_rank"]

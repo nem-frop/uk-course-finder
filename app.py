@@ -13,7 +13,7 @@ from pathlib import Path
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent / "src"))
-from data_loader import load_master_dataframe, get_filter_options, load_med_schools
+from data_loader import load_master_dataframe, get_filter_options
 from grade_parser import ALEVEL_GRADE_OPTIONS, grade_score_to_display
 
 # Page config
@@ -139,12 +139,6 @@ def load_data():
     return load_master_dataframe()
 
 
-@st.cache_data(ttl=3600)
-def load_med_data():
-    """Load the medical schools DataFrame (cached)."""
-    return load_med_schools()
-
-
 def format_rank(val):
     """Format rank value for display."""
     if pd.isna(val):
@@ -195,7 +189,8 @@ def build_display_df(filtered, req_mode, has_oxbridge):
                    "weighted_score",
                    "duration", "study_mode",
                    "total_offer_pct", "intl_offer_pct",
-                   "asia_pct", "international_pct"]
+                   "asia_pct", "international_pct",
+                   "smc_approved"]
     available_wanted = [c for c in wanted_cols if c in filtered.columns]
     display_df = filtered[available_wanted].copy()
 
@@ -216,7 +211,14 @@ def build_display_df(filtered, req_mode, has_oxbridge):
         "intl_offer_pct": "Intl Offer %",
         "asia_pct": "Asia %",
         "international_pct": "Intl %",
+        "smc_approved": "SMC",
     })
+
+    # Format SMC column
+    if "SMC" in display_df.columns:
+        display_df["SMC"] = display_df["SMC"].apply(
+            lambda x: ("Yes" if x == "Yes" else "No") if pd.notna(x) else "-"
+        )
 
     for rank_col in ["QS Global", "THE Global", "QS Subject"]:
         if rank_col in display_df.columns:
@@ -242,6 +244,9 @@ def build_display_df(filtered, req_mode, has_oxbridge):
                        "Asia %", "Intl %"])
     if has_oxbridge:
         show_cols.extend(["Offer %", "Intl Offer %"])
+    # Only show SMC column when results contain medicine courses
+    if "SMC" in display_df.columns and display_df["SMC"].ne("-").any():
+        show_cols.append("SMC")
 
     available_show = [c for c in show_cols if c in display_df.columns]
     return display_df, available_show
@@ -262,6 +267,7 @@ COLUMN_CONFIG = {
     "Intl Offer %": st.column_config.TextColumn(width="small"),
     "Asia %": st.column_config.TextColumn(width="small"),
     "Intl %": st.column_config.TextColumn(width="small"),
+    "SMC": st.column_config.TextColumn(width="small"),
 }
 
 
@@ -357,18 +363,16 @@ def show_landing_page(df):
         n_courses = len(df)
         n_unis = df["university"].nunique()
         n_with_subj = df["qs_subject_rank"].notna().sum()
-        n_med = load_med_data().shape[0]
+        n_smc = df["smc_approved"].notna().sum() if "smc_approved" in df.columns else 0
         st.markdown(f"""
         **Course Data (2025 UCAS cycle):**
         - {n_courses:,} undergraduate courses across {n_unis} universities
         - A-Level and IB entry requirements
         - Course URLs and UCAS codes
+        - Singapore Medical Council (SMC) approval status for {n_smc} medicine courses
 
         **Rankings:** QS Global + Subject (60 subjects) + THE Global
         - {n_with_subj:,}/{n_courses:,} courses have subject-level rank data
-
-        **Medical Schools tab:** {n_med} schools with SMC requirements,
-        admission tests, interview types, and international applicant stats
 
         **Oxbridge admissions:** Per-course offer rates for Oxford and Cambridge
 
@@ -609,7 +613,7 @@ def main():
     shortlist_label = f"Shortlist ({shortlist_count})" if shortlist_count > 0 else "Shortlist"
 
     # Tabs
-    tab_courses, tab_med, tab_shortlist = st.tabs(["Course Explorer", "Medical Schools", shortlist_label])
+    tab_courses, tab_shortlist = st.tabs(["Course Explorer", shortlist_label])
 
     # ==================== TAB 1: Course Explorer ====================
     with tab_courses:
@@ -739,6 +743,7 @@ def main():
                     "total_students": "Total Students",
                     "ucas_code": "UCAS Code",
                     "qualification": "Qualification",
+                    "smc_approved": "SMC Approved",
                 }
                 available_export = {k: v for k, v in export_cols.items() if k in filtered.columns}
                 export_df = filtered.head(n_export)[list(available_export.keys())].rename(columns=available_export)
@@ -750,116 +755,9 @@ def main():
                     mime="text/csv"
                 )
 
-    # ==================== TAB 2: Medical Schools ====================
-    with tab_med:
-        render_medical_schools()
-
-    # ==================== TAB 3: Shortlist ====================
+    # ==================== TAB 2: Shortlist ====================
     with tab_shortlist:
         render_shortlist(df, req_mode=req_mode)
-
-
-def render_medical_schools():
-    """Render the Medical Schools tab with independent data and filters."""
-    med = load_med_data()
-
-    st.subheader("UK Medical Schools")
-    st.caption("Requirements and admissions data from the Medical School Council and international applicant statistics.")
-
-    # Filters for this tab (independent of sidebar)
-    f1, f2, f3 = st.columns(3)
-    with f1:
-        med_uni_filter = st.multiselect(
-            "University",
-            options=sorted(med["university"].dropna().unique()),
-            default=[],
-            placeholder="All medical schools",
-            key="med_uni_filter"
-        )
-    with f2:
-        test_options = sorted(med["test_category"].dropna().unique())
-        med_test_filter = st.multiselect(
-            "Admission Test",
-            options=test_options,
-            default=[],
-            placeholder="All test types",
-            key="med_test_filter"
-        )
-    with f3:
-        smc_only = st.checkbox(
-            "SMC Approved only",
-            value=False,
-            help="Filter to Singapore Medical Council approved schools (22 schools)",
-            key="smc_filter"
-        )
-
-    # Apply med filters
-    med_mask = pd.Series(True, index=med.index)
-    if med_uni_filter:
-        med_mask &= med["university"].isin(med_uni_filter)
-    if med_test_filter:
-        med_mask &= med["test_category"].isin(med_test_filter)
-    if smc_only:
-        med_mask &= med["med_singapore_approved"].str.contains("Yes", case=False, na=False)
-
-    med_filtered = med.loc[med_mask].copy()
-
-    st.metric("Medical Schools", len(med_filtered))
-    st.divider()
-
-    if med_filtered.empty:
-        st.warning("No medical schools match your filters.")
-        return
-
-    # Select and rename columns for display
-    display_cols = {
-        "university": "University",
-        "med_course": "Course",
-        "med_singapore_approved": "SMC Approved",
-        "med_alevel_req": "A-Level Req",
-        "med_ib_req": "IB Req",
-        "med_gcse_req": "GCSE Req",
-        "test_category": "Admission Test",
-        "med_interview_type": "Interview",
-        "med_teaching_style": "Teaching Style",
-        "med_work_experience": "Work Experience",
-        "med_intl_applicants": "Intl Applicants",
-        "med_intl_offers": "Intl Offers",
-        "med_intl_offer_pct": "Intl Offer %",
-    }
-
-    available = {k: v for k, v in display_cols.items() if k in med_filtered.columns}
-    med_display = med_filtered[list(available.keys())].rename(columns=available)
-
-    # Format percentage
-    if "Intl Offer %" in med_display.columns:
-        med_display["Intl Offer %"] = med_display["Intl Offer %"].apply(
-            lambda x: f"{x:.1f}%" if pd.notna(x) else "-"
-        )
-
-    col_config = {
-        "University": st.column_config.TextColumn(width="medium"),
-        "Course": st.column_config.TextColumn(width="medium"),
-        "SMC Approved": st.column_config.TextColumn(width="small"),
-        "A-Level Req": st.column_config.TextColumn(width="medium"),
-        "IB Req": st.column_config.TextColumn(width="medium"),
-        "GCSE Req": st.column_config.TextColumn(width="medium"),
-        "Admission Test": st.column_config.TextColumn(width="small"),
-        "Interview": st.column_config.TextColumn(width="medium"),
-        "Teaching Style": st.column_config.TextColumn(width="medium"),
-        "Work Experience": st.column_config.TextColumn(width="medium"),
-        "Intl Applicants": st.column_config.NumberColumn(width="small"),
-        "Intl Offers": st.column_config.NumberColumn(width="small"),
-        "Intl Offer %": st.column_config.TextColumn(width="small"),
-    }
-
-    st.dataframe(
-        med_display,
-        hide_index=True,
-        width="stretch",
-        height=600,
-        column_config={k: v for k, v in col_config.items() if k in med_display.columns}
-    )
 
 
 def render_shortlist(df, req_mode="A-Level"):
@@ -923,6 +821,7 @@ def render_shortlist(df, req_mode="A-Level"):
         "qualification": "Qualification",
         "total_offer_pct": "Offer %",
         "intl_offer_pct": "Intl Offer %",
+        "smc_approved": "SMC Approved",
     }
     available_export = {k: v for k, v in export_cols.items() if k in shortlisted.columns}
     export_df = shortlisted[list(available_export.keys())].rename(columns=available_export)
