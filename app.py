@@ -135,7 +135,7 @@ def apply_keyword_search(series: pd.Series, query: str) -> pd.Series:
 
 @st.cache_data(ttl=3600)
 def load_data():
-    """Load the master DataFrame (cached)."""
+    """Load the master DataFrame with SMC + demographics (cached v2)."""
     return load_master_dataframe()
 
 
@@ -324,7 +324,7 @@ def render_dataframe(display_df, available_show, height=600, enable_shortlist=Fa
 
 def show_landing_page(df):
     """Show the landing page when no filters are active."""
-    st.info("Use the **sidebar filters** or **search for a course** to get started.")
+    st.info("Use the **sidebar filters** or **search for a course** to get started. Looking for US colleges instead? Check out the [US College Finder](https://us-colleges-longlist.streamlit.app/) (password: rankings).")
 
     # Quick stats
     col1, col2, col3 = st.columns(3)
@@ -393,9 +393,6 @@ def show_landing_page(df):
         - International applicant statistics (34 schools)
         - Student demographics (50 universities)
         """)
-
-    st.markdown("---")
-    st.caption("Also check out the [US College Finder](https://us-colleges-longlist.streamlit.app/) (password: rankings)")
 
     # Data quality / known gaps in expander
     with st.expander("Data Quality & Known Gaps (priority list)", expanded=False):
@@ -567,6 +564,12 @@ def main():
         demo_filter_active = (min_asia > 0 or max_asia < 50
                               or min_intl > 0 or max_intl < 70)
 
+        # SMC filter
+        smc_only = st.checkbox(
+            "SMC approved only",
+            help="Show only courses at universities approved by the Singapore Medical Council"
+        )
+
         st.divider()
 
         # Group by
@@ -606,7 +609,7 @@ def main():
         selected_unis or selected_domains or course_search.strip()
         or grade_filter_enabled
         or selected_modes or selected_durations
-        or demo_filter_active
+        or demo_filter_active or smc_only
     )
 
     # Initialize shortlist in session state
@@ -644,6 +647,10 @@ def main():
                     mask &= (df["asia_pct"] >= min_asia) & (df["asia_pct"] <= max_asia)
                 if "international_pct" in df.columns:
                     mask &= (df["international_pct"] >= min_intl) & (df["international_pct"] <= max_intl)
+
+            # SMC filter
+            if smc_only and "smc_approved" in df.columns:
+                mask &= df["smc_approved"] == "Yes"
 
             # Grade filters
             if req_mode == "A-Level" and grade_filter_enabled and my_grade_score is not None:

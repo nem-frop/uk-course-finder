@@ -182,7 +182,7 @@ SUBJECT_TO_DOMAIN = {
     "Environmental Sciences": "Physical Sciences",
     "Biological": "Life Sciences",
     "Anatomy": "Life Sciences",
-    "Natural Sciences": "Life Sciences",
+    "Natural Sciences": "Physical Sciences",  # Cambridge NatSci spans bio+chem+physics
 
     # Health
     "Medicine": "Medicine & Health",
