@@ -23,10 +23,8 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 # These handle naming differences between the two data sources
 OXBRIDGE_NAME_MAP = {
     # Oxford naming differences
-    "Asian And Middle Eastern Studies": "Oriental Studies",
     "Biochemistry (Molecular And Cellular)": "Biochemistry",
     "Classics And Oriental Studies": "Classics And Asian And Middle Eastern Studies",
-    "Earth Sciences (Geology)": "Earth Sciences",
     "History (Ancient And Modern)": "Ancient And Modern History",
     "Law (Jurisprudence)": "Law",
     "Maths": "Mathematics",
