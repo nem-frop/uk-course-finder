@@ -394,6 +394,9 @@ def show_landing_page(df):
         - Student demographics (50 universities)
         """)
 
+    st.markdown("---")
+    st.caption("Also check out the [US College Finder](https://us-colleges-longlist.streamlit.app/) (password: rankings)")
+
     # Data quality / known gaps in expander
     with st.expander("Data Quality & Known Gaps (priority list)", expanded=False):
         # Compute dynamic stats
@@ -403,6 +406,7 @@ def show_landing_page(df):
         cambridge_count = len(df[df["university"] == "University of Cambridge"])
         oxford_offer = df[(df["university"] == "University of Oxford") & (df["total_offer_pct"].notna())].shape[0]
         cambridge_offer = df[(df["university"] == "University of Cambridge") & (df["total_offer_pct"].notna())].shape[0]
+        fallback_urls = df["course_url"].str.contains("google.com/search", na=False).sum()
         missing_urls = df["course_url"].isna().sum()
         missing_subj = df["qs_subject_rank"].isna().sum()
 
@@ -412,7 +416,7 @@ def show_landing_page(df):
 | 1 | **MEDIUM** | Oxford course count | {oxford_count} Oxford courses ({oxford_stem} STEM) — many language variants from UCAS, core STEM added manually | Original UCAS extract heavy on language combos, light on sciences |
 | 2 | **MEDIUM** | Cambridge course count | {cambridge_count} courses (core subjects covered, but variants like "with Year Abroad" not in data) | Get fuller Cambridge UCAS extract for variant courses |
 | 3 | **MEDIUM** | Oxford Oxbridge stats | {oxford_offer}/{oxford_count} Oxford courses have offer data (vs {cambridge_offer}/{cambridge_count} Cambridge) | Many Oxford language variants have no separate admissions stats |
-| 4 | **MEDIUM** | Missing course URLs | {missing_urls}/{n_courses} ({100*missing_urls//n_courses}%) have no link | Check if source Excel contains the URLs |
+| 4 | **LOW** | Course URL fallbacks | {fallback_urls} courses use Google search links (no direct URL available), {missing_urls} missing | Scrape specific course pages for remaining universities |
 | 5 | **LOW** | Unmatched QS subjects | {missing_subj}/{n_courses} ({100*missing_subj//n_courses}%) courses have no subject-level rank | Expand subject mapper keyword rules |
         """)
 
