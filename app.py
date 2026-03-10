@@ -398,13 +398,13 @@ def show_landing_page(df):
     st.warning("""
 **Grade Requirements — Please Verify Before Relying On This Data**
 
-A-Level grades have been spot-checked and are generally accurate. However, IB scores and some A-Level ranges should be treated as indicative. Key things to watch:
+A-Level grades are generally accurate across all universities. IB scores have been audited and corrected where systematic errors were found, but should still be treated as indicative. Key things to watch:
 
-- **Ranges vs single values** — Some universities publish grade ranges (e.g. AAA-AAB). We show a single value, typically the higher end.
-- **LSE 2027 entry** — LSE is raising requirements for some courses (e.g. AAB → AAA). Our data reflects 2026 entry and may be 1 grade below 2027 offers.
-- **Bristol IB** — A systematic error was found and corrected (contextual offers were shown instead of standard offers). Now fixed, but other edge cases may exist.
-- **Edinburgh** — Some courses show a single grade but the actual page shows a range. Verify directly on the university website.
-- **Durham IB** — Minor off-by-one errors found (e.g. 37 vs 36).
+- **Ranges vs single values** — Some universities publish grade ranges (e.g. AAA-AAB or IB 36-34). We show a single value, typically the higher end of the range.
+- **LSE** — Some courses may show contextual (lower) A-Level offers rather than standard offers (e.g. AAA instead of A*AA). LSE is also raising requirements for 2027 entry. Our data reflects 2026 entry.
+- **Edinburgh** — Courses show the upper end of a published range. Actual requirements may be lower. Verify directly on the university website.
+- **Bristol IB & Durham IB** — Systematic errors were found and corrected (Bristol: contextual offers shown instead of standard; Durham: off by 1 across the board). Now fixed.
+- **UCL & Oxford** — IB scores could not be independently verified (sites block automated access). Treat as indicative.
 
 Always confirm entry requirements on the university's own course page before making decisions.
     """)
