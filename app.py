@@ -324,7 +324,7 @@ def render_dataframe(display_df, available_show, height=600, enable_shortlist=Fa
 
 def show_landing_page(df):
     """Show the landing page when no filters are active."""
-    st.info("Use the **sidebar filters** or **search for a course** to get started. Looking for US colleges instead? Check out the [US College Finder](https://us-colleges-longlist.streamlit.app/) (password: rankings).")
+    st.info("Use the **sidebar filters** or **search for a course** to get started.")
 
     # Quick stats
     col1, col2, col3 = st.columns(3)
@@ -394,6 +394,21 @@ def show_landing_page(df):
         - Student demographics (50 universities)
         """)
 
+    # Grade data advisory
+    st.warning("""
+**Grade Requirements — Please Verify Before Relying On This Data**
+
+A-Level grades have been spot-checked and are generally accurate. However, IB scores and some A-Level ranges should be treated as indicative. Key things to watch:
+
+- **Ranges vs single values** — Some universities publish grade ranges (e.g. AAA-AAB). We show a single value, typically the higher end.
+- **LSE 2027 entry** — LSE is raising requirements for some courses (e.g. AAB → AAA). Our data reflects 2026 entry and may be 1 grade below 2027 offers.
+- **Bristol IB** — A systematic error was found and corrected (contextual offers were shown instead of standard offers). Now fixed, but other edge cases may exist.
+- **Edinburgh** — Some courses show a single grade but the actual page shows a range. Verify directly on the university website.
+- **Durham IB** — Minor off-by-one errors found (e.g. 37 vs 36).
+
+Always confirm entry requirements on the university's own course page before making decisions.
+    """)
+
     # Data quality / known gaps in expander
     with st.expander("Data Quality & Known Gaps (priority list)", expanded=False):
         # Compute dynamic stats
@@ -457,6 +472,7 @@ def main():
     # Header
     st.markdown('<p class="main-header">UK Course Finder</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Explore undergraduate courses across top UK universities with rankings, entry requirements, and admissions data</p>', unsafe_allow_html=True)
+    st.caption("Looking for US colleges instead? Check out the [US College Finder](https://us-colleges-longlist.streamlit.app/) (password: rankings).")
 
     # Sidebar filters
     with st.sidebar:
