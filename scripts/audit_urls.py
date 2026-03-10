@@ -115,8 +115,15 @@ def check_url(url: str, timeout: int = 15) -> dict:
                 "notes": f"{type(e).__name__}: {str(e)[:100]}"}
 
 
-def run_audit(batch_size: int = 50, uni_filter: str = None, recheck_fails: bool = False):
-    """Run a batch of URL checks."""
+def run_audit(batch_size: int = 50, uni_filter: str = None, recheck_fails: bool = False, slow: bool = False):
+    """Run a batch of URL checks. Use slow=True for rate-limit-prone sites (5-10s delays)."""
+    global MIN_DELAY, MAX_DELAY, DOMAIN_BATCH_SIZE, DOMAIN_PAUSE
+    if slow:
+        MIN_DELAY = 5.0
+        MAX_DELAY = 10.0
+        DOMAIN_BATCH_SIZE = 8
+        DOMAIN_PAUSE = 20.0
+        print("SLOW MODE: 5-10s delays, 20s pause every 8 requests")
     audit = load_audit()
 
     # Select rows to audit
@@ -303,6 +310,7 @@ def main():
     parser.add_argument("--batch", type=int, default=50, help="Batch size (default: 50)")
     parser.add_argument("--uni", type=str, default=None, help="Filter by university name")
     parser.add_argument("--recheck-fails", action="store_true", help="Re-check previously failed URLs")
+    parser.add_argument("--slow", action="store_true", help="Slow mode: longer delays for rate-limit-prone sites")
     parser.add_argument("--report", action="store_true", help="Print report only")
     parser.add_argument("--fix", action="store_true", help="Apply fixes to courses.csv")
     args = parser.parse_args()
@@ -312,7 +320,7 @@ def main():
     elif args.fix:
         apply_fixes()
     else:
-        run_audit(batch_size=args.batch, uni_filter=args.uni, recheck_fails=args.recheck_fails)
+        run_audit(batch_size=args.batch, uni_filter=args.uni, recheck_fails=args.recheck_fails, slow=args.slow)
 
 
 if __name__ == "__main__":
