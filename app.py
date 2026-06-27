@@ -74,61 +74,54 @@ st.markdown("""
 
 # --- Search helpers ---
 
-def parse_search_keywords(query: str) -> tuple[list[str], list[str]]:
-    """Parse a search query into include and exclude keyword lists.
+def tokenize_terms(text: str) -> list[str]:
+    """Split a filter string into lowercased search terms.
 
-    Supports both comma-separated and space-separated tokens.
-    If commas are present, split on commas. Otherwise split on spaces.
-    Minus prefix for excludes: "-philo" removes matches.
+    If commas are present, split on commas (preserves multi-word phrases like
+    "computer science"). Otherwise split on whitespace (each word is a term).
 
     Examples:
-        "comp, phys, -philo"  -> include=["comp","phys"], exclude=["philo"]
-        "comp phys -philo"    -> include=["comp","phys"], exclude=["philo"]
-        "computer science"    -> include=["computer science"] (comma mode preserves phrases)
+        "busi mana"            -> ["busi", "mana"]
+        "geo account fin"      -> ["geo", "account", "fin"]
+        "computer science, law" -> ["computer science", "law"]
     """
-    if not query or not query.strip():
-        return [], []
-
-    includes = []
-    excludes = []
-
-    # If commas present, split on commas (preserves multi-word phrases)
-    # Otherwise split on spaces (each word is a keyword)
-    if "," in query:
-        tokens = query.split(",")
-    else:
-        tokens = query.split()
-
-    for token in tokens:
-        token = token.strip()
-        if not token:
-            continue
-        if token.startswith("-") and len(token) > 1:
-            excludes.append(token[1:].strip().lower())
-        else:
-            includes.append(token.lower())
-
-    return includes, excludes
+    if not text or not text.strip():
+        return []
+    parts = text.split(",") if "," in text else text.split()
+    return [p.strip().lower() for p in parts if p.strip()]
 
 
-def apply_keyword_search(series: pd.Series, query: str) -> pd.Series:
-    """Apply multi-keyword AND search with excludes to a text Series.
+def apply_include_exclude(series: pd.Series, include_text: str, exclude_text: str) -> pd.Series:
+    """Boolean mask for include (OR) / exclude (AND) keyword filtering.
 
-    Returns a boolean mask.
+    - Includes are OR-based: a row is kept if it contains ANY include term.
+    - Excludes are AND-based: a row is kept only if it contains NONE of the
+      exclude terms (each exclusion is ANDed together).
+
+    A row passes only if it satisfies both the include and the exclude tests.
+    Empty inputs are no-ops (all rows pass that test).
     """
-    includes, excludes = parse_search_keywords(query)
+    includes = tokenize_terms(include_text)
+    excludes = tokenize_terms(exclude_text)
     if not includes and not excludes:
         return pd.Series(True, index=series.index)
 
     lower = series.str.lower().fillna("")
-    mask = pd.Series(True, index=series.index)
 
-    for kw in includes:
-        mask &= lower.str.contains(kw, na=False)
+    # Include: OR across terms (kept if matches at least one)
+    if includes:
+        include_mask = pd.Series(False, index=series.index)
+        for kw in includes:
+            include_mask |= lower.str.contains(kw, na=False, regex=False)
+    else:
+        include_mask = pd.Series(True, index=series.index)
+
+    # Exclude: AND across terms (kept only if matches none)
+    exclude_mask = pd.Series(True, index=series.index)
     for kw in excludes:
-        mask &= ~lower.str.contains(kw, na=False)
+        exclude_mask &= ~lower.str.contains(kw, na=False, regex=False)
 
-    return mask
+    return include_mask & exclude_mask
 
 
 # --- Data loading ---
@@ -342,7 +335,7 @@ def show_landing_page(df):
     how_cols = st.columns(4)
     with how_cols[0]:
         st.markdown("**1. Search Courses**")
-        st.caption("Type keywords to find courses. Use commas for AND logic, minus to exclude (e.g. `comp, sci, -philo`)")
+        st.caption("Filter course names, subject areas, and entry requirements with separate Includes (match any) and Excludes (drop any) boxes")
     with how_cols[1]:
         st.markdown("**2. Filter**")
         st.caption("Narrow by university, subject area, grade requirements, study mode, and duration")
@@ -478,6 +471,8 @@ def main():
     with st.sidebar:
         st.header("Filters")
 
+        st.caption("**Includes** = match ANY term (OR). **Excludes** = drop if ANY term matches (AND). Separate terms with spaces, or commas for multi-word phrases.")
+
         # University filter
         selected_unis = st.multiselect(
             "Universities",
@@ -486,28 +481,65 @@ def main():
             placeholder="All universities"
         )
 
-        # Domain filter
-        selected_domains = st.multiselect(
-            "Subject Area",
-            options=options["domains"],
-            default=[],
-            placeholder="All subject areas"
-        )
+        st.divider()
 
-        # Course name search (multi-keyword)
-        course_search = st.text_input(
-            "Course name contains",
-            placeholder="e.g. comp sci -philo"
+        # Course name include / exclude
+        st.markdown("**University Course**")
+        course_inc = st.text_input(
+            "Includes",
+            key="course_inc",
+            placeholder="e.g. busi mana",
+            help="Keep courses whose name contains ANY of these terms"
         )
-        st.caption("Space or comma-separated AND logic. Prefix with - to exclude.")
+        course_exc = st.text_input(
+            "Excludes",
+            key="course_exc",
+            placeholder="e.g. geo account fin",
+            help="Drop courses whose name contains ANY of these terms"
+        )
 
         st.divider()
 
-        # A-Level / IB toggle
+        # Domain (Subject Area) include / exclude
+        st.markdown("**Domain (Subject Area)**")
+        domain_inc = st.multiselect(
+            "Includes",
+            options=options["domains"],
+            default=[],
+            key="domain_inc",
+            placeholder="All subject areas"
+        )
+        domain_exc = st.multiselect(
+            "Excludes",
+            options=options["domains"],
+            default=[],
+            key="domain_exc",
+            placeholder="Exclude none"
+        )
+
+        st.divider()
+
+        # A-Level / IB toggle (drives both the grade view and subject-requirement search)
         req_mode = st.radio(
             "Requirements view",
             ["A-Level", "IB"],
             horizontal=True
+        )
+
+        # Subject requirements include / exclude (searches alevel_details / ib_details)
+        detail_label = "A-Level" if req_mode == "A-Level" else "IB"
+        st.markdown(f"**Subject Requirements** ({detail_label})")
+        subj_inc = st.text_input(
+            "Includes",
+            key="subj_inc",
+            placeholder="e.g. mathematics physics",
+            help=f"Keep courses whose {detail_label} requirements mention ANY of these terms"
+        )
+        subj_exc = st.text_input(
+            "Excludes",
+            key="subj_exc",
+            placeholder="e.g. chemistry",
+            help=f"Drop courses whose {detail_label} requirements mention ANY of these terms"
         )
 
         # Grade filter
@@ -622,7 +654,10 @@ def main():
 
     # Detect if any filter is active (triggers results vs landing page)
     any_filter_active = bool(
-        selected_unis or selected_domains or course_search.strip()
+        selected_unis
+        or course_inc.strip() or course_exc.strip()
+        or domain_inc or domain_exc
+        or subj_inc.strip() or subj_exc.strip()
         or grade_filter_enabled
         or selected_modes or selected_durations
         or demo_filter_active or smc_only
@@ -648,10 +683,22 @@ def main():
 
             if selected_unis:
                 mask &= df["university"].isin(selected_unis)
-            if selected_domains:
-                mask &= df["domain"].isin(selected_domains)
-            if course_search:
-                mask &= apply_keyword_search(df["course"], course_search)
+
+            # Course name include (OR) / exclude (AND)
+            if course_inc.strip() or course_exc.strip():
+                mask &= apply_include_exclude(df["course"], course_inc, course_exc)
+
+            # Domain include (OR) / exclude (AND)
+            if domain_inc:
+                mask &= df["domain"].isin(domain_inc)
+            if domain_exc:
+                mask &= ~df["domain"].isin(domain_exc)
+
+            # Subject requirements include (OR) / exclude (AND) — A-Level or IB per toggle
+            detail_col = "alevel_details" if req_mode == "A-Level" else "ib_details"
+            if (subj_inc.strip() or subj_exc.strip()) and detail_col in df.columns:
+                mask &= apply_include_exclude(df[detail_col], subj_inc, subj_exc)
+
             if selected_modes:
                 mask &= df["study_mode"].isin(selected_modes)
             if selected_durations:
