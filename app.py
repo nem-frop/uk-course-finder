@@ -128,7 +128,7 @@ def apply_include_exclude(series: pd.Series, include_text: str, exclude_text: st
 
 @st.cache_data(ttl=3600)
 def load_data():
-    """Load the master DataFrame with SMC + demographics (cached v2)."""
+    """Load the master DataFrame with SMC + demographics + subject reqs (cached v3)."""
     return load_master_dataframe()
 
 
@@ -178,6 +178,7 @@ def build_display_df(filtered, req_mode, has_oxbridge):
     """Build the display DataFrame with proper formatting and column selection."""
     wanted_cols = ["university", "course", "course_url", "domain",
                    "alevel_grades", "ib_points_raw",
+                   "required_subjects",
                    "qs_global_rank", "the_rank", "qs_subject_rank",
                    "weighted_score",
                    "duration", "study_mode",
@@ -187,6 +188,19 @@ def build_display_df(filtered, req_mode, has_oxbridge):
     available_wanted = [c for c in wanted_cols if c in filtered.columns]
     display_df = filtered[available_wanted].copy()
 
+    # Build a readable "Required Subjects" cell that distinguishes "open" from "unknown"
+    if "required_subjects" in display_df.columns and "subject_req_status" in filtered.columns:
+        status = filtered["subject_req_status"].values
+        def _fmt_subj(i, val):
+            if status[i] == "open":
+                return "Any subjects"
+            if status[i] != "specified" or not str(val).strip():
+                return "Not listed"
+            return val
+        display_df["required_subjects"] = [
+            _fmt_subj(i, v) for i, v in enumerate(display_df["required_subjects"])
+        ]
+
     display_df = display_df.rename(columns={
         "university": "University",
         "course": "Course",
@@ -194,6 +208,7 @@ def build_display_df(filtered, req_mode, has_oxbridge):
         "domain": "Subject Area",
         "alevel_grades": "A-Level Req",
         "ib_points_raw": "IB Req",
+        "required_subjects": "Required Subjects",
         "qs_global_rank": "QS Global",
         "the_rank": "THE Global",
         "qs_subject_rank": "QS Subject",
@@ -233,6 +248,7 @@ def build_display_df(filtered, req_mode, has_oxbridge):
         show_cols.append("A-Level Req")
     else:
         show_cols.append("IB Req")
+    show_cols.append("Required Subjects")
     show_cols.extend(["QS Global", "THE Global", "QS Subject", "Score",
                        "Asia %", "Intl %"])
     if has_oxbridge:
@@ -252,6 +268,7 @@ COLUMN_CONFIG = {
     "Subject Area": st.column_config.TextColumn(width="medium"),
     "A-Level Req": st.column_config.TextColumn(width="small"),
     "IB Req": st.column_config.TextColumn(width="small"),
+    "Required Subjects": st.column_config.TextColumn(width="medium"),
     "QS Global": st.column_config.TextColumn(width="small"),
     "THE Global": st.column_config.TextColumn(width="small"),
     "QS Subject": st.column_config.TextColumn(width="small"),
@@ -398,6 +415,7 @@ A-Level grades are generally accurate across all universities. IB scores have be
 - **Edinburgh** — Courses show the upper end of a published range. Actual requirements may be lower. Verify directly on the university website.
 - **Bristol IB & Durham IB** — Systematic errors were found and corrected (Bristol: contextual offers shown instead of standard; Durham: off by 1 across the board). Now fixed.
 - **UCL & Oxford** — IB scores could not be independently verified (sites block automated access). Treat as indicative.
+- **Required Subjects** — auto-extracted from each course's requirement text, so they're indicative. Subject data is available for ~63% of courses; the rest (including all Cambridge courses) show "Not listed" and are hidden when you filter by a required subject.
 
 Always confirm entry requirements on the university's own course page before making decisions.
     """)
@@ -519,27 +537,48 @@ def main():
 
         st.divider()
 
-        # A-Level / IB toggle (drives both the grade view and subject-requirement search)
+        # Subject requirements include / exclude (structured required subjects)
+        st.markdown("**Required Subjects**")
+        subj_options = options.get("required_subjects", [])
+        subj_inc = st.multiselect(
+            "Requires (any of)",
+            options=subj_options,
+            default=[],
+            key="subj_inc",
+            placeholder="Any subjects",
+            help="Keep courses that require ANY of these subjects at A-Level/IB"
+        )
+        subj_exc = st.multiselect(
+            "Must not require",
+            options=subj_options,
+            default=[],
+            key="subj_exc",
+            placeholder="Exclude none",
+            help="Drop courses that require ANY of these subjects"
+        )
+        # Coverage indicator — be transparent about missing data
+        n_known = int((df["subject_req_status"] == "specified").sum()) if "subject_req_status" in df.columns else 0
+        n_unknown = int((df["subject_req_status"] == "unknown").sum()) if "subject_req_status" in df.columns else 0
+        st.caption(
+            f"⚠️ Subject data available for {n_known:,} of {len(df):,} courses. "
+            f"{n_unknown:,} have none listed (incl. all Cambridge) and are hidden when you filter by subject."
+        )
+        keep_unknown_subj = False
+        if subj_inc:
+            keep_unknown_subj = st.checkbox(
+                "Also keep courses with no subject data",
+                value=False,
+                key="keep_unknown_subj",
+                help="Include courses whose required subjects are unknown, instead of dropping them"
+            )
+
+        st.divider()
+
+        # A-Level / IB toggle (drives the grade requirement column + grade filter)
         req_mode = st.radio(
             "Requirements view",
             ["A-Level", "IB"],
             horizontal=True
-        )
-
-        # Subject requirements include / exclude (searches alevel_details / ib_details)
-        detail_label = "A-Level" if req_mode == "A-Level" else "IB"
-        st.markdown(f"**Subject Requirements** ({detail_label})")
-        subj_inc = st.text_input(
-            "Includes",
-            key="subj_inc",
-            placeholder="e.g. mathematics physics",
-            help=f"Keep courses whose {detail_label} requirements mention ANY of these terms"
-        )
-        subj_exc = st.text_input(
-            "Excludes",
-            key="subj_exc",
-            placeholder="e.g. chemistry",
-            help=f"Drop courses whose {detail_label} requirements mention ANY of these terms"
         )
 
         # Grade filter
@@ -657,7 +696,7 @@ def main():
         selected_unis
         or course_inc.strip() or course_exc.strip()
         or domain_inc or domain_exc
-        or subj_inc.strip() or subj_exc.strip()
+        or subj_inc or subj_exc
         or grade_filter_enabled
         or selected_modes or selected_durations
         or demo_filter_active or smc_only
@@ -694,10 +733,20 @@ def main():
             if domain_exc:
                 mask &= ~df["domain"].isin(domain_exc)
 
-            # Subject requirements include (OR) / exclude (AND) — A-Level or IB per toggle
-            detail_col = "alevel_details" if req_mode == "A-Level" else "ib_details"
-            if (subj_inc.strip() or subj_exc.strip()) and detail_col in df.columns:
-                mask &= apply_include_exclude(df[detail_col], subj_inc, subj_exc)
+            # Required-subject include (OR) / exclude (AND) on structured data
+            if (subj_inc or subj_exc) and "required_subjects" in df.columns:
+                req_sets = df["required_subjects"].fillna("").apply(
+                    lambda s: set(p for p in s.split("; ") if p)
+                )
+                if subj_inc:
+                    inc_set = set(subj_inc)
+                    inc_mask = req_sets.apply(lambda r: bool(r & inc_set))
+                    if keep_unknown_subj:
+                        inc_mask |= df["subject_req_status"].ne("specified")
+                    mask &= inc_mask
+                if subj_exc:
+                    exc_set = set(subj_exc)
+                    mask &= req_sets.apply(lambda r: not (r & exc_set))
 
             if selected_modes:
                 mask &= df["study_mode"].isin(selected_modes)
@@ -804,6 +853,8 @@ def main():
                     "domain": "Subject Area",
                     "alevel_grades": "A-Level Req",
                     "ib_points_raw": "IB Req",
+                    "required_subjects": "Required Subjects",
+                    "subject_req_status": "Subject Req Status",
                     "qs_global_rank": "QS Global Rank",
                     "the_rank": "THE Rank",
                     "qs_subject_rank": "QS Subject Rank",
@@ -884,6 +935,8 @@ def render_shortlist(df, req_mode="A-Level"):
         "domain": "Subject Area",
         "alevel_grades": "A-Level Req",
         "ib_points_raw": "IB Req",
+        "required_subjects": "Required Subjects",
+        "subject_req_status": "Subject Req Status",
         "qs_global_rank": "QS Global Rank",
         "the_rank": "THE Rank",
         "qs_subject_rank": "QS Subject Rank",

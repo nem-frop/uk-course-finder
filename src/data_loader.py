@@ -15,6 +15,7 @@ from pathlib import Path
 
 from subject_mapper import map_course_to_primary_subject, map_course_to_domain
 from grade_parser import parse_alevel_grades, parse_ib_points
+from subject_requirements import add_subject_requirement_columns
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 
@@ -117,6 +118,12 @@ def load_master_dataframe() -> pd.DataFrame:
     courses["domain"] = courses["course"].apply(map_course_to_domain)
     courses["qs_subject"] = courses["course"].apply(map_course_to_primary_subject)
 
+    # Structured subject requirements (from scripts/process_subject_requirements.py).
+    # Fallback: compute at load time if courses.csv predates that preprocessing step.
+    if "required_subjects" not in courses.columns or "subject_req_status" not in courses.columns:
+        courses = add_subject_requirement_columns(courses)
+    courses["required_subjects"] = courses["required_subjects"].fillna("")
+
     # Parse grades to numeric
     courses["alevel_score"] = courses["alevel_grades"].apply(parse_alevel_grades)
     courses["ib_score"] = courses["ib_points_numeric"]  # already numeric from processing
@@ -196,11 +203,20 @@ def normalize_ranks(df: pd.DataFrame) -> pd.DataFrame:
 
 def get_filter_options(df: pd.DataFrame) -> dict:
     """Extract available filter options from the master DataFrame."""
+    # Canonical required subjects actually present in the data (for the dropdown)
+    required_subjects = set()
+    if "required_subjects" in df.columns:
+        for val in df["required_subjects"].dropna():
+            for subj in str(val).split("; "):
+                if subj.strip():
+                    required_subjects.add(subj.strip())
+
     return {
         "universities": sorted(df["university"].dropna().unique()),
         "domains": sorted(df["domain"].dropna().unique()),
         "study_modes": sorted(df["study_mode"].dropna().unique()),
         "durations": sorted(df["duration"].dropna().unique()),
+        "required_subjects": sorted(required_subjects),
         "alevel_score_range": (
             int(df["alevel_score"].min()) if df["alevel_score"].notna().any() else 0,
             int(df["alevel_score"].max()) if df["alevel_score"].notna().any() else 18
