@@ -204,13 +204,22 @@ SUBJECT_TO_DOMAIN = {
     "Politics": "Social Sciences",
     "Sociology": "Social Sciences",
     "Anthropology": "Social Sciences",
-    "Education": "Social Sciences",
     "Development Studies": "Social Sciences",
     "Social Policy": "Social Sciences",
-    "Communication": "Social Sciences",
     "Geography": "Social Sciences",
-    "Area Studies": "Social Sciences",
     "Sports-related Subjects": "Social Sciences",
+
+    # Education
+    "Education": "Education",
+
+    # Media & Communication
+    "Communication": "Media & Communication",
+
+    # Languages & Area Studies
+    "Modern Languages": "Languages & Area Studies",
+    "Linguistics": "Languages & Area Studies",
+    "English Language": "Languages & Area Studies",
+    "Area Studies": "Languages & Area Studies",
 
     # Humanities
     "History$": "Humanities",
@@ -219,13 +228,12 @@ SUBJECT_TO_DOMAIN = {
     "Classics": "Humanities",
     "Philosophy": "Humanities",
     "Theology": "Humanities",
-    "English Language": "Humanities",
-    "Modern Languages": "Humanities",
-    "Linguistics": "Humanities",
-    "Music": "Arts",
-    "Performing Arts": "Arts",
-    "Art & Design": "Arts",
-    "Architecture": "Arts",
+
+    # Creative Arts & Design (Architecture folded in here)
+    "Music": "Creative Arts & Design",
+    "Performing Arts": "Creative Arts & Design",
+    "Art & Design": "Creative Arts & Design",
+    "Architecture": "Creative Arts & Design",
 }
 
 

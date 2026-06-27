@@ -8,6 +8,7 @@ requirements, and Oxbridge admissions statistics.
 import streamlit as st
 import pandas as pd
 import numpy as np
+import re
 import sys
 from pathlib import Path
 
@@ -74,52 +75,69 @@ st.markdown("""
 
 # --- Search helpers ---
 
-def tokenize_terms(text: str) -> list[str]:
-    """Split a filter string into lowercased search terms.
+def parse_filter_groups(text: str) -> list[list[str]]:
+    """Parse a filter string into OR-groups of AND-terms.
 
-    If commas are present, split on commas (preserves multi-word phrases like
-    "computer science"). Otherwise split on whitespace (each word is a term).
+    The '+' operator joins terms that must ALL be present (AND); spaces or
+    commas separate alternatives (OR). Commas allow multi-word phrases.
 
-    Examples:
-        "busi mana"            -> ["busi", "mana"]
-        "geo account fin"      -> ["geo", "account", "fin"]
-        "computer science, law" -> ["computer science", "law"]
+        "busi mana"               -> [["busi"], ["mana"]]            (busi OR mana)
+        "econ+psych"              -> [["econ", "psych"]]             (econ AND psych)
+        "econ+psych, mgmt+psych"  -> [["econ","psych"], ["mgmt","psych"]]
+        "computer science, law"   -> [["computer science"], ["law"]]
     """
     if not text or not text.strip():
         return []
-    parts = text.split(",") if "," in text else text.split()
-    return [p.strip().lower() for p in parts if p.strip()]
+    # Collapse spaces around '+' so "econ + psych" reads as one AND-group.
+    norm = re.sub(r"\s*\+\s*", "+", text)
+    units = norm.split(",") if "," in norm else norm.split()
+    groups = []
+    for unit in units:
+        terms = [t.strip().lower() for t in unit.split("+") if t.strip()]
+        if terms:
+            groups.append(terms)
+    return groups
 
 
 def apply_include_exclude(series: pd.Series, include_text: str, exclude_text: str) -> pd.Series:
     """Boolean mask for include (OR) / exclude (AND) keyword filtering.
 
-    - Includes are OR-based: a row is kept if it contains ANY include term.
-    - Excludes are AND-based: a row is kept only if it contains NONE of the
-      exclude terms (each exclusion is ANDed together).
+    Within a group, '+' means AND (all terms must be present). Between groups,
+    the logic is OR for includes and AND-not for excludes:
 
-    A row passes only if it satisfies both the include and the exclude tests.
+    - Includes: a row is kept if it matches ANY group (and a group matches only
+      when ALL of its '+'-joined terms are present).
+    - Excludes: a row is dropped if it matches ANY group; kept only if it
+      matches none.
+
     Empty inputs are no-ops (all rows pass that test).
     """
-    includes = tokenize_terms(include_text)
-    excludes = tokenize_terms(exclude_text)
-    if not includes and not excludes:
+    inc_groups = parse_filter_groups(include_text)
+    exc_groups = parse_filter_groups(exclude_text)
+    if not inc_groups and not exc_groups:
         return pd.Series(True, index=series.index)
 
     lower = series.str.lower().fillna("")
 
-    # Include: OR across terms (kept if matches at least one)
-    if includes:
+    def group_match(group: list[str]) -> pd.Series:
+        # AND across the terms in one group
+        m = pd.Series(True, index=series.index)
+        for term in group:
+            m &= lower.str.contains(term, na=False, regex=False)
+        return m
+
+    # Include: OR across groups (kept if any group matches)
+    if inc_groups:
         include_mask = pd.Series(False, index=series.index)
-        for kw in includes:
-            include_mask |= lower.str.contains(kw, na=False, regex=False)
+        for g in inc_groups:
+            include_mask |= group_match(g)
     else:
         include_mask = pd.Series(True, index=series.index)
 
-    # Exclude: AND across terms (kept only if matches none)
+    # Exclude: drop if any group matches (kept only if none match)
     exclude_mask = pd.Series(True, index=series.index)
-    for kw in excludes:
-        exclude_mask &= ~lower.str.contains(kw, na=False, regex=False)
+    for g in exc_groups:
+        exclude_mask &= ~group_match(g)
 
     return include_mask & exclude_mask
 
@@ -128,7 +146,7 @@ def apply_include_exclude(series: pd.Series, include_text: str, exclude_text: st
 
 @st.cache_data(ttl=3600)
 def load_data():
-    """Load the master DataFrame with SMC + demographics + subject reqs (cached v3)."""
+    """Load the master DataFrame with SMC + demographics + subject reqs (cached v4)."""
     return load_master_dataframe()
 
 
@@ -489,7 +507,12 @@ def main():
     with st.sidebar:
         st.header("Filters")
 
-        st.caption("**Includes** = match ANY term (OR). **Excludes** = drop if ANY term matches (AND). Separate terms with spaces, or commas for multi-word phrases.")
+        st.caption(
+            "**Includes** = match ANY term (OR). **Excludes** = drop if ANY term matches. "
+            "Separate terms with spaces, or commas for multi-word phrases. "
+            "Use **`+`** to require several at once, e.g. `econ+psych` matches courses with **both** "
+            "(try `econ+psych, mgmt+psych` for either pairing)."
+        )
 
         # University filter
         selected_unis = st.multiselect(
@@ -506,8 +529,8 @@ def main():
         course_inc = st.text_input(
             "Includes",
             key="course_inc",
-            placeholder="e.g. busi mana",
-            help="Keep courses whose name contains ANY of these terms"
+            placeholder="e.g. busi mana  (econ+psych = both)",
+            help="Keep courses matching ANY term (OR). Use + for AND, e.g. econ+psych = courses with both."
         )
         course_exc = st.text_input(
             "Excludes",
