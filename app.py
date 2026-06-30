@@ -146,7 +146,7 @@ def apply_include_exclude(series: pd.Series, include_text: str, exclude_text: st
 
 @st.cache_data(ttl=3600)
 def load_data():
-    """Load the master DataFrame with SMC + demographics + subject reqs (cached v4)."""
+    """Load the master DataFrame with SMC + demographics + subject reqs + multi-domain (cached v5)."""
     return load_master_dataframe()
 
 
@@ -194,7 +194,7 @@ def compute_weighted_score(df: pd.DataFrame, global_weight: float) -> pd.Series:
 
 def build_display_df(filtered, req_mode, has_oxbridge):
     """Build the display DataFrame with proper formatting and column selection."""
-    wanted_cols = ["university", "course", "course_url", "domain",
+    wanted_cols = ["university", "course", "course_url", "domains_all",
                    "alevel_grades", "ib_points_raw",
                    "required_subjects",
                    "qs_global_rank", "the_rank", "qs_subject_rank",
@@ -223,7 +223,7 @@ def build_display_df(filtered, req_mode, has_oxbridge):
         "university": "University",
         "course": "Course",
         "course_url": "Link",
-        "domain": "Subject Area",
+        "domains_all": "Subject Area",
         "alevel_grades": "A-Level Req",
         "ib_points_raw": "IB Req",
         "required_subjects": "Required Subjects",
@@ -557,6 +557,7 @@ def main():
             key="domain_exc",
             placeholder="Exclude none"
         )
+        st.caption("Matches every domain a course spans — excluding Languages also drops e.g. *Business with Chinese*.")
 
         st.divider()
 
@@ -750,11 +751,23 @@ def main():
             if course_inc.strip() or course_exc.strip():
                 mask &= apply_include_exclude(df["course"], course_inc, course_exc)
 
-            # Domain include (OR) / exclude (AND)
-            if domain_inc:
-                mask &= df["domain"].isin(domain_inc)
-            if domain_exc:
-                mask &= ~df["domain"].isin(domain_exc)
+            # Domain include (OR) / exclude (AND) — matched against a course's
+            # FULL domain set, so excluding e.g. Languages also drops
+            # "International Business with Chinese". Falls back to the single
+            # primary domain if the multi-domain column is unavailable.
+            if domain_inc or domain_exc:
+                if "domain_list" in df.columns:
+                    if domain_inc:
+                        inc = set(domain_inc)
+                        mask &= df["domain_list"].apply(lambda ds: bool(set(ds) & inc))
+                    if domain_exc:
+                        exc = set(domain_exc)
+                        mask &= df["domain_list"].apply(lambda ds: not (set(ds) & exc))
+                else:
+                    if domain_inc:
+                        mask &= df["domain"].isin(domain_inc)
+                    if domain_exc:
+                        mask &= ~df["domain"].isin(domain_exc)
 
             # Required-subject include (OR) / exclude (AND) on structured data
             if (subj_inc or subj_exc) and "required_subjects" in df.columns:
@@ -873,7 +886,7 @@ def main():
                     "university": "University",
                     "course": "Course",
                     "course_url": "URL",
-                    "domain": "Subject Area",
+                    "domains_all": "Subject Area",
                     "alevel_grades": "A-Level Req",
                     "ib_points_raw": "IB Req",
                     "required_subjects": "Required Subjects",
@@ -955,7 +968,7 @@ def render_shortlist(df, req_mode="A-Level"):
         "university": "University",
         "course": "Course",
         "course_url": "URL",
-        "domain": "Subject Area",
+        "domains_all": "Subject Area",
         "alevel_grades": "A-Level Req",
         "ib_points_raw": "IB Req",
         "required_subjects": "Required Subjects",

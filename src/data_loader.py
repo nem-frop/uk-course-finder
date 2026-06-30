@@ -13,7 +13,9 @@ Data flow:
 import pandas as pd
 from pathlib import Path
 
-from subject_mapper import map_course_to_primary_subject, map_course_to_domain
+from subject_mapper import (
+    map_course_to_primary_subject, map_course_to_domain, map_course_to_domains,
+)
 from grade_parser import parse_alevel_grades, parse_ib_points
 from subject_requirements import add_subject_requirement_columns
 
@@ -114,8 +116,13 @@ def load_master_dataframe() -> pd.DataFrame:
     # 1. Base: courses
     courses = pd.read_csv(DATA_DIR / "courses.csv")
 
-    # Add domain and QS subject mapping
+    # Add domain and QS subject mapping. `domain` is the single primary domain
+    # (used for grouping/colouring); `domain_list` is the full set of domains a
+    # course touches (used by the Domain filter so cross-disciplinary courses are
+    # matched on any component); `domains_all` is the readable joined form.
     courses["domain"] = courses["course"].apply(map_course_to_domain)
+    courses["domain_list"] = courses["course"].apply(map_course_to_domains)
+    courses["domains_all"] = courses["domain_list"].apply("; ".join)
     courses["qs_subject"] = courses["course"].apply(map_course_to_primary_subject)
 
     # Structured subject requirements (from scripts/process_subject_requirements.py).
@@ -211,9 +218,19 @@ def get_filter_options(df: pd.DataFrame) -> dict:
                 if subj.strip():
                     required_subjects.add(subj.strip())
 
+    # Domain options = union across every course's full domain set (so a domain
+    # that only ever appears as a secondary tag is still selectable).
+    if "domain_list" in df.columns:
+        all_domains = set()
+        for lst in df["domain_list"]:
+            all_domains.update(lst)
+        domain_options = sorted(all_domains)
+    else:
+        domain_options = sorted(df["domain"].dropna().unique())
+
     return {
         "universities": sorted(df["university"].dropna().unique()),
-        "domains": sorted(df["domain"].dropna().unique()),
+        "domains": domain_options,
         "study_modes": sorted(df["study_mode"].dropna().unique()),
         "durations": sorted(df["duration"].dropna().unique()),
         "required_subjects": sorted(required_subjects),

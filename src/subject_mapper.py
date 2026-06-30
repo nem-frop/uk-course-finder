@@ -159,6 +159,21 @@ def map_course_to_domain(course_name: str) -> str:
     return SUBJECT_TO_DOMAIN.get(primary, "Other")
 
 
+def map_course_to_domains(course_name: str) -> list[str]:
+    """All broad domains a course touches (deduped, primary first).
+
+    A cross-disciplinary course like "International Business with Chinese" maps
+    to both Business & Economics and Languages & Area Studies. The first entry
+    is the primary domain (same as map_course_to_domain).
+    """
+    seen = []
+    for subj in map_course_to_subjects(course_name):
+        d = SUBJECT_TO_DOMAIN.get(subj, "Other")
+        if d not in seen:
+            seen.append(d)
+    return seen or ["Other"]
+
+
 # Broad domain categories for colored tags (like IvyPrep's Domain column)
 SUBJECT_TO_DOMAIN = {
     # STEM
